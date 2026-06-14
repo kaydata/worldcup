@@ -1,0 +1,152 @@
+.wrapper {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+/* ── Header ── */
+.table thead tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.thRank { width: 48px; text-align: center; }
+.thPlayer { min-width: 160px; }
+.thTeam { min-width: 140px; }
+.thStat { width: 48px; text-align: center; }
+
+.thActive {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ── Body rows ── */
+.table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.topThree {
+  background: rgba(240, 208, 128, 0.03);
+}
+
+/* ── Rank cell ── */
+.rankCell {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.rankGold   { color: var(--color-gold);   background: rgba(240, 208, 128, 0.14); }
+.rankSilver { color: var(--color-silver); background: rgba(156, 163, 175, 0.12); }
+.rankBronze { color: var(--color-bronze); background: rgba(201, 123, 46, 0.12); }
+
+/* ── Player cell ── */
+.playerCell {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.playerName {
+  font-weight: 600;
+  color: var(--color-heading);
+  line-height: 1.2;
+}
+
+.position {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Team cell ── */
+.teamCell {
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.tla {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 20px;
+  padding: 0 var(--space-xs);
+  background: var(--color-primary);
+  border-radius: 3px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.teamName {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* ── Stat cells ── */
+.stat {
+  text-align: center;
+  padding: var(--space-md);
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.statActive {
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+
+@media (max-width: 560px) {
+  .teamName {
+    display: none;
+  }
+
+  .table th,
+  .table td {
+    padding: var(--space-sm);
+  }
+}
