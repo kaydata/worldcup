@@ -8,7 +8,6 @@ import styles from './Matches.module.css'
 
 const STATUS_TABS = [
   { label: 'All', value: 'ALL' },
-  { label: 'Live', value: 'LIVE' },
   { label: 'Upcoming', value: 'UPCOMING' },
   { label: 'Played', value: 'PLAYED' },
 ]
@@ -26,7 +25,6 @@ export default function Matches() {
   const [statusFilter, setStatusFilter] = useState('ALL')
 
   const allMatches = (data?.matches ?? []).filter(m => m.stage === 'GROUP_STAGE')
-  const liveCount = allMatches.filter(m => LIVE_STATUSES.has(m.status)).length
 
   const groupLetters = [...new Set(
     allMatches.map(m => m.group?.replace('GROUP_', '')).filter(Boolean)
@@ -70,9 +68,6 @@ export default function Matches() {
       <div className={styles.pageHeader}>
         <div className={styles.titleRow}>
           <h2 className={styles.title}>Matches</h2>
-          {liveCount > 0 && (
-            <span className={styles.liveBadge}>{liveCount} LIVE</span>
-          )}
           {error && (
             <span className={styles.fallbackNote}>Showing cached data</span>
           )}
@@ -93,9 +88,6 @@ export default function Matches() {
               onClick={() => setStatusFilter(value)}
             >
               {label}
-              {value === 'LIVE' && liveCount > 0 && (
-                <span className={styles.liveCount}>{liveCount}</span>
-              )}
             </button>
           ))}
         </div>

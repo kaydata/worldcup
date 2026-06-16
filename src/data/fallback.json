@@ -1,299 +1,474 @@
 {
-  "competition": {
-    "id": 2000,
-    "name": "FIFA World Cup 2026",
-    "code": "WC"
-  },
+  "competition": { "id": 2000, "name": "FIFA World Cup 2026", "code": "WC" },
   "standings": [
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_A",
       "table": [
-        { "position": 1, "team": { "id": 101, "name": "Mexico", "shortName": "Mexico", "tla": "MEX", "crest": "" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 2, "goalsAgainst": 0, "goalDifference": 2, "form": "W" },
-        { "position": 2, "team": { "id": 102, "name": "South Korea", "shortName": "South Korea", "tla": "KOR", "crest": "" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 2, "goalsAgainst": 1, "goalDifference": 1, "form": "W" },
-        { "position": 3, "team": { "id": 103, "name": "Czechia", "shortName": "Czechia", "tla": "CZE", "crest": "" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 1, "goalsAgainst": 2, "goalDifference": -1, "form": "L" },
-        { "position": 4, "team": { "id": 104, "name": "South Africa", "shortName": "South Africa", "tla": "RSA", "crest": "" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 0, "goalsAgainst": 2, "goalDifference": -2, "form": "L" }
+        { "position": 1, "team": { "id": 203,  "name": "Mexico",       "shortName": "Mexico",       "tla": "MEX", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png"  }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 2, "goalsAgainst": 0, "goalDifference":  2 },
+        { "position": 2, "team": { "id": 451,  "name": "South Korea",  "shortName": "South Korea",  "tla": "KOR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 2, "goalsAgainst": 1, "goalDifference":  1 },
+        { "position": 3, "team": { "id": 450,  "name": "Czechia",      "shortName": "Czechia",      "tla": "CZE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"  }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 1, "goalsAgainst": 2, "goalDifference": -1 },
+        { "position": 4, "team": { "id": 467,  "name": "South Africa", "shortName": "South Africa", "tla": "RSA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png"  }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 0, "goalsAgainst": 2, "goalDifference": -2 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_B",
       "table": [
-        { "position": 1, "team": { "id": 105, "name": "Canada", "shortName": "Canada", "tla": "CAN", "crest": "" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "form": "D" },
-        { "position": 2, "team": { "id": 106, "name": "Bosnia & Herzegovina", "shortName": "Bosnia", "tla": "BIH", "crest": "" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "form": "D" },
-        { "position": 3, "team": { "id": 107, "name": "Qatar", "shortName": "Qatar", "tla": "QAT", "crest": "" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "form": "D" },
-        { "position": 4, "team": { "id": 108, "name": "Switzerland", "shortName": "Switzerland", "tla": "SUI", "crest": "" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "form": "D" }
+        { "position": 1, "team": { "id": 475,  "name": "Switzerland",      "shortName": "Switzerland", "tla": "SUI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0 },
+        { "position": 2, "team": { "id": 206,  "name": "Canada",            "shortName": "Canada",      "tla": "CAN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/can.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0 },
+        { "position": 3, "team": { "id": 4398, "name": "Qatar",             "shortName": "Qatar",       "tla": "QAT", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0 },
+        { "position": 4, "team": { "id": 452,  "name": "Bosnia-Herzegovina","shortName": "Bosnia",      "tla": "BIH", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_C",
       "table": [
-        { "position": 1, "team": { "id": 109, "name": "Scotland", "shortName": "Scotland", "tla": "SCO", "crest": "" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 1, "goalsAgainst": 0, "goalDifference": 1, "form": "W" },
-        { "position": 2, "team": { "id": 110, "name": "Morocco", "shortName": "Morocco", "tla": "MAR", "crest": "" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "form": "D" },
-        { "position": 3, "team": { "id": 111, "name": "Brazil", "shortName": "Brazil", "tla": "BRA", "crest": "" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "form": "D" },
-        { "position": 4, "team": { "id": 112, "name": "Haiti", "shortName": "Haiti", "tla": "HAI", "crest": "" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 0, "goalsAgainst": 1, "goalDifference": -1, "form": "L" }
+        { "position": 1, "team": { "id": 580,  "name": "Scotland", "shortName": "Scotland", "tla": "SCO", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 1, "goalsAgainst": 0, "goalDifference":  1 },
+        { "position": 2, "team": { "id": 2869, "name": "Morocco",  "shortName": "Morocco",  "tla": "MAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference":  0 },
+        { "position": 3, "team": { "id": 205,  "name": "Brazil",   "shortName": "Brazil",   "tla": "BRA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 1, "goalsAgainst": 1, "goalDifference":  0 },
+        { "position": 4, "team": { "id": 2654, "name": "Haiti",    "shortName": "Haiti",    "tla": "HAI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 0, "goalsAgainst": 1, "goalDifference": -1 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_D",
       "table": [
-        { "position": 1, "team": { "id": 113, "name": "United States", "shortName": "USA", "tla": "USA", "crest": "" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 4, "goalsAgainst": 1, "goalDifference": 3, "form": "W" },
-        { "position": 2, "team": { "id": 114, "name": "Australia", "shortName": "Australia", "tla": "AUS", "crest": "" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 2, "goalsAgainst": 0, "goalDifference": 2, "form": "W" },
-        { "position": 3, "team": { "id": 115, "name": "Turkiye", "shortName": "Turkiye", "tla": "TUR", "crest": "" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 0, "goalsAgainst": 2, "goalDifference": -2, "form": "L" },
-        { "position": 4, "team": { "id": 116, "name": "Paraguay", "shortName": "Paraguay", "tla": "PAR", "crest": "" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 1, "goalsAgainst": 4, "goalDifference": -3, "form": "L" }
+        { "position": 1, "team": { "id": 660, "name": "United States", "shortName": "USA",       "tla": "USA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 4, "goalsAgainst": 1, "goalDifference":  3 },
+        { "position": 2, "team": { "id": 628, "name": "Australia",     "shortName": "Australia", "tla": "AUS", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 2, "goalsAgainst": 0, "goalDifference":  2 },
+        { "position": 3, "team": { "id": 465, "name": "Türkiye",       "shortName": "Türkiye",   "tla": "TUR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 0, "goalsAgainst": 2, "goalDifference": -2 },
+        { "position": 4, "team": { "id": 210, "name": "Paraguay",      "shortName": "Paraguay",  "tla": "PAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/par.png" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 1, "goalsAgainst": 4, "goalDifference": -3 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_E",
       "table": [
-        { "position": 1, "team": { "id": 117, "name": "Germany", "shortName": "Germany", "tla": "GER", "crest": "" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 7, "goalsAgainst": 1, "goalDifference": 6, "form": "W" },
-        { "position": 2, "team": { "id": 118, "name": "Ecuador", "shortName": "Ecuador", "tla": "ECU", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 119, "name": "Ivory Coast", "shortName": "Ivory Coast", "tla": "CIV", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 120, "name": "Curacao", "shortName": "Curacao", "tla": "CUW", "crest": "" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 1, "goalsAgainst": 7, "goalDifference": -6, "form": "L" }
+        { "position": 1, "team": { "id": 481,   "name": "Germany",      "shortName": "Germany",      "tla": "GER", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"        }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 7, "goalsAgainst": 1, "goalDifference":  6 },
+        { "position": 2, "team": { "id": 4789,  "name": "Ivory Coast",  "shortName": "Ivory Coast",  "tla": "CIV", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png"        }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 1, "goalsAgainst": 0, "goalDifference":  1 },
+        { "position": 3, "team": { "id": 209,   "name": "Ecuador",      "shortName": "Ecuador",      "tla": "ECU", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png"        }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 0, "goalsAgainst": 1, "goalDifference": -1 },
+        { "position": 4, "team": { "id": 11678, "name": "Curaçao",      "shortName": "Curaçao",      "tla": "CUW", "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png"        }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 1, "goalsAgainst": 7, "goalDifference": -6 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_F",
       "table": [
-        { "position": 1, "team": { "id": 121, "name": "Netherlands", "shortName": "Netherlands", "tla": "NED", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 2, "team": { "id": 122, "name": "Japan", "shortName": "Japan", "tla": "JPN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 123, "name": "Sweden", "shortName": "Sweden", "tla": "SWE", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 124, "name": "Tunisia", "shortName": "Tunisia", "tla": "TUN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" }
+        { "position": 1, "team": { "id": 466, "name": "Sweden",      "shortName": "Sweden",      "tla": "SWE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png" }, "playedGames": 1, "won": 1, "draw": 0, "lost": 0, "points": 3, "goalsFor": 5, "goalsAgainst": 1, "goalDifference":  4 },
+        { "position": 2, "team": { "id": 627, "name": "Japan",       "shortName": "Japan",       "tla": "JPN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 2, "goalsAgainst": 2, "goalDifference":  0 },
+        { "position": 3, "team": { "id": 449, "name": "Netherlands", "shortName": "Netherlands", "tla": "NED", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png" }, "playedGames": 1, "won": 0, "draw": 1, "lost": 0, "points": 1, "goalsFor": 2, "goalsAgainst": 2, "goalDifference":  0 },
+        { "position": 4, "team": { "id": 659, "name": "Tunisia",     "shortName": "Tunisia",     "tla": "TUN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png" }, "playedGames": 1, "won": 0, "draw": 0, "lost": 1, "points": 0, "goalsFor": 1, "goalsAgainst": 5, "goalDifference": -4 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_G",
       "table": [
-        { "position": 1, "team": { "id": 125, "name": "Belgium", "shortName": "Belgium", "tla": "BEL", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 2, "team": { "id": 126, "name": "Iran", "shortName": "Iran", "tla": "IRN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 127, "name": "Egypt", "shortName": "Egypt", "tla": "EGY", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 128, "name": "New Zealand", "shortName": "New Zealand", "tla": "NZL", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" }
+        { "position": 1, "team": { "id": 125, "name": "Belgium",     "shortName": "Belgium",     "tla": "BEL", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 2, "team": { "id": 126, "name": "Iran",        "shortName": "Iran",        "tla": "IRN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 3, "team": { "id": 127, "name": "Egypt",       "shortName": "Egypt",       "tla": "EGY", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 4, "team": { "id": 128, "name": "New Zealand", "shortName": "New Zealand", "tla": "NZL", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_H",
       "table": [
-        { "position": 1, "team": { "id": 129, "name": "Spain", "shortName": "Spain", "tla": "ESP", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 2, "team": { "id": 130, "name": "Uruguay", "shortName": "Uruguay", "tla": "URU", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 131, "name": "Saudi Arabia", "shortName": "Saudi Arabia", "tla": "KSA", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 132, "name": "Cape Verde", "shortName": "Cape Verde", "tla": "CPV", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" }
+        { "position": 1, "team": { "id": 129, "name": "Spain",        "shortName": "Spain",        "tla": "ESP", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 2, "team": { "id": 130, "name": "Uruguay",      "shortName": "Uruguay",      "tla": "URU", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 3, "team": { "id": 131, "name": "Saudi Arabia", "shortName": "Saudi Arabia", "tla": "KSA", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 4, "team": { "id": 132, "name": "Cape Verde",   "shortName": "Cape Verde",   "tla": "CPV", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_I",
       "table": [
-        { "position": 1, "team": { "id": 133, "name": "France", "shortName": "France", "tla": "FRA", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 2, "team": { "id": 134, "name": "Senegal", "shortName": "Senegal", "tla": "SEN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 135, "name": "Norway", "shortName": "Norway", "tla": "NOR", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 136, "name": "Iraq", "shortName": "Iraq", "tla": "IRQ", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" }
+        { "position": 1, "team": { "id": 133, "name": "France",  "shortName": "France",  "tla": "FRA", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 2, "team": { "id": 134, "name": "Senegal", "shortName": "Senegal", "tla": "SEN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 3, "team": { "id": 135, "name": "Norway",  "shortName": "Norway",  "tla": "NOR", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 4, "team": { "id": 136, "name": "Iraq",    "shortName": "Iraq",    "tla": "IRQ", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_J",
       "table": [
-        { "position": 1, "team": { "id": 137, "name": "Argentina", "shortName": "Argentina", "tla": "ARG", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 2, "team": { "id": 138, "name": "Austria", "shortName": "Austria", "tla": "AUT", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 139, "name": "Algeria", "shortName": "Algeria", "tla": "ALG", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 140, "name": "Jordan", "shortName": "Jordan", "tla": "JOR", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" }
+        { "position": 1, "team": { "id": 137, "name": "Argentina", "shortName": "Argentina", "tla": "ARG", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 2, "team": { "id": 138, "name": "Austria",   "shortName": "Austria",   "tla": "AUT", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 3, "team": { "id": 139, "name": "Algeria",   "shortName": "Algeria",   "tla": "ALG", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 4, "team": { "id": 140, "name": "Jordan",    "shortName": "Jordan",    "tla": "JOR", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_K",
       "table": [
-        { "position": 1, "team": { "id": 141, "name": "Portugal", "shortName": "Portugal", "tla": "POR", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 2, "team": { "id": 142, "name": "Colombia", "shortName": "Colombia", "tla": "COL", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 143, "name": "DR Congo", "shortName": "DR Congo", "tla": "COD", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 144, "name": "Uzbekistan", "shortName": "Uzbekistan", "tla": "UZB", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" }
+        { "position": 1, "team": { "id": 141, "name": "Portugal",   "shortName": "Portugal",   "tla": "POR", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 2, "team": { "id": 142, "name": "Colombia",   "shortName": "Colombia",   "tla": "COL", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 3, "team": { "id": 143, "name": "DR Congo",   "shortName": "DR Congo",   "tla": "COD", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 4, "team": { "id": 144, "name": "Uzbekistan", "shortName": "Uzbekistan", "tla": "UZB", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 }
       ]
     },
     {
       "stage": "GROUP_STAGE", "type": "TOTAL", "group": "GROUP_L",
       "table": [
-        { "position": 1, "team": { "id": 145, "name": "England", "shortName": "England", "tla": "ENG", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 2, "team": { "id": 146, "name": "Croatia", "shortName": "Croatia", "tla": "CRO", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 3, "team": { "id": 147, "name": "Ghana", "shortName": "Ghana", "tla": "GHA", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" },
-        { "position": 4, "team": { "id": 148, "name": "Panama", "shortName": "Panama", "tla": "PAN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "form": "" }
+        { "position": 1, "team": { "id": 145, "name": "England", "shortName": "England", "tla": "ENG", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 2, "team": { "id": 146, "name": "Croatia", "shortName": "Croatia", "tla": "CRO", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 3, "team": { "id": 147, "name": "Ghana",   "shortName": "Ghana",   "tla": "GHA", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 },
+        { "position": 4, "team": { "id": 148, "name": "Panama",  "shortName": "Panama",  "tla": "PAN", "crest": "" }, "playedGames": 0, "won": 0, "draw": 0, "lost": 0, "points": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0 }
       ]
     }
   ],
   "matches": [
     {
-      "id": 1, "utcDate": "2026-06-11T20:00:00Z", "status": "FINISHED",
+      "id": "wc_a1", "utcDate": "2026-06-11T20:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_A",
-      "homeTeam": { "id": 101, "name": "Mexico", "shortName": "Mexico", "tla": "MEX", "crest": "" },
-      "awayTeam": { "id": 104, "name": "South Africa", "shortName": "South Africa", "tla": "RSA", "crest": "" },
-      "score": { "winner": "HOME_TEAM", "duration": "REGULAR", "fullTime": { "home": 2, "away": 0 }, "halfTime": { "home": 1, "away": 0 } }
+      "homeTeam": { "id": 203, "name": "Mexico",       "shortName": "Mexico",       "tla": "MEX", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png"  },
+      "awayTeam": { "id": 467, "name": "South Africa", "shortName": "South Africa", "tla": "RSA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png"  },
+      "score": { "fullTime": { "home": 2, "away": 0 } }
     },
     {
-      "id": 2, "utcDate": "2026-06-11T23:00:00Z", "status": "FINISHED",
+      "id": "wc_a2", "utcDate": "2026-06-11T23:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_A",
-      "homeTeam": { "id": 102, "name": "South Korea", "shortName": "South Korea", "tla": "KOR", "crest": "" },
-      "awayTeam": { "id": 103, "name": "Czechia", "shortName": "Czechia", "tla": "CZE", "crest": "" },
-      "score": { "winner": "HOME_TEAM", "duration": "REGULAR", "fullTime": { "home": 2, "away": 1 }, "halfTime": { "home": 1, "away": 0 } }
+      "homeTeam": { "id": 451, "name": "South Korea", "shortName": "South Korea", "tla": "KOR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png" },
+      "awayTeam": { "id": 450, "name": "Czechia",     "shortName": "Czechia",     "tla": "CZE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"  },
+      "score": { "fullTime": { "home": 2, "away": 1 } }
     },
     {
-      "id": 3, "utcDate": "2026-06-12T18:00:00Z", "status": "FINISHED",
+      "id": "wc_b1", "utcDate": "2026-06-12T18:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_B",
-      "homeTeam": { "id": 105, "name": "Canada", "shortName": "Canada", "tla": "CAN", "crest": "" },
-      "awayTeam": { "id": 106, "name": "Bosnia & Herzegovina", "shortName": "Bosnia", "tla": "BIH", "crest": "" },
-      "score": { "winner": "DRAW", "duration": "REGULAR", "fullTime": { "home": 1, "away": 1 }, "halfTime": { "home": 0, "away": 1 } }
+      "homeTeam": { "id": 206,  "name": "Canada",            "shortName": "Canada", "tla": "CAN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/can.png" },
+      "awayTeam": { "id": 452,  "name": "Bosnia-Herzegovina","shortName": "Bosnia", "tla": "BIH", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png" },
+      "score": { "fullTime": { "home": 1, "away": 1 } }
     },
     {
-      "id": 4, "utcDate": "2026-06-12T21:00:00Z", "status": "FINISHED",
+      "id": "wc_b2", "utcDate": "2026-06-12T21:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_B",
-      "homeTeam": { "id": 107, "name": "Qatar", "shortName": "Qatar", "tla": "QAT", "crest": "" },
-      "awayTeam": { "id": 108, "name": "Switzerland", "shortName": "Switzerland", "tla": "SUI", "crest": "" },
-      "score": { "winner": "DRAW", "duration": "REGULAR", "fullTime": { "home": 1, "away": 1 }, "halfTime": { "home": 0, "away": 0 } }
+      "homeTeam": { "id": 4398, "name": "Qatar",       "shortName": "Qatar",       "tla": "QAT", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png" },
+      "awayTeam": { "id": 475,  "name": "Switzerland", "shortName": "Switzerland", "tla": "SUI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png" },
+      "score": { "fullTime": { "home": 1, "away": 1 } }
     },
     {
-      "id": 5, "utcDate": "2026-06-12T18:00:00Z", "status": "FINISHED",
+      "id": "wc_c1", "utcDate": "2026-06-12T18:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_C",
-      "homeTeam": { "id": 109, "name": "Scotland", "shortName": "Scotland", "tla": "SCO", "crest": "" },
-      "awayTeam": { "id": 112, "name": "Haiti", "shortName": "Haiti", "tla": "HAI", "crest": "" },
-      "score": { "winner": "HOME_TEAM", "duration": "REGULAR", "fullTime": { "home": 1, "away": 0 }, "halfTime": { "home": 1, "away": 0 } }
+      "homeTeam": { "id": 580,  "name": "Scotland", "shortName": "Scotland", "tla": "SCO", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png" },
+      "awayTeam": { "id": 2654, "name": "Haiti",    "shortName": "Haiti",    "tla": "HAI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png" },
+      "score": { "fullTime": { "home": 1, "away": 0 } }
     },
     {
-      "id": 6, "utcDate": "2026-06-12T21:00:00Z", "status": "FINISHED",
+      "id": "wc_c2", "utcDate": "2026-06-12T21:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_C",
-      "homeTeam": { "id": 110, "name": "Morocco", "shortName": "Morocco", "tla": "MAR", "crest": "" },
-      "awayTeam": { "id": 111, "name": "Brazil", "shortName": "Brazil", "tla": "BRA", "crest": "" },
-      "score": { "winner": "DRAW", "duration": "REGULAR", "fullTime": { "home": 1, "away": 1 }, "halfTime": { "home": 0, "away": 0 } }
+      "homeTeam": { "id": 2869, "name": "Morocco", "shortName": "Morocco", "tla": "MAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png" },
+      "awayTeam": { "id": 205,  "name": "Brazil",  "shortName": "Brazil",  "tla": "BRA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png" },
+      "score": { "fullTime": { "home": 1, "away": 1 } }
     },
     {
-      "id": 7, "utcDate": "2026-06-13T18:00:00Z", "status": "FINISHED",
+      "id": "wc_d1", "utcDate": "2026-06-13T18:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_D",
-      "homeTeam": { "id": 113, "name": "United States", "shortName": "USA", "tla": "USA", "crest": "" },
-      "awayTeam": { "id": 116, "name": "Paraguay", "shortName": "Paraguay", "tla": "PAR", "crest": "" },
-      "score": { "winner": "HOME_TEAM", "duration": "REGULAR", "fullTime": { "home": 4, "away": 1 }, "halfTime": { "home": 2, "away": 0 } }
+      "homeTeam": { "id": 660, "name": "United States", "shortName": "USA",      "tla": "USA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png" },
+      "awayTeam": { "id": 210, "name": "Paraguay",      "shortName": "Paraguay", "tla": "PAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/par.png" },
+      "score": { "fullTime": { "home": 4, "away": 1 } }
     },
     {
-      "id": 8, "utcDate": "2026-06-13T21:00:00Z", "status": "FINISHED",
+      "id": "760421", "utcDate": "2026-06-14T04:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_D",
-      "homeTeam": { "id": 114, "name": "Australia", "shortName": "Australia", "tla": "AUS", "crest": "" },
-      "awayTeam": { "id": 115, "name": "Turkiye", "shortName": "Turkiye", "tla": "TUR", "crest": "" },
-      "score": { "winner": "HOME_TEAM", "duration": "REGULAR", "fullTime": { "home": 2, "away": 0 }, "halfTime": { "home": 1, "away": 0 } }
+      "homeTeam": { "id": 628, "name": "Australia", "shortName": "Australia", "tla": "AUS", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png" },
+      "awayTeam": { "id": 465, "name": "Türkiye",   "shortName": "Türkiye",   "tla": "TUR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png" },
+      "score": { "fullTime": { "home": 2, "away": 0 } }
     },
     {
-      "id": 9, "utcDate": "2026-06-13T21:00:00Z", "status": "FINISHED",
+      "id": "760422", "utcDate": "2026-06-14T17:00:00Z", "status": "FINISHED",
       "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_E",
-      "homeTeam": { "id": 117, "name": "Germany", "shortName": "Germany", "tla": "GER", "crest": "" },
-      "awayTeam": { "id": 120, "name": "Curacao", "shortName": "Curacao", "tla": "CUW", "crest": "" },
-      "score": { "winner": "HOME_TEAM", "duration": "REGULAR", "fullTime": { "home": 7, "away": 1 }, "halfTime": { "home": 4, "away": 0 } }
-    }
+      "homeTeam": { "id": 481,   "name": "Germany",  "shortName": "Germany",  "tla": "GER", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"   },
+      "awayTeam": { "id": 11678, "name": "Curaçao",  "shortName": "Curaçao",  "tla": "CUW", "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png"    },
+      "score": { "fullTime": { "home": 7, "away": 1 } }
+    },
+    {
+      "id": "760425", "utcDate": "2026-06-14T20:00:00Z", "status": "FINISHED",
+      "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_F",
+      "homeTeam": { "id": 449, "name": "Netherlands", "shortName": "Netherlands", "tla": "NED", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png" },
+      "awayTeam": { "id": 627, "name": "Japan",       "shortName": "Japan",       "tla": "JPN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png" },
+      "score": { "fullTime": { "home": 2, "away": 2 } }
+    },
+    {
+      "id": "760423", "utcDate": "2026-06-14T23:00:00Z", "status": "FINISHED",
+      "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_E",
+      "homeTeam": { "id": 4789, "name": "Ivory Coast", "shortName": "Ivory Coast", "tla": "CIV", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png" },
+      "awayTeam": { "id": 209,  "name": "Ecuador",     "shortName": "Ecuador",     "tla": "ECU", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png" },
+      "score": { "fullTime": { "home": 1, "away": 0 } }
+    },
+    {
+      "id": "760424", "utcDate": "2026-06-15T02:00:00Z", "status": "FINISHED",
+      "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_F",
+      "homeTeam": { "id": 466, "name": "Sweden",  "shortName": "Sweden",  "tla": "SWE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png" },
+      "awayTeam": { "id": 659, "name": "Tunisia", "shortName": "Tunisia", "tla": "TUN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png" },
+      "score": { "fullTime": { "home": 5, "away": 1 } }
+    },
+
+    { "id": "fix_g1_1", "utcDate": "2026-06-16T13:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_G",
+      "homeTeam": { "id": 125, "name": "Belgium",     "shortName": "Belgium",     "tla": "BEL", "crest": "" },
+      "awayTeam": { "id": 128, "name": "New Zealand", "shortName": "New Zealand", "tla": "NZL", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_g1_2", "utcDate": "2026-06-16T16:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_G",
+      "homeTeam": { "id": 126, "name": "Iran",  "shortName": "Iran",  "tla": "IRN", "crest": "" },
+      "awayTeam": { "id": 127, "name": "Egypt", "shortName": "Egypt", "tla": "EGY", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_h1_1", "utcDate": "2026-06-16T20:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_H",
+      "homeTeam": { "id": 129, "name": "Spain",      "shortName": "Spain",      "tla": "ESP", "crest": "" },
+      "awayTeam": { "id": 132, "name": "Cape Verde", "shortName": "Cape Verde", "tla": "CPV", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_h1_2", "utcDate": "2026-06-16T23:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_H",
+      "homeTeam": { "id": 130, "name": "Uruguay",      "shortName": "Uruguay",      "tla": "URU", "crest": "" },
+      "awayTeam": { "id": 131, "name": "Saudi Arabia", "shortName": "Saudi Arabia", "tla": "KSA", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_i1_1", "utcDate": "2026-06-17T13:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_I",
+      "homeTeam": { "id": 133, "name": "France", "shortName": "France", "tla": "FRA", "crest": "" },
+      "awayTeam": { "id": 136, "name": "Iraq",   "shortName": "Iraq",   "tla": "IRQ", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_i1_2", "utcDate": "2026-06-17T16:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_I",
+      "homeTeam": { "id": 134, "name": "Senegal", "shortName": "Senegal", "tla": "SEN", "crest": "" },
+      "awayTeam": { "id": 135, "name": "Norway",  "shortName": "Norway",  "tla": "NOR", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_j1_1", "utcDate": "2026-06-17T20:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_J",
+      "homeTeam": { "id": 137, "name": "Argentina", "shortName": "Argentina", "tla": "ARG", "crest": "" },
+      "awayTeam": { "id": 140, "name": "Jordan",    "shortName": "Jordan",    "tla": "JOR", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_j1_2", "utcDate": "2026-06-17T23:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_J",
+      "homeTeam": { "id": 138, "name": "Austria",  "shortName": "Austria",  "tla": "AUT", "crest": "" },
+      "awayTeam": { "id": 139, "name": "Algeria",  "shortName": "Algeria",  "tla": "ALG", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_k1_1", "utcDate": "2026-06-18T13:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_K",
+      "homeTeam": { "id": 141, "name": "Portugal",   "shortName": "Portugal",   "tla": "POR", "crest": "" },
+      "awayTeam": { "id": 144, "name": "Uzbekistan", "shortName": "Uzbekistan", "tla": "UZB", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_k1_2", "utcDate": "2026-06-18T16:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_K",
+      "homeTeam": { "id": 142, "name": "Colombia", "shortName": "Colombia", "tla": "COL", "crest": "" },
+      "awayTeam": { "id": 143, "name": "DR Congo",  "shortName": "DR Congo",  "tla": "COD", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_l1_1", "utcDate": "2026-06-18T20:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_L",
+      "homeTeam": { "id": 145, "name": "England", "shortName": "England", "tla": "ENG", "crest": "" },
+      "awayTeam": { "id": 148, "name": "Panama",  "shortName": "Panama",  "tla": "PAN", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_l1_2", "utcDate": "2026-06-18T23:00:00Z", "status": "SCHEDULED", "matchday": 1, "stage": "GROUP_STAGE", "group": "GROUP_L",
+      "homeTeam": { "id": 146, "name": "Croatia", "shortName": "Croatia", "tla": "CRO", "crest": "" },
+      "awayTeam": { "id": 147, "name": "Ghana",   "shortName": "Ghana",   "tla": "GHA", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_a2_1", "utcDate": "2026-06-19T13:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_A",
+      "homeTeam": { "id": 203, "name": "Mexico",      "shortName": "Mexico",      "tla": "MEX", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png"  },
+      "awayTeam": { "id": 451, "name": "South Korea", "shortName": "South Korea", "tla": "KOR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_a2_2", "utcDate": "2026-06-19T16:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_A",
+      "homeTeam": { "id": 450, "name": "Czechia",      "shortName": "Czechia",      "tla": "CZE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png" },
+      "awayTeam": { "id": 467, "name": "South Africa", "shortName": "South Africa", "tla": "RSA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_b2_1", "utcDate": "2026-06-19T20:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_B",
+      "homeTeam": { "id": 206,  "name": "Canada", "shortName": "Canada", "tla": "CAN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/can.png" },
+      "awayTeam": { "id": 4398, "name": "Qatar",  "shortName": "Qatar",  "tla": "QAT", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_b2_2", "utcDate": "2026-06-19T23:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_B",
+      "homeTeam": { "id": 475, "name": "Switzerland",      "shortName": "Switzerland", "tla": "SUI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png" },
+      "awayTeam": { "id": 452, "name": "Bosnia-Herzegovina","shortName": "Bosnia",      "tla": "BIH", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_c2_1", "utcDate": "2026-06-20T13:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_C",
+      "homeTeam": { "id": 580,  "name": "Scotland", "shortName": "Scotland", "tla": "SCO", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png" },
+      "awayTeam": { "id": 2869, "name": "Morocco",  "shortName": "Morocco",  "tla": "MAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_c2_2", "utcDate": "2026-06-20T16:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_C",
+      "homeTeam": { "id": 205,  "name": "Brazil", "shortName": "Brazil", "tla": "BRA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png" },
+      "awayTeam": { "id": 2654, "name": "Haiti",  "shortName": "Haiti",  "tla": "HAI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_d2_1", "utcDate": "2026-06-20T20:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_D",
+      "homeTeam": { "id": 660, "name": "United States", "shortName": "USA",       "tla": "USA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png" },
+      "awayTeam": { "id": 628, "name": "Australia",     "shortName": "Australia", "tla": "AUS", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_d2_2", "utcDate": "2026-06-20T23:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_D",
+      "homeTeam": { "id": 465, "name": "Türkiye",  "shortName": "Türkiye",  "tla": "TUR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png" },
+      "awayTeam": { "id": 210, "name": "Paraguay", "shortName": "Paraguay", "tla": "PAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/par.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_e2_1", "utcDate": "2026-06-21T13:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_E",
+      "homeTeam": { "id": 481,  "name": "Germany",     "shortName": "Germany",     "tla": "GER", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png"   },
+      "awayTeam": { "id": 4789, "name": "Ivory Coast", "shortName": "Ivory Coast", "tla": "CIV", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png"   },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_e2_2", "utcDate": "2026-06-21T16:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_E",
+      "homeTeam": { "id": 209,   "name": "Ecuador", "shortName": "Ecuador", "tla": "ECU", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png"        },
+      "awayTeam": { "id": 11678, "name": "Curaçao", "shortName": "Curaçao", "tla": "CUW", "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png"         },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_f2_1", "utcDate": "2026-06-21T20:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_F",
+      "homeTeam": { "id": 466, "name": "Sweden", "shortName": "Sweden", "tla": "SWE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png" },
+      "awayTeam": { "id": 627, "name": "Japan",  "shortName": "Japan",  "tla": "JPN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_f2_2", "utcDate": "2026-06-21T23:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_F",
+      "homeTeam": { "id": 449, "name": "Netherlands", "shortName": "Netherlands", "tla": "NED", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png" },
+      "awayTeam": { "id": 659, "name": "Tunisia",     "shortName": "Tunisia",     "tla": "TUN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_g2_1", "utcDate": "2026-06-22T13:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_G",
+      "homeTeam": { "id": 125, "name": "Belgium", "shortName": "Belgium", "tla": "BEL", "crest": "" },
+      "awayTeam": { "id": 126, "name": "Iran",    "shortName": "Iran",    "tla": "IRN", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_g2_2", "utcDate": "2026-06-22T16:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_G",
+      "homeTeam": { "id": 127, "name": "Egypt",       "shortName": "Egypt",       "tla": "EGY", "crest": "" },
+      "awayTeam": { "id": 128, "name": "New Zealand", "shortName": "New Zealand", "tla": "NZL", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_h2_1", "utcDate": "2026-06-22T20:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_H",
+      "homeTeam": { "id": 129, "name": "Spain",   "shortName": "Spain",   "tla": "ESP", "crest": "" },
+      "awayTeam": { "id": 130, "name": "Uruguay", "shortName": "Uruguay", "tla": "URU", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_h2_2", "utcDate": "2026-06-22T23:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_H",
+      "homeTeam": { "id": 131, "name": "Saudi Arabia", "shortName": "Saudi Arabia", "tla": "KSA", "crest": "" },
+      "awayTeam": { "id": 132, "name": "Cape Verde",   "shortName": "Cape Verde",   "tla": "CPV", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_i2_1", "utcDate": "2026-06-23T13:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_I",
+      "homeTeam": { "id": 133, "name": "France",  "shortName": "France",  "tla": "FRA", "crest": "" },
+      "awayTeam": { "id": 134, "name": "Senegal", "shortName": "Senegal", "tla": "SEN", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_i2_2", "utcDate": "2026-06-23T16:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_I",
+      "homeTeam": { "id": 135, "name": "Norway", "shortName": "Norway", "tla": "NOR", "crest": "" },
+      "awayTeam": { "id": 136, "name": "Iraq",   "shortName": "Iraq",   "tla": "IRQ", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_j2_1", "utcDate": "2026-06-23T20:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_J",
+      "homeTeam": { "id": 137, "name": "Argentina", "shortName": "Argentina", "tla": "ARG", "crest": "" },
+      "awayTeam": { "id": 138, "name": "Austria",   "shortName": "Austria",   "tla": "AUT", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_j2_2", "utcDate": "2026-06-23T23:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_J",
+      "homeTeam": { "id": 139, "name": "Algeria", "shortName": "Algeria", "tla": "ALG", "crest": "" },
+      "awayTeam": { "id": 140, "name": "Jordan",  "shortName": "Jordan",  "tla": "JOR", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_k2_1", "utcDate": "2026-06-24T13:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_K",
+      "homeTeam": { "id": 141, "name": "Portugal",  "shortName": "Portugal",  "tla": "POR", "crest": "" },
+      "awayTeam": { "id": 142, "name": "Colombia",  "shortName": "Colombia",  "tla": "COL", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_k2_2", "utcDate": "2026-06-24T16:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_K",
+      "homeTeam": { "id": 143, "name": "DR Congo",   "shortName": "DR Congo",   "tla": "COD", "crest": "" },
+      "awayTeam": { "id": 144, "name": "Uzbekistan", "shortName": "Uzbekistan", "tla": "UZB", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_l2_1", "utcDate": "2026-06-24T20:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_L",
+      "homeTeam": { "id": 145, "name": "England", "shortName": "England", "tla": "ENG", "crest": "" },
+      "awayTeam": { "id": 146, "name": "Croatia", "shortName": "Croatia", "tla": "CRO", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_l2_2", "utcDate": "2026-06-24T23:00:00Z", "status": "SCHEDULED", "matchday": 2, "stage": "GROUP_STAGE", "group": "GROUP_L",
+      "homeTeam": { "id": 147, "name": "Ghana",  "shortName": "Ghana",  "tla": "GHA", "crest": "" },
+      "awayTeam": { "id": 148, "name": "Panama", "shortName": "Panama", "tla": "PAN", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_a3_1", "utcDate": "2026-06-25T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_A",
+      "homeTeam": { "id": 203, "name": "Mexico",  "shortName": "Mexico",  "tla": "MEX", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png"  },
+      "awayTeam": { "id": 450, "name": "Czechia", "shortName": "Czechia", "tla": "CZE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png"  },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_a3_2", "utcDate": "2026-06-25T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_A",
+      "homeTeam": { "id": 451, "name": "South Korea",  "shortName": "South Korea",  "tla": "KOR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png" },
+      "awayTeam": { "id": 467, "name": "South Africa", "shortName": "South Africa", "tla": "RSA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png"  },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_b3_1", "utcDate": "2026-06-25T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_B",
+      "homeTeam": { "id": 206, "name": "Canada",      "shortName": "Canada",      "tla": "CAN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/can.png" },
+      "awayTeam": { "id": 475, "name": "Switzerland", "shortName": "Switzerland", "tla": "SUI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_b3_2", "utcDate": "2026-06-25T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_B",
+      "homeTeam": { "id": 4398, "name": "Qatar",            "shortName": "Qatar",  "tla": "QAT", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png" },
+      "awayTeam": { "id": 452,  "name": "Bosnia-Herzegovina","shortName": "Bosnia", "tla": "BIH", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_c3_1", "utcDate": "2026-06-26T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_C",
+      "homeTeam": { "id": 580, "name": "Scotland", "shortName": "Scotland", "tla": "SCO", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png" },
+      "awayTeam": { "id": 205, "name": "Brazil",   "shortName": "Brazil",   "tla": "BRA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_c3_2", "utcDate": "2026-06-26T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_C",
+      "homeTeam": { "id": 2869, "name": "Morocco", "shortName": "Morocco", "tla": "MAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png" },
+      "awayTeam": { "id": 2654, "name": "Haiti",   "shortName": "Haiti",   "tla": "HAI", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_d3_1", "utcDate": "2026-06-26T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_D",
+      "homeTeam": { "id": 660, "name": "United States", "shortName": "USA",      "tla": "USA", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png" },
+      "awayTeam": { "id": 465, "name": "Türkiye",       "shortName": "Türkiye",  "tla": "TUR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_d3_2", "utcDate": "2026-06-26T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_D",
+      "homeTeam": { "id": 628, "name": "Australia", "shortName": "Australia", "tla": "AUS", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png" },
+      "awayTeam": { "id": 210, "name": "Paraguay",  "shortName": "Paraguay",  "tla": "PAR", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/par.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_e3_1", "utcDate": "2026-06-27T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_E",
+      "homeTeam": { "id": 481, "name": "Germany",  "shortName": "Germany",  "tla": "GER", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png" },
+      "awayTeam": { "id": 209, "name": "Ecuador",  "shortName": "Ecuador",  "tla": "ECU", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_e3_2", "utcDate": "2026-06-27T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_E",
+      "homeTeam": { "id": 4789,  "name": "Ivory Coast", "shortName": "Ivory Coast", "tla": "CIV", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png"   },
+      "awayTeam": { "id": 11678, "name": "Curaçao",     "shortName": "Curaçao",     "tla": "CUW", "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png"    },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_f3_1", "utcDate": "2026-06-27T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_F",
+      "homeTeam": { "id": 466, "name": "Sweden",      "shortName": "Sweden",      "tla": "SWE", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png" },
+      "awayTeam": { "id": 449, "name": "Netherlands", "shortName": "Netherlands", "tla": "NED", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_f3_2", "utcDate": "2026-06-27T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_F",
+      "homeTeam": { "id": 627, "name": "Japan",   "shortName": "Japan",   "tla": "JPN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png" },
+      "awayTeam": { "id": 659, "name": "Tunisia", "shortName": "Tunisia", "tla": "TUN", "crest": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_g3_1", "utcDate": "2026-06-28T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_G",
+      "homeTeam": { "id": 125, "name": "Belgium", "shortName": "Belgium", "tla": "BEL", "crest": "" },
+      "awayTeam": { "id": 127, "name": "Egypt",   "shortName": "Egypt",   "tla": "EGY", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_g3_2", "utcDate": "2026-06-28T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_G",
+      "homeTeam": { "id": 126, "name": "Iran",        "shortName": "Iran",        "tla": "IRN", "crest": "" },
+      "awayTeam": { "id": 128, "name": "New Zealand", "shortName": "New Zealand", "tla": "NZL", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_h3_1", "utcDate": "2026-06-28T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_H",
+      "homeTeam": { "id": 129, "name": "Spain",        "shortName": "Spain",        "tla": "ESP", "crest": "" },
+      "awayTeam": { "id": 131, "name": "Saudi Arabia", "shortName": "Saudi Arabia", "tla": "KSA", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_h3_2", "utcDate": "2026-06-28T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_H",
+      "homeTeam": { "id": 130, "name": "Uruguay",    "shortName": "Uruguay",    "tla": "URU", "crest": "" },
+      "awayTeam": { "id": 132, "name": "Cape Verde", "shortName": "Cape Verde", "tla": "CPV", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_i3_1", "utcDate": "2026-06-29T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_I",
+      "homeTeam": { "id": 133, "name": "France",  "shortName": "France",  "tla": "FRA", "crest": "" },
+      "awayTeam": { "id": 135, "name": "Norway",  "shortName": "Norway",  "tla": "NOR", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_i3_2", "utcDate": "2026-06-29T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_I",
+      "homeTeam": { "id": 134, "name": "Senegal", "shortName": "Senegal", "tla": "SEN", "crest": "" },
+      "awayTeam": { "id": 136, "name": "Iraq",    "shortName": "Iraq",    "tla": "IRQ", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_j3_1", "utcDate": "2026-06-29T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_J",
+      "homeTeam": { "id": 137, "name": "Argentina", "shortName": "Argentina", "tla": "ARG", "crest": "" },
+      "awayTeam": { "id": 139, "name": "Algeria",   "shortName": "Algeria",   "tla": "ALG", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_j3_2", "utcDate": "2026-06-29T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_J",
+      "homeTeam": { "id": 138, "name": "Austria", "shortName": "Austria", "tla": "AUT", "crest": "" },
+      "awayTeam": { "id": 140, "name": "Jordan",  "shortName": "Jordan",  "tla": "JOR", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+
+    { "id": "fix_k3_1", "utcDate": "2026-06-30T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_K",
+      "homeTeam": { "id": 141, "name": "Portugal", "shortName": "Portugal", "tla": "POR", "crest": "" },
+      "awayTeam": { "id": 143, "name": "DR Congo",  "shortName": "DR Congo",  "tla": "COD", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_k3_2", "utcDate": "2026-06-30T20:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_K",
+      "homeTeam": { "id": 142, "name": "Colombia",  "shortName": "Colombia",  "tla": "COL", "crest": "" },
+      "awayTeam": { "id": 144, "name": "Uzbekistan","shortName": "Uzbekistan","tla": "UZB", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_l3_1", "utcDate": "2026-06-30T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_L",
+      "homeTeam": { "id": 145, "name": "England", "shortName": "England", "tla": "ENG", "crest": "" },
+      "awayTeam": { "id": 147, "name": "Ghana",   "shortName": "Ghana",   "tla": "GHA", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } },
+    { "id": "fix_l3_2", "utcDate": "2026-06-30T23:00:00Z", "status": "SCHEDULED", "matchday": 3, "stage": "GROUP_STAGE", "group": "GROUP_L",
+      "homeTeam": { "id": 146, "name": "Croatia", "shortName": "Croatia", "tla": "CRO", "crest": "" },
+      "awayTeam": { "id": 148, "name": "Panama",  "shortName": "Panama",  "tla": "PAN", "crest": "" },
+      "score": { "fullTime": { "home": null, "away": null } } }
   ],
   "scorers": [
-    {
-      "player": { "id": 1001, "name": "Folarin Balogun", "nationality": "United States", "position": "Centre-Forward" },
-      "team": { "id": 113, "name": "United States", "shortName": "United States", "tla": "USA" },
-      "goals": 2, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1002, "name": "Kai Havertz", "nationality": "Germany", "position": "Centre-Forward" },
-      "team": { "id": 117, "name": "Germany", "shortName": "Germany", "tla": "GER" },
-      "goals": 2, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1003, "name": "Julian Quinones", "nationality": "Mexico", "position": "Right Winger" },
-      "team": { "id": 101, "name": "Mexico", "shortName": "Mexico", "tla": "MEX" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1004, "name": "Raul Jimenez", "nationality": "Mexico", "position": "Centre-Forward" },
-      "team": { "id": 101, "name": "Mexico", "shortName": "Mexico", "tla": "MEX" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1005, "name": "Vinicius Junior", "nationality": "Brazil", "position": "Left Winger" },
-      "team": { "id": 111, "name": "Brazil", "shortName": "Brazil", "tla": "BRA" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1006, "name": "Jamal Musiala", "nationality": "Germany", "position": "Attacking Midfield" },
-      "team": { "id": 117, "name": "Germany", "shortName": "Germany", "tla": "GER" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1007, "name": "Felix Nmecha", "nationality": "Germany", "position": "Central Midfield" },
-      "team": { "id": 117, "name": "Germany", "shortName": "Germany", "tla": "GER" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1008, "name": "Nico Schlotterbeck", "nationality": "Germany", "position": "Centre-Back" },
-      "team": { "id": 117, "name": "Germany", "shortName": "Germany", "tla": "GER" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1009, "name": "Denis Undav", "nationality": "Germany", "position": "Centre-Forward" },
-      "team": { "id": 117, "name": "Germany", "shortName": "Germany", "tla": "GER" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1010, "name": "Giovanni Reyna", "nationality": "United States", "position": "Attacking Midfield" },
-      "team": { "id": 113, "name": "United States", "shortName": "United States", "tla": "USA" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1011, "name": "Ismael Saibari", "nationality": "Morocco", "position": "Attacking Midfield" },
-      "team": { "id": 110, "name": "Morocco", "shortName": "Morocco", "tla": "MAR" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1012, "name": "John McGinn", "nationality": "Scotland", "position": "Central Midfield" },
-      "team": { "id": 109, "name": "Scotland", "shortName": "Scotland", "tla": "SCO" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1013, "name": "Cyle Larin", "nationality": "Canada", "position": "Centre-Forward" },
-      "team": { "id": 105, "name": "Canada", "shortName": "Canada", "tla": "CAN" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1014, "name": "In-Beom Hwang", "nationality": "South Korea", "position": "Central Midfield" },
-      "team": { "id": 102, "name": "Korea Republic", "shortName": "South Korea", "tla": "KOR" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1015, "name": "Hyun-Gyu Oh", "nationality": "South Korea", "position": "Centre-Forward" },
-      "team": { "id": 102, "name": "Korea Republic", "shortName": "South Korea", "tla": "KOR" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1016, "name": "Nestory Irankunda", "nationality": "Australia", "position": "Right Winger" },
-      "team": { "id": 114, "name": "Australia", "shortName": "Australia", "tla": "AUS" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1017, "name": "Connor Metcalfe", "nationality": "Australia", "position": "Central Midfield" },
-      "team": { "id": 114, "name": "Australia", "shortName": "Australia", "tla": "AUS" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1018, "name": "Breel Embolo", "nationality": "Switzerland", "position": "Centre-Forward" },
-      "team": { "id": 108, "name": "Switzerland", "shortName": "Switzerland", "tla": "SUI" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1019, "name": "Ladislav Krejci", "nationality": "Czech Republic", "position": "Centre-Back" },
-      "team": { "id": 103, "name": "Czech Republic", "shortName": "Czechia", "tla": "CZE" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1020, "name": "Jovo Lukic", "nationality": "Bosnia and Herzegovina", "position": "Forward" },
-      "team": { "id": 106, "name": "Bosnia and Herzegovina", "shortName": "Bosnia & Herz.", "tla": "BIH" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1021, "name": "Boualem Khoukhi", "nationality": "Qatar", "position": "Central Midfield" },
-      "team": { "id": 107, "name": "Qatar", "shortName": "Qatar", "tla": "QAT" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1022, "name": "Mauricio Pereyra", "nationality": "Paraguay", "position": "Attacking Midfield" },
-      "team": { "id": 116, "name": "Paraguay", "shortName": "Paraguay", "tla": "PAR" },
-      "goals": 1, "assists": 0, "penalties": 0
-    },
-    {
-      "player": { "id": 1023, "name": "Livano Comenencia", "nationality": "Curacao", "position": "Left Winger" },
-      "team": { "id": 120, "name": "Curacao", "shortName": "Curacao", "tla": "CUW" },
-      "goals": 1, "assists": 0, "penalties": 0
-    }
+    { "player": { "id": 1001, "name": "Folarin Balogun",   "nationality": "United States", "position": "Centre-Forward"    }, "team": { "id": 660,  "name": "United States", "shortName": "USA",         "tla": "USA" }, "goals": 2, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1002, "name": "Kai Havertz",        "nationality": "Germany",       "position": "Centre-Forward"    }, "team": { "id": 481,  "name": "Germany",       "shortName": "Germany",     "tla": "GER" }, "goals": 2, "assists": 1, "penalties": 0 },
+    { "player": { "id": 1003, "name": "Jamal Musiala",      "nationality": "Germany",       "position": "Attacking Mid"     }, "team": { "id": 481,  "name": "Germany",       "shortName": "Germany",     "tla": "GER" }, "goals": 1, "assists": 2, "penalties": 0 },
+    { "player": { "id": 1004, "name": "Nestory Irankunda",  "nationality": "Australia",     "position": "Right Winger"      }, "team": { "id": 628,  "name": "Australia",     "shortName": "Australia",   "tla": "AUS" }, "goals": 1, "assists": 1, "penalties": 0 },
+    { "player": { "id": 1005, "name": "Vinicius Junior",    "nationality": "Brazil",        "position": "Left Winger"       }, "team": { "id": 205,  "name": "Brazil",        "shortName": "Brazil",      "tla": "BRA" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1006, "name": "Felix Nmecha",       "nationality": "Germany",       "position": "Central Midfield"  }, "team": { "id": 481,  "name": "Germany",       "shortName": "Germany",     "tla": "GER" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1007, "name": "Nico Schlotterbeck", "nationality": "Germany",       "position": "Centre-Back"       }, "team": { "id": 481,  "name": "Germany",       "shortName": "Germany",     "tla": "GER" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1008, "name": "Denis Undav",        "nationality": "Germany",       "position": "Centre-Forward"    }, "team": { "id": 481,  "name": "Germany",       "shortName": "Germany",     "tla": "GER" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1009, "name": "Giovanni Reyna",     "nationality": "United States", "position": "Attacking Mid"     }, "team": { "id": 660,  "name": "United States", "shortName": "USA",         "tla": "USA" }, "goals": 1, "assists": 1, "penalties": 0 },
+    { "player": { "id": 1010, "name": "Breel Embolo",       "nationality": "Switzerland",   "position": "Centre-Forward"    }, "team": { "id": 475,  "name": "Switzerland",   "shortName": "Switzerland", "tla": "SUI" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1011, "name": "In-Beom Hwang",      "nationality": "South Korea",   "position": "Central Midfield"  }, "team": { "id": 451,  "name": "South Korea",   "shortName": "South Korea", "tla": "KOR" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1012, "name": "John McGinn",        "nationality": "Scotland",      "position": "Central Midfield"  }, "team": { "id": 580,  "name": "Scotland",      "shortName": "Scotland",    "tla": "SCO" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1013, "name": "Ismael Saibari",     "nationality": "Morocco",       "position": "Attacking Mid"     }, "team": { "id": 2869, "name": "Morocco",       "shortName": "Morocco",     "tla": "MAR" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1014, "name": "Connor Metcalfe",    "nationality": "Australia",     "position": "Central Midfield"  }, "team": { "id": 628,  "name": "Australia",     "shortName": "Australia",   "tla": "AUS" }, "goals": 1, "assists": 0, "penalties": 0 },
+    { "player": { "id": 1015, "name": "Cyle Larin",         "nationality": "Canada",        "position": "Centre-Forward"    }, "team": { "id": 206,  "name": "Canada",        "shortName": "Canada",      "tla": "CAN" }, "goals": 1, "assists": 0, "penalties": 0 }
   ]
 }

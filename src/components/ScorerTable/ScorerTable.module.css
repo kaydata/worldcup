@@ -104,6 +104,16 @@
   gap: var(--space-sm);
 }
 
+.flagImg {
+  display: block;
+  width: 28px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
 .tla {
   display: inline-flex;
   align-items: center;

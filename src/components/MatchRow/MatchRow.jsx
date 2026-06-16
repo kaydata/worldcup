@@ -1,11 +1,24 @@
+import { getFlagCode, flagUrl } from '../../utils/teamFlags'
 import styles from './MatchRow.module.css'
 
 const LIVE_STATUSES = new Set(['IN_PLAY', 'PAUSED'])
 
-export default function MatchRow({ match }) {
-  const { homeTeam, awayTeam, score, status, group, utcDate, matchday } = match
+function Flag({ team }) {
+  const code = getFlagCode(team)
+  if (!code) return null
+  return (
+    <img
+      src={flagUrl(code)}
+      srcSet={`${flagUrl(code, 80)} 2x`}
+      alt={team.tla ?? ''}
+      className={styles.flagImg}
+    />
+  )
+}
 
-  const groupLetter = group?.replace('GROUP_', '') ?? ''
+export default function MatchRow({ match }) {
+  const { homeTeam, awayTeam, score, status, utcDate, matchday } = match
+
   const isFinished = status === 'FINISHED'
   const isLive = LIVE_STATUSES.has(status)
   const isHT = status === 'PAUSED'
@@ -32,7 +45,9 @@ export default function MatchRow({ match }) {
 
   return (
     <div className={`${styles.row}${isLive ? ` ${styles.liveRow}` : ''}`}>
-      <span className={styles.group}>Grp {groupLetter}</span>
+      <span className={styles.teamFlag}>
+        <Flag team={homeTeam} />
+      </span>
 
       <span className={styles.home}>
         {homeTeam.shortName ?? homeTeam.name}
@@ -50,6 +65,10 @@ export default function MatchRow({ match }) {
 
       <span className={styles.away}>
         {awayTeam.shortName ?? awayTeam.name}
+      </span>
+
+      <span className={styles.teamFlag}>
+        <Flag team={awayTeam} />
       </span>
 
       <span className={`${styles.statusBadge} ${statusClass}`}>

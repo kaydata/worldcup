@@ -11,7 +11,7 @@ import {
 } from 'recharts'
 import { useFetch } from '../hooks/useFetch'
 import { getStandings, getMatches } from '../services/footballApi'
-import { TEAM_FLAGS, flagUrl } from '../utils/teamFlags'
+import { getFlagCode, flagUrl } from '../utils/teamFlags'
 import fallbackData from '../data/fallback.json'
 import styles from './MyTeam.module.css'
 
@@ -154,10 +154,10 @@ export default function MyTeam() {
               onClick={() => selectTeam(t.team.id)}
               aria-label={`Follow ${t.team.name}`}
             >
-              {TEAM_FLAGS[t.team.id] && (
+              {getFlagCode(t.team) && (
                 <img
                   className={styles.flagImg}
-                  src={flagUrl(TEAM_FLAGS[t.team.id])}
+                  src={flagUrl(getFlagCode(t.team))}
                   alt={`${t.team.name} flag`}
                   loading="lazy"
                 />
@@ -177,7 +177,7 @@ export default function MyTeam() {
   }
 
   /* ── Team dashboard ── */
-  const flagCode = TEAM_FLAGS[myTeam.team.id]
+  const flagCode = getFlagCode(myTeam.team)
 
   const STATS = [
     { label: 'Played', value: myTeam.playedGames },
@@ -307,10 +307,10 @@ export default function MyTeam() {
                   <span className={styles.hDate}>{formatDate(m.utcDate)}</span>
                   <span className={styles.hVenue}>{venue}</span>
                   <span className={styles.hOpponent}>
-                    {TEAM_FLAGS[opp.id] && (
+                    {getFlagCode(opp) && (
                       <img
                         className={styles.hOppFlagImg}
-                        src={flagUrl(TEAM_FLAGS[opp.id])}
+                        src={flagUrl(getFlagCode(opp))}
                         alt=""
                         aria-hidden="true"
                         loading="lazy"

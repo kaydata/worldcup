@@ -1,38 +1,49 @@
 :root {
-  /* Brand */
-  --color-primary: #3b82f6;
-  --color-primary-dim: rgba(59, 130, 246, 0.18);
-  --color-accent: #e2e8f0;
-  --color-accent-dim: rgba(226, 232, 240, 0.1);
+  /* Brand palette from design spec */
+  --palette-blue: #3852F5;
+  --palette-green: #2EF068;
+  --palette-red: #C51E4B;
+  --palette-white: #FFFFFF;
 
-  /* Backgrounds */
-  --color-bg: #0f1f3d;
-  --color-bg-card: #162447;
-  --color-bg-nav: #0f1f3d;
-  --color-bg-button: #1f4068;
+  /* Semantic colour aliases */
+  --color-primary: #3852F5;
+  --color-primary-dim: rgba(56, 82, 245, 0.16);
+  --color-primary-hover: #2a40e0;
+  --color-win: #2EF068;
+  --color-win-dim: rgba(46, 240, 104, 0.12);
+  --color-loss: #C51E4B;
+  --color-loss-dim: rgba(197, 30, 75, 0.12);
+  --color-draw: #f59e0b;
 
-  /* Text */
+  /* Dark theme (default) */
+  --color-bg: #0b0f1a;
+  --color-bg-card: #111827;
+  --color-bg-nav: #0b0f1a;
+  --color-bg-button: #1a2540;
+  --color-bg-badge: #1a2540;
+  --color-accent: #C51E4B;
+  --color-accent-dim: rgba(197, 30, 75, 0.1);
+
   --color-text: #94a3b8;
   --color-text-muted: #64748b;
   --color-heading: #ffffff;
 
-  /* Nav text (on dark navy nav) */
-  --color-nav-text: rgba(255, 255, 255, 0.7);
+  --color-nav-text: rgba(255, 255, 255, 0.65);
   --color-nav-text-hover: #ffffff;
-  --color-nav-hover-bg: rgba(59, 130, 246, 0.14);
+  --color-nav-hover-bg: rgba(56, 82, 245, 0.12);
 
-  /* Medal colours — kept semantic */
   --color-gold: #f0d080;
   --color-silver: #9ca3af;
   --color-bronze: #c97b2e;
 
-  /* Borders & shadows */
-  --color-border: #1f3a6e;
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --color-border: #1e2a45;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.6);
 
   /* Radii */
-  --radius-card: 8px;
+  --radius-card: 10px;
   --radius-sm: 6px;
+  --radius-xs: 4px;
 
   /* Spacing */
   --space-xs: 4px;
@@ -48,4 +59,26 @@
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --color-bg: #f1f5f9;
+  --color-bg-card: #ffffff;
+  --color-bg-nav: #ffffff;
+  --color-bg-button: #e8edff;
+  --color-bg-badge: #eef2ff;
+  --color-accent-dim: rgba(197, 30, 75, 0.08);
+
+  --color-text: #475569;
+  --color-text-muted: #94a3b8;
+  --color-heading: #0f172a;
+
+  --color-nav-text: #475569;
+  --color-nav-text-hover: #0f172a;
+  --color-nav-hover-bg: rgba(56, 82, 245, 0.08);
+
+  --color-border: #e2e8f0;
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 4px 20px rgba(0, 0, 0, 0.12);
 }

@@ -1,0 +1,442 @@
+/* ── Outer container ──────────────────────────────────────────── */
+.outer {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-xl) var(--space-2xl);
+}
+
+/* ── Group filter bar ─────────────────────────────────────────── */
+.filterBar {
+  display: flex;
+  gap: var(--space-xs);
+  overflow-x: auto;
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.filterBar::-webkit-scrollbar {
+  display: none;
+}
+
+.filterChip {
+  appearance: none;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.filterChip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filterChipActive {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.filterChipActive:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #fff;
+}
+
+/* ── Two-panel grid ───────────────────────────────────────────── */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Shared panel styles ──────────────────────────────────────── */
+.panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.panelTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dateChip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg-badge);
+  border: 1px solid var(--color-border);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.list {
+  padding: var(--space-xs) 0;
+}
+
+/* ── Match rows (button reset + layout) ───────────────────────── */
+.row {
+  /* button reset */
+  appearance: none;
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+
+  /* layout */
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.12s ease;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: var(--color-nav-hover-bg);
+}
+
+.row:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.flagImg {
+  display: block;
+  width: 28px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.flagImgLg {
+  width: 34px;
+}
+
+.teamFlag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.teams {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.team {
+  flex: 1;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teamRight {
+  text-align: right;
+}
+
+.teamWin {
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+.teamDraw {
+  color: var(--color-draw);
+  font-weight: 600;
+}
+
+.teamLoss {
+  color: var(--color-text-muted);
+}
+
+/* Score box */
+.scoreWrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--color-bg-badge);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  min-width: 60px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.scoreDigit {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.winNum {
+  color: var(--color-win);
+}
+
+.drawNum {
+  color: var(--color-draw);
+}
+
+.scoreDivider {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Time box */
+.timeWrap {
+  background: var(--color-primary-dim);
+  border-color: rgba(56, 82, 245, 0.25);
+}
+
+.timeText {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* End badges */
+.ftTag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.koTag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-win);
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Empty state */
+.emptyState {
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Golden Boot card ─────────────────────────────────────────── */
+.goldenBoot {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.bootIcon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.scorerList {
+  padding: var(--space-xs) 0;
+}
+
+.scorerRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 12px var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.scorerRow:last-child {
+  border-bottom: none;
+}
+
+/* Rank bubble */
+.rank {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-bg-badge);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.rankGold {
+  background: rgba(240, 208, 128, 0.14);
+  border-color: rgba(240, 208, 128, 0.4);
+  color: var(--color-gold);
+}
+
+.rankSilver {
+  background: rgba(156, 163, 175, 0.1);
+  border-color: rgba(156, 163, 175, 0.3);
+  color: var(--color-silver);
+}
+
+.rankBronze {
+  background: rgba(201, 123, 46, 0.1);
+  border-color: rgba(201, 123, 46, 0.3);
+  color: var(--color-bronze);
+}
+
+.scorerFlag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+}
+
+/* Player info */
+.scorerInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.scorerName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scorerCountry {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Goals / assists */
+.scorerStats {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.goals {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.goalLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.statDivider {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: var(--color-border);
+  margin: 0 6px;
+  align-self: center;
+}
+
+.assists {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.assistLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .outer {
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .team {
+    font-size: 0.78rem;
+  }
+
+  .scoreWrap {
+    min-width: 52px;
+    padding: 4px 8px;
+  }
+
+  .scorerRow {
+    gap: var(--space-sm);
+  }
+
+  .goals {
+    font-size: 1.5rem;
+  }
+}

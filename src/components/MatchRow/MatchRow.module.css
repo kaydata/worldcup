@@ -1,8 +1,8 @@
 .row {
   display: grid;
-  grid-template-columns: 52px 1fr 96px 1fr 48px;
+  grid-template-columns: 32px 1fr 96px 1fr 32px 48px;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   padding: 13px var(--space-lg);
   border-bottom: 1px solid var(--color-border);
   transition: background-color 0.15s ease;
@@ -20,12 +20,21 @@
   background: rgba(59, 130, 246, 0.06);
 }
 
-.group {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-text-muted);
-  white-space: nowrap;
+.teamFlag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.flagImg {
+  display: block;
+  width: 26px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .home {
@@ -97,9 +106,13 @@
 
 @media (max-width: 560px) {
   .row {
-    grid-template-columns: 40px 1fr 80px 1fr 40px;
-    gap: var(--space-sm);
+    grid-template-columns: 24px 1fr 72px 1fr 24px 36px;
+    gap: var(--space-xs);
     padding: 10px var(--space-md);
+  }
+
+  .flagImg {
+    width: 20px;
   }
 
   .score {

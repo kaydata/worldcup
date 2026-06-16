@@ -1,3 +1,4 @@
+import { getFlagCode, flagUrl } from '../../utils/teamFlags'
 import styles from './ScorerTable.module.css'
 
 export default function ScorerTable({ scorers, sortBy }) {
@@ -48,7 +49,16 @@ export default function ScorerTable({ scorers, sortBy }) {
                 </td>
 
                 <td className={styles.teamCell}>
-                  <span className={styles.tla}>{s.team.tla}</span>
+                  {getFlagCode(s.team) ? (
+                    <img
+                      src={flagUrl(getFlagCode(s.team))}
+                      srcSet={`${flagUrl(getFlagCode(s.team), 80)} 2x`}
+                      alt={s.team.tla}
+                      className={styles.flagImg}
+                    />
+                  ) : (
+                    <span className={styles.tla}>{s.team.tla}</span>
+                  )}
                   <span className={styles.teamName}>
                     {s.team.shortName ?? s.team.name}
                   </span>
