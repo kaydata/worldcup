@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
@@ -6,6 +7,7 @@ const NAV_LINKS = [
   { to: '/my-team', label: 'My Team' },
   { to: '/players', label: 'Players' },
   { to: '/matches', label: 'Matches' },
+  { to: '/h2h', label: 'H2H' },
 ]
 
 const SunIcon = () => (
@@ -28,15 +30,35 @@ const MoonIcon = () => (
   </svg>
 )
 
+const HamburgerIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+)
+
+const CloseIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+    <line x1="18" y1="6" x2="6" y2="18"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+)
+
 export default function Navbar({ isDark, onToggleTheme }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  function close() { setMenuOpen(false) }
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav} aria-label="Main navigation">
-        <NavLink to="/" className={styles.brand}>
-          <span className={styles.brandBall} aria-hidden="true">⚽</span>
-          <span>WC 2026</span>
+        <NavLink to="/" className={styles.brand} onClick={close}>
+          <img src="/kaymetrics-fav.png" alt="KayMetrics" className={styles.brandLogo} />
         </NavLink>
+
         <div className={styles.navRight}>
+          {/* Desktop links */}
           <ul className={styles.links}>
             {NAV_LINKS.map(({ to, label }) => (
               <li key={to}>
@@ -51,6 +73,7 @@ export default function Navbar({ isDark, onToggleTheme }) {
               </li>
             ))}
           </ul>
+
           <button
             className={styles.themeToggle}
             onClick={onToggleTheme}
@@ -58,8 +81,36 @@ export default function Navbar({ isDark, onToggleTheme }) {
           >
             {isDark ? <SunIcon /> : <MoonIcon />}
           </button>
+
+          {/* Hamburger — mobile only */}
+          <button
+            className={styles.hamburger}
+            onClick={() => setMenuOpen(m => !m)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <CloseIcon /> : <HamburgerIcon />}
+          </button>
         </div>
       </nav>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <div className={styles.mobileMenu} role="navigation" aria-label="Mobile navigation">
+          {NAV_LINKS.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              onClick={close}
+              className={({ isActive }) =>
+                `${styles.mobileLink}${isActive ? ` ${styles.mobileLinkActive}` : ''}`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+        </div>
+      )}
     </header>
   )
 }

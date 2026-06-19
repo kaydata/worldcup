@@ -394,4 +394,24 @@
   .search {
     max-width: 100%;
   }
+
+  .heroFlagImg {
+    width: 56px;
+    height: 42px;
+  }
+
+  .heroName {
+    font-size: 1.25rem;
+  }
+
+  /* History rows: hide date on very small screens, tighten columns */
+  .historyRow {
+    grid-template-columns: 28px 1fr 60px 28px;
+    gap: var(--space-xs);
+    padding: 10px var(--space-md);
+  }
+
+  .hDate {
+    display: none;
+  }
 }

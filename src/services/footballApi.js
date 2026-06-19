@@ -1,18 +1,19 @@
-import { getCached, setCached, clearCached } from './cache.js'
+import { getCached, setCached, clearCached, clearAllCached } from './cache.js'
 import fallback from '../data/fallback.json'
 
-// No API key needed — ESPN endpoints are public
 const ESPN_V2   = 'https://site.api.espn.com/apis/v2/sports/soccer/fifa.world'
 const ESPN_SITE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world'
 
-async function get(url, cacheKey) {
+const SCOREBOARD_TTL = 60 * 1000 // 60 seconds for live match data
+
+async function get(url, cacheKey, ttl) {
   const key = cacheKey ?? url
   const hit = getCached(key)
   if (hit) return hit
   const res = await fetch(url)
   if (!res.ok) throw new Error(`ESPN ${res.status} ${res.statusText} — ${url}`)
   const data = await res.json()
-  setCached(key, data)
+  setCached(key, data, ttl)
   return data
 }
 
@@ -30,7 +31,6 @@ function normalizeTeam(t = {}) {
   }
 }
 
-// ESPN status.type.name → football-data.org status string used by components
 const ESPN_STATUS = {
   STATUS_FULL_TIME:    'FINISHED',
   STATUS_FINAL:        'FINISHED',
@@ -72,11 +72,11 @@ export async function getStandings() {
 }
 
 function normalizeEvent(event, teamGroup) {
-  const comp     = event.competitions?.[0] ?? {}
-  const status   = comp.status?.type ?? {}
-  const home     = comp.competitors?.find(c => c.homeAway === 'home')
-  const away     = comp.competitors?.find(c => c.homeAway === 'away')
-  const homeId   = Number(home?.team?.id) || 0
+  const comp      = event.competitions?.[0] ?? {}
+  const status    = comp.status?.type ?? {}
+  const home      = comp.competitors?.find(c => c.homeAway === 'home')
+  const away      = comp.competitors?.find(c => c.homeAway === 'away')
+  const homeId    = Number(home?.team?.id) || 0
   const statusStr = ESPN_STATUS[status.name] ?? (status.completed ? 'FINISHED' : 'SCHEDULED')
   return {
     id:       String(event.id),
@@ -96,6 +96,17 @@ function normalizeEvent(event, teamGroup) {
   }
 }
 
+// Returns "YYYYMMDD" in UTC for ESPN date queries
+function utcDateStr(offsetDays = 0) {
+  const d = new Date()
+  d.setUTCDate(d.getUTCDate() + offsetDays)
+  return [
+    d.getUTCFullYear(),
+    String(d.getUTCMonth() + 1).padStart(2, '0'),
+    String(d.getUTCDate()).padStart(2, '0'),
+  ].join('')
+}
+
 export async function getMatches() {
   // Build team-id → group map; try live ESPN standings, fall back to static
   const teamGroup = {}
@@ -110,17 +121,38 @@ export async function getMatches() {
         teamGroup[row.team.id] = group.group
   }
 
-  // Fetch today's live scoreboard from ESPN (best-effort)
+  // Fetch ESPN scoreboards for yesterday, today and tomorrow so the MatchDay
+  // panel always has both yesterday's results and upcoming fixtures.
+  // Yesterday and tomorrow are cached for 5 min; today uses 60 s TTL.
+  const days = [-1, 0, 1]
+  const dateStrs = days.map(utcDateStr)
+
   let espnMatches = []
+  let espnFailed = false
   try {
-    const raw = await get(`${ESPN_SITE}/scoreboard`, 'espn:scoreboard')
-    espnMatches = (raw.events ?? []).map(e => normalizeEvent(e, teamGroup))
+    const responses = await Promise.all(
+      dateStrs.map((ds, i) =>
+        get(
+          `${ESPN_SITE}/scoreboard?dates=${ds}`,
+          `espn:scoreboard:${ds}`,
+          i === 1 ? SCOREBOARD_TTL : 5 * 60 * 1000
+        )
+      )
+    )
+    const seen = new Set()
+    for (const raw of responses) {
+      for (const e of (raw.events ?? [])) {
+        if (!seen.has(e.id)) {
+          seen.add(e.id)
+          espnMatches.push(normalizeEvent(e, teamGroup))
+        }
+      }
+    }
   } catch {
-    // ESPN unavailable — historical fallback data covers everything played so far
+    espnFailed = true
   }
 
-  // ESPN scoreboard only returns today's events; fallback.json holds historical results.
-  // Merge: fallback provides the base, ESPN overrides/adds its events by ID.
+  // Merge: fallback provides base for future fixtures; ESPN overrides by ID
   const espnIds = new Set(espnMatches.map(m => String(m.id)))
   const historical = (fallback.matches ?? []).filter(m => !espnIds.has(String(m.id)))
 
@@ -128,7 +160,7 @@ export async function getMatches() {
     (a, b) => new Date(a.utcDate) - new Date(b.utcDate)
   )
 
-  return { matches }
+  return { matches, espnFailed }
 }
 
 // ESPN has no public WC top-scorers endpoint — serve static data from fallback.json
@@ -142,6 +174,5 @@ export async function getTeam(id) {
 }
 
 export function invalidateMatches() {
-  clearCached('espn:scoreboard')
-  clearCached('espn:standings')
+  clearAllCached()
 }

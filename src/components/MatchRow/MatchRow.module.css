@@ -1,6 +1,6 @@
 .row {
   display: grid;
-  grid-template-columns: 32px 1fr 96px 1fr 32px 48px;
+  grid-template-columns: 32px 1fr 96px 1fr 32px auto;
   align-items: center;
   gap: var(--space-sm);
   padding: 13px var(--space-lg);
@@ -14,6 +14,19 @@
 
 .row:hover {
   background: rgba(255, 255, 255, 0.02);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.clickable:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
 }
 
 .liveRow {
@@ -79,6 +92,15 @@
   text-overflow: ellipsis;
 }
 
+/* Status cell — flex column to stack badge + prediction indicator */
+.statusCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 48px;
+}
+
 .statusBadge {
   font-size: 0.65rem;
   font-weight: 700;
@@ -104,9 +126,115 @@
   50% { opacity: 0.4; }
 }
 
+/* Prediction result (finished matches) */
+.predResult {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.predCorrect {
+  color: #22c55e;
+}
+
+.predWrong {
+  color: #ef4444;
+}
+
+/* Predict button (upcoming, no pick yet) */
+.predictBtn {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  cursor: pointer;
+  line-height: 1.4;
+  transition: border-color 0.12s, color 0.12s;
+}
+
+.predictBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Pick badge (upcoming, already picked) */
+.predPick {
+  appearance: none;
+  background: var(--color-primary-dim);
+  border: none;
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 5px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+/* Pick strip (inline team chooser) */
+.pickStrip {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-bg-badge);
+  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+}
+
+.pickBtn {
+  flex: 1;
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px var(--space-sm);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pickBtn:hover {
+  background: var(--color-primary-dim);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.pickBtnActive {
+  background: var(--color-primary-dim);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.pickCancel {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  flex-shrink: 0;
+}
+
+.pickCancel:hover {
+  color: var(--color-heading);
+}
+
 @media (max-width: 560px) {
   .row {
-    grid-template-columns: 24px 1fr 72px 1fr 24px 36px;
+    grid-template-columns: 24px 1fr 72px 1fr 24px auto;
     gap: var(--space-xs);
     padding: 10px var(--space-md);
   }
@@ -122,5 +250,13 @@
   .home,
   .away {
     font-size: 0.8rem;
+  }
+
+  .pickStrip {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .statusCell {
+    min-width: 36px;
   }
 }

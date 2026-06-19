@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
-import { getMatches, invalidateMatches } from '../services/footballApi'
+import { getMatches, getScorers, invalidateMatches } from '../services/footballApi'
+import { getPredictions, savePrediction, getTotalScore } from '../utils/predictions'
 import GroupFilter from '../components/GroupFilter/GroupFilter'
 import MatchRow from '../components/MatchRow/MatchRow'
+import MatchDetail from '../components/MatchDetail/MatchDetail'
 import fallbackData from '../data/fallback.json'
 import styles from './Matches.module.css'
 
@@ -21,10 +23,22 @@ export default function Matches() {
     getMatches,
     { matches: fallbackData.matches }
   )
+  const { data: scorersData } = useFetch(
+    getScorers,
+    { scorers: fallbackData.scorers }
+  )
+
   const [activeGroup, setActiveGroup] = useState('ALL')
   const [statusFilter, setStatusFilter] = useState('ALL')
+  const [selectedMatch, setSelectedMatch] = useState(null)
+  const [predictions, setPredictions] = useState(() => getPredictions())
+
+  const todayStr = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' })
+  const tomorrowDate = new Date(); tomorrowDate.setDate(tomorrowDate.getDate() + 1)
+  const tomorrowStr = tomorrowDate.toLocaleDateString('en-CA', { timeZone: 'Europe/London' })
 
   const allMatches = (data?.matches ?? []).filter(m => m.stage === 'GROUP_STAGE')
+  const scorers = scorersData?.scorers ?? []
 
   const groupLetters = [...new Set(
     allMatches.map(m => m.group?.replace('GROUP_', '')).filter(Boolean)
@@ -49,9 +63,16 @@ export default function Matches() {
   })
   const dates = Object.keys(byDate).sort()
 
+  const predScore = getTotalScore(predictions, allMatches)
+
   function handleRefresh() {
     invalidateMatches()
     refresh()
+  }
+
+  function handlePredict(matchId, pick) {
+    savePrediction(matchId, pick)
+    setPredictions(getPredictions())
   }
 
   if (loading) {
@@ -76,6 +97,17 @@ export default function Matches() {
           ↻ Refresh
         </button>
       </div>
+
+      {predScore.total > 0 && (
+        <div className={styles.predScore}>
+          <span className={styles.predScoreText}>
+            Your predictions: <strong>{predScore.correct}/{predScore.total}</strong> correct
+          </span>
+          <span className={styles.predScorePoints}>
+            {predScore.points} pt{predScore.points !== 1 ? 's' : ''}
+          </span>
+        </div>
+      )}
 
       <div className={styles.filters}>
         <div className={styles.statusTabs} role="tablist" aria-label="Filter by status">
@@ -103,21 +135,37 @@ export default function Matches() {
           {dates.map(date => (
             <div key={date} className={styles.dateGroup}>
               <h3 className={styles.dateHeader}>
-                {new Date(`${date}T12:00:00Z`).toLocaleDateString('en-GB', {
-                  weekday: 'long',
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                })}
+                {date === todayStr
+                  ? 'Today'
+                  : date === tomorrowStr
+                  ? 'Tomorrow'
+                  : new Date(`${date}T12:00:00Z`).toLocaleDateString('en-GB', {
+                      weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
+                      timeZone: 'Europe/London',
+                    })}
               </h3>
               <div className={styles.matchCard}>
                 {byDate[date].map(match => (
-                  <MatchRow key={match.id} match={match} />
+                  <MatchRow
+                    key={match.id}
+                    match={match}
+                    onClick={match.status === 'FINISHED' ? setSelectedMatch : undefined}
+                    prediction={predictions[match.id] ?? null}
+                    onPredict={(pick) => handlePredict(match.id, pick)}
+                  />
                 ))}
               </div>
             </div>
           ))}
         </div>
+      )}
+
+      {selectedMatch && (
+        <MatchDetail
+          match={selectedMatch}
+          scorers={scorers}
+          onClose={() => setSelectedMatch(null)}
+        />
       )}
     </div>
   )

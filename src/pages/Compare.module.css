@@ -1,0 +1,353 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-xl) var(--space-2xl);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Selectors ── */
+.selectors {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.selectorWrap {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  appearance: none;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  color: var(--color-heading);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  box-shadow: var(--shadow-card);
+}
+
+.select:focus {
+  border-color: var(--color-primary);
+}
+
+.vsBadge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ── Panel ── */
+.panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* ── Team header — flag + name, no group chips ── */
+.teamHeader {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xl) var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.teamInfoRight {
+  align-items: flex-end;
+}
+
+/* Flag image — valid sizes only (w80 src, w160 2×) */
+.flagImg {
+  width: 72px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Fallback badge when getFlagCode returns null */
+.tlaFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 52px;
+  background: var(--color-bg-badge);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.teamName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  line-height: 1.2;
+  /* allow wrapping instead of truncating */
+  word-break: break-word;
+}
+
+.vsCenter {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ── Stat bars ── */
+.statsGrid {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg) var(--space-xl);
+  gap: 2px;
+}
+
+.statRow {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 6px 0;
+}
+
+.statVal {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-align: left;
+  transition: color 0.3s;
+}
+
+.statValRight {
+  text-align: right;
+}
+
+.statWinner {
+  color: var(--color-heading);
+  font-weight: 800;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.barA,
+.barB {
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 99px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.barA {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.barB {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.barFillA {
+  background: var(--color-primary);
+  opacity: 0.5;
+}
+
+.barFillB {
+  background: var(--color-accent);
+  opacity: 0.5;
+}
+
+.barFillA.barWinner {
+  opacity: 1;
+}
+
+.barFillB.barWinner {
+  opacity: 1;
+}
+
+/* ── Head-to-Head result ── */
+.h2hSection {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.h2hLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.h2hResult {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.h2hTeam {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.h2hScore {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  letter-spacing: -0.02em;
+}
+
+.h2hMeta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  width: 100%;
+  text-align: center;
+}
+
+.h2hPending {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ── Empty state ── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  min-height: 240px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.emptyIcon {
+  font-size: 2rem;
+  opacity: 0.4;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .page {
+    padding: var(--space-lg) var(--space-md) var(--space-2xl);
+  }
+
+  .selectors {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .vsBadge {
+    display: none;
+  }
+
+  .teamHeader {
+    padding: var(--space-lg) var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .flagImg,
+  .tlaFallback {
+    width: 52px;
+  }
+
+  .tlaFallback {
+    height: 38px;
+    font-size: 0.75rem;
+  }
+
+  .teamName {
+    font-size: 0.9rem;
+  }
+
+  .statsGrid {
+    padding: var(--space-md);
+  }
+
+  .h2hSection {
+    padding: var(--space-md);
+  }
+
+  .statRow {
+    grid-template-columns: 28px 1fr 28px;
+  }
+}

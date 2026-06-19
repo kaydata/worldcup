@@ -1,4 +1,4 @@
-import { TEAM_FLAGS, FLAG_COLORS, flagUrl } from '../../utils/teamFlags'
+import { getFlagCode, FLAG_COLORS, flagUrl } from '../../utils/teamFlags'
 import styles from './GroupStandings.module.css'
 
 const QUALIFYING_SPOTS = 2
@@ -27,7 +27,7 @@ export default function GroupStandings({ group }) {
           </thead>
           <tbody>
             {group.table.map(row => {
-              const flagCode = TEAM_FLAGS[row.team.id]
+              const flagCode = getFlagCode(row.team)
               const flagColor = FLAG_COLORS[row.team.id]
 
               return (
@@ -47,7 +47,7 @@ export default function GroupStandings({ group }) {
                       />
                     ) : flagCode ? (
                       <img
-                        src={flagUrl(flagCode, 32, 24)}
+                        src={flagUrl(flagCode, 40)}
                         alt=""
                         aria-hidden="true"
                         className={styles.flagImg}
