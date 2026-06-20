@@ -95,28 +95,20 @@ function SubTabs({ tabs, active, onChange }) {
 
 const TEAM_TABS = [
   { id: 'attack',     label: 'Attack',     defaultMetric: 'goals',       metrics: [
-    { key: 'goals',         label: 'Goals',         unit: '' },
-    { key: 'shots',         label: 'Shots',         unit: '' },
-    { key: 'shotsOnTarget', label: 'On Target',     unit: '' },
-    { key: 'xg',            label: 'xG',            unit: '' },
-    { key: 'bigChances',    label: 'Big Chances',   unit: '' },
-    { key: 'corners',       label: 'Corners',       unit: '' },
+    { key: 'goals',         label: 'Goals',      unit: '' },
+    { key: 'shots',         label: 'Shots',      unit: '' },
+    { key: 'shotsOnTarget', label: 'On Target',  unit: '' },
+    { key: 'corners',       label: 'Corners',    unit: '' },
+    { key: 'possession',    label: 'Possession', unit: '%' },
   ]},
   { id: 'defence',    label: 'Defence',    defaultMetric: 'cleanSheets', metrics: [
-    { key: 'cleanSheets',   label: 'Clean Sheets',  unit: '' },
-    { key: 'tackles',       label: 'Tackles',       unit: '' },
-    { key: 'interceptions', label: 'Interceptions', unit: '' },
-    { key: 'saves',         label: 'Saves',         unit: '' },
+    { key: 'cleanSheets', label: 'Clean Sheets', unit: '' },
+    { key: 'saves',       label: 'Saves',        unit: '' },
   ]},
   { id: 'discipline', label: 'Discipline', defaultMetric: 'fouls',       metrics: [
     { key: 'fouls',       label: 'Fouls',        unit: '' },
     { key: 'yellowCards', label: 'Yellow Cards', unit: '' },
     { key: 'redCards',    label: 'Red Cards',    unit: '' },
-  ]},
-  { id: 'possession', label: 'Possession', defaultMetric: 'possession',  metrics: [
-    { key: 'possession',      label: 'Possession',       unit: '%' },
-    { key: 'passAccuracy',    label: 'Pass Accuracy',    unit: '%' },
-    { key: 'completedPasses', label: 'Completed Passes', unit: '' },
   ]},
 ]
 
@@ -151,29 +143,15 @@ function TeamSection({ teams }) {
 // ─── PLAYER STATS ──────────────────────────────────────────────────────
 
 const PLAYER_TABS = [
-  { id: 'goals',       label: 'Goals',       defaultMetric: 'goals',        metrics: [
-    { key: 'goals',          label: 'Goals',           unit: '' },
-    { key: 'goalsPerNinety', label: 'Goals / 90',      unit: '' },
-    { key: 'shotsOnTarget',  label: 'Shots on Target', unit: '' },
+  { id: 'goals',       label: 'Goals',       defaultMetric: 'goals', metrics: [
+    { key: 'goals',          label: 'Goals',      unit: '' },
+    { key: 'goalsPerNinety', label: 'Goals / 90', unit: '' },
+    { key: 'assists',        label: 'Assists',    unit: '' },
   ]},
-  { id: 'creativity',  label: 'Creativity',  defaultMetric: 'assists',      metrics: [
-    { key: 'assists',        label: 'Assists',          unit: '' },
-    { key: 'chancesCreated', label: 'Chances Created',  unit: '' },
-    { key: 'keyPasses',      label: 'Key Passes',       unit: '' },
-  ]},
-  { id: 'goalkeeping', label: 'Goalkeeping', defaultMetric: 'saves',        metrics: [
+  { id: 'goalkeeping', label: 'Goalkeeping', defaultMetric: 'saves', metrics: [
     { key: 'saves',             label: 'Saves',        unit: '' },
     { key: 'savePercent',       label: 'Save %',       unit: '%' },
     { key: 'keeperCleanSheets', label: 'Clean Sheets', unit: '' },
-  ]},
-  { id: 'defence',     label: 'Defence',     defaultMetric: 'tackles',      metrics: [
-    { key: 'tackles',       label: 'Tackles',       unit: '' },
-    { key: 'interceptions', label: 'Interceptions', unit: '' },
-    { key: 'recoveries',    label: 'Recoveries',    unit: '' },
-  ]},
-  { id: 'discipline',  label: 'Discipline',  defaultMetric: 'yellowCards',  metrics: [
-    { key: 'yellowCards',    label: 'Yellow Cards',    unit: '' },
-    { key: 'foulsCommitted', label: 'Fouls Committed', unit: '' },
   ]},
 ]
 
@@ -189,8 +167,7 @@ function PlayerSection({ players }) {
 
   const filtered = players.filter(p => {
     if (tabId === 'goalkeeping') return p.saves != null
-    if (tabId === 'defence')     return p.saves == null
-    return true
+    return p.saves == null
   })
   const rows   = [...filtered].filter(p => p[metric] != null && p[metric] > 0).sort((a, b) => b[metric] - a[metric]).slice(0, 8)
   const maxVal = rows[0]?.[metric] ?? 1
@@ -447,7 +424,14 @@ export default function Stats() {
     <div className={styles.page}>
       <div className={styles.pageHeader}>
         <h1 className={styles.pageTitle}>Statistics</h1>
-        <p className={styles.pageSubtitle}>FIFA World Cup 2026: Group Stage</p>
+        <p className={styles.pageSubtitle}>
+          FIFA World Cup 2026: Group Stage
+          {statsData._updated && (
+            <span className={styles.updatedAt}>
+              {' · Updated '}{new Date(statsData._updated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'UTC' })}
+            </span>
+          )}
+        </p>
       </div>
 
       <div className={styles.splitLayout}>
