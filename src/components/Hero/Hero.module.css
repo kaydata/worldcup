@@ -86,6 +86,20 @@
   margin-bottom: var(--space-xl);
 }
 
+.host {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hostFlag {
+  width: 20px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
 .hostSep {
   color: var(--color-text-muted);
 }
@@ -139,5 +153,42 @@
 
   .statValue {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--space-lg) var(--space-sm) var(--space-md);
+  }
+
+  .stageBadge {
+    font-size: 0.65rem;
+    padding: 5px 12px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .hosts {
+    font-size: 0.8rem;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
+  }
+
+  .stats {
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .statValue {
+    font-size: 1.25rem;
+  }
+
+  .statLabel {
+    font-size: 0.6rem;
   }
 }

@@ -9,13 +9,13 @@ function getInitials(name) {
 
 function PlayerAvatar({ scorer }) {
   const [failed, setFailed] = useState(false)
-  const espnId = scorer.player.espnId
-  if (!espnId || failed) {
+  const photoUrl = scorer.player.photoUrl
+  if (!photoUrl || failed) {
     return <span className={styles.initials}>{getInitials(scorer.player.name)}</span>
   }
   return (
     <img
-      src={`https://a.espncdn.com/i/headshots/soccer/players/full/${espnId}.png`}
+      src={photoUrl}
       alt={scorer.player.name}
       className={styles.headshot}
       onError={() => setFailed(true)}

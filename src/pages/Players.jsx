@@ -85,7 +85,7 @@ export default function Players() {
           <p>
             {search
               ? 'No players match your search.'
-              : 'No scorer data available yet — matches may not have started.'}
+              : 'No scorer data available yet. Matches may not have started.'}
           </p>
         </div>
       ) : (

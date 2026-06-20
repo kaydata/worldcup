@@ -5,7 +5,7 @@ import styles from './Navbar.module.css'
 const NAV_LINKS = [
   { to: '/overview', label: 'Overview' },
   { to: '/my-team', label: 'My Team' },
-  { to: '/players', label: 'Players' },
+  { to: '/stats', label: 'Stats' },
   { to: '/matches', label: 'Matches' },
   { to: '/h2h', label: 'H2H' },
 ]

@@ -35,7 +35,7 @@ export default function Overview() {
         <h2 className={styles.title}>Group Standings</h2>
         {error && (
           <p className={styles.fallbackNote}>
-            Live data unavailable — showing cached standings
+            Live data unavailable. Showing cached standings.
           </p>
         )}
       </div>

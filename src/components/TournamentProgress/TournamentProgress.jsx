@@ -33,26 +33,28 @@ export default function TournamentProgress() {
 
   return (
     <div className={styles.bar} role="status" aria-label={`Group stage: ${played} of ${GROUP_STAGE_TOTAL} matches played`}>
-      <span className={styles.stage}>Group Stage</span>
+      <div className={styles.inner}>
+        <span className={styles.stage}>Group Stage</span>
 
-      <div className={styles.trackWrap}>
-        <div className={styles.track}>
-          <div className={styles.fill} style={{ width: `${pct}%` }} />
+        <div className={styles.trackWrap}>
+          <div className={styles.track}>
+            <div className={styles.fill} style={{ width: `${pct}%` }} />
+          </div>
         </div>
-      </div>
 
-      <span className={styles.count}>
-        <strong>{played}</strong> / {GROUP_STAGE_TOTAL} matches
-      </span>
-
-      {groupsDone.length > 0 && (
-        <span className={styles.done} aria-label={`Groups completed: ${groupsDone.join(', ')}`}>
-          {groupsDone.map(g => (
-            <span key={g} className={styles.chip}>{g}</span>
-          ))}
-          <span className={styles.doneLabel}>complete</span>
+        <span className={styles.count}>
+          <strong>{played}</strong> / {GROUP_STAGE_TOTAL} matches
         </span>
-      )}
+
+        {groupsDone.length > 0 && (
+          <span className={styles.done} aria-label={`Groups completed: ${groupsDone.join(', ')}`}>
+            {groupsDone.map(g => (
+              <span key={g} className={styles.chip}>{g}</span>
+            ))}
+            <span className={styles.doneLabel}>complete</span>
+          </span>
+        )}
+      </div>
     </div>
   )
 }

@@ -17,6 +17,11 @@
 .copy {
   font-size: 0.8rem;
   color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.copy:hover {
+  color: var(--color-heading);
 }
 
 .socials {

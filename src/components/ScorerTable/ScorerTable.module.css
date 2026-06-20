@@ -9,7 +9,6 @@
 
 .table {
   width: 100%;
-  min-width: 480px;
   border-collapse: collapse;
   font-size: 0.875rem;
 }
@@ -29,11 +28,12 @@
   user-select: none;
 }
 
-.thRank   { width: 48px; text-align: center; }
-.thAvatar { width: 52px; }
-.thPlayer { min-width: 160px; }
-.thTeam   { min-width: 140px; }
-.thStat   { width: 48px; text-align: center; }
+/* Desktop column widths — balanced, no wasted space */
+.thRank   { width: 40px; text-align: center; }
+.thAvatar { width: 48px; padding-right: 0; }
+.thPlayer { width: 36%; }
+.thTeam   { width: 22%; }
+.thStat   { width: 40px; text-align: center; }
 
 .thActive {
   color: var(--color-accent);
@@ -61,7 +61,7 @@
 /* ── Rank cell ── */
 .rankCell {
   text-align: center;
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-sm);
 }
 
 .rank {
@@ -113,7 +113,7 @@
 
 /* ── Player cell ── */
 .playerCell {
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-sm) var(--space-md) var(--space-sm);
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -132,7 +132,7 @@
 
 /* ── Team cell ── */
 .teamCell {
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-sm);
   display: flex;
   align-items: center;
   gap: var(--space-sm);
@@ -140,7 +140,7 @@
 
 .flagImg {
   display: block;
-  width: 28px;
+  width: 24px;
   height: auto;
   border-radius: 2px;
   object-fit: cover;
@@ -152,8 +152,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 32px;
-  height: 20px;
+  min-width: 28px;
+  height: 18px;
   padding: 0 var(--space-xs);
   background: var(--color-primary);
   border-radius: 3px;
@@ -168,12 +168,15 @@
   font-size: 0.8rem;
   color: var(--color-text);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
 }
 
 /* ── Stat cells ── */
 .stat {
   text-align: center;
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-sm);
   font-weight: 600;
   color: var(--color-text);
   font-size: 0.9rem;
@@ -184,20 +187,40 @@
   font-size: 1rem;
 }
 
+/* ── Mobile — no horizontal scroll, everything fits ── */
 @media (max-width: 560px) {
-  .teamName {
-    display: none;
+  .table {
+    font-size: 0.8rem;
   }
 
   .table th,
   .table td {
-    padding: var(--space-sm);
+    padding: 6px 4px;
   }
 
+  .thRank   { width: 28px; }
+  .thAvatar { width: 36px; }
+  .thStat   { width: 32px; }
+
+  /* Hide position sub-line and team name on mobile */
+  .position  { display: none; }
+  .teamName  { display: none; }
+
+  /* Smaller avatar */
   .headshot,
   .initials {
     width: 32px;
     height: 32px;
     font-size: 0.6rem;
   }
+
+  /* Tighter rank circle */
+  .rank {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+  }
+
+  /* Smaller flag */
+  .flagImg { width: 20px; }
 }

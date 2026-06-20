@@ -194,7 +194,7 @@ export default function Compare() {
               ) : (
                 <div className={styles.h2hPending}>
                   These teams meet in Group {h2h.group?.replace('GROUP_', '')} · MD{h2h.matchday}
-                  {' — '}
+                  {' on '}
                   {new Date(h2h.utcDate).toLocaleDateString('en-GB', {
                     day: 'numeric', month: 'short', timeZone: 'Europe/London',
                   })}

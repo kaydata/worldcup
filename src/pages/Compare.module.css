@@ -311,6 +311,10 @@
     padding: var(--space-lg) var(--space-md) var(--space-2xl);
   }
 
+  .title {
+    font-size: 1.375rem;
+  }
+
   .selectors {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
@@ -349,5 +353,37 @@
 
   .statRow {
     grid-template-columns: 28px 1fr 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: var(--space-md) var(--space-sm) var(--space-xl);
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .flagImg,
+  .tlaFallback {
+    width: 40px;
+  }
+
+  .tlaFallback {
+    height: 30px;
+    font-size: 0.65rem;
+  }
+
+  .teamName {
+    font-size: 0.8rem;
+  }
+
+  .teamHeader {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .statsGrid {
+    padding: var(--space-sm) var(--space-md);
   }
 }

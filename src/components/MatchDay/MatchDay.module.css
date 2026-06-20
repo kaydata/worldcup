@@ -9,6 +9,7 @@
 .filterBar {
   display: flex;
   gap: var(--space-xs);
+  justify-content: space-evenly;
   overflow-x: auto;
   padding-bottom: var(--space-md);
   margin-bottom: var(--space-lg);
@@ -482,6 +483,172 @@
   }
 }
 
+@media (max-width: 480px) {
+  .outer {
+    padding: var(--space-md) var(--space-sm) var(--space-lg);
+  }
+
+  .filterBar {
+    justify-content: flex-start;
+  }
+
+  .winnerPoll {
+    padding: var(--space-md);
+  }
+
+  .pollChoices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── WC Winner Poll ────────────────────────────────────────────── */
+.pollHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pollTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pollVoteCount {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.winnerPoll {
+  max-width: var(--content-width);
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.pollChoices {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-sm);
+}
+
+.pollChoice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  font-family: inherit;
+}
+.pollChoice:hover {
+  border-color: var(--color-primary);
+  background: rgba(20,70,160,0.1);
+}
+
+.pollFlag {
+  width: 28px;
+  height: auto;
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+.pollName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pollResults {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pollRow {
+  display: grid;
+  grid-template-columns: 28px 1fr 160px 44px;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+}
+
+.pollRowVoted .pollName { color: var(--color-accent); }
+
+.pollBarWrap {
+  height: 8px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.pollBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #2a7aff);
+  border-radius: 4px;
+  transition: width 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+.pollRowVoted .pollBar {
+  background: linear-gradient(90deg, var(--color-accent), #ffe566);
+}
+
+.pollPct {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+.pollRowVoted .pollPct { color: var(--color-accent); }
+
+.pollCheck {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.pollChange {
+  align-self: flex-start;
+  margin-top: var(--space-sm);
+  padding: 4px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s;
+}
+.pollChange:hover { border-color: var(--color-primary); color: var(--color-text); }
+
+@media (max-width: 600px) {
+  .winnerPoll { padding: var(--space-md); }
+  .pollRow { grid-template-columns: 24px 1fr 100px 36px; }
+  .pollChoices { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── existing 480px breakpoint ─────────────────────────────────── */
 @media (max-width: 480px) {
   .team {
     font-size: 0.78rem;

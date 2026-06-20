@@ -1,3 +1,4 @@
+import { flagUrl } from '../../utils/teamFlags'
 import styles from './Hero.module.css'
 
 const STATS = [
@@ -18,14 +19,23 @@ export default function Hero() {
         </div>
         <h1 className={styles.title}>FIFA World Cup 2026™</h1>
         <p className={styles.subtitle}>
-          Live standings, match results, and player stats — all in one place.
+          Live standings, match results, and player stats, all in one place.
         </p>
         <div className={styles.hosts}>
-          <span>🇺🇸 USA</span>
+          <span className={styles.host}>
+            <img src={flagUrl('us', 20)} srcSet={`${flagUrl('us', 40)} 2x`} alt="USA" className={styles.hostFlag} />
+            USA
+          </span>
           <span className={styles.hostSep}>·</span>
-          <span>🇨🇦 Canada</span>
+          <span className={styles.host}>
+            <img src={flagUrl('ca', 20)} srcSet={`${flagUrl('ca', 40)} 2x`} alt="Canada" className={styles.hostFlag} />
+            Canada
+          </span>
           <span className={styles.hostSep}>·</span>
-          <span>🇲🇽 Mexico</span>
+          <span className={styles.host}>
+            <img src={flagUrl('mx', 20)} srcSet={`${flagUrl('mx', 40)} 2x`} alt="Mexico" className={styles.hostFlag} />
+            Mexico
+          </span>
         </div>
         <div className={styles.stats}>
           {STATS.map(({ label, value }) => (

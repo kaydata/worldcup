@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        <span className={styles.copy}>© 2026 KayMetrics</span>
+        <a href="https://kaymetrics.com/" target="_blank" rel="noopener noreferrer" className={styles.copy}>© 2026 KayMetrics</a>
         <div className={styles.socials}>
           <a
             href="https://www.linkedin.com/in/kelvin-porter-/"

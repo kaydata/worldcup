@@ -15,7 +15,7 @@ export default function GroupFilter({ groups, active, onChange }) {
           className={`${styles.btn}${active === letter ? ` ${styles.active}` : ''}`}
           onClick={() => onChange(letter)}
         >
-          Group {letter}
+          {letter}
         </button>
       ))}
     </div>

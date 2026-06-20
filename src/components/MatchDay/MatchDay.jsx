@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useFetch } from '../../hooks/useFetch'
-import { getMatches, getScorers } from '../../services/footballApi'
+import { getMatches } from '../../services/footballApi'
 import { getFlagCode, flagUrl } from '../../utils/teamFlags'
 import fallbackData from '../../data/fallback.json'
 import styles from './MatchDay.module.css'
@@ -119,42 +119,105 @@ function EmptyState({ msg }) {
   )
 }
 
-function GoldenBoot({ scorers }) {
-  if (!scorers.length) return null
+const POLL_KEY = 'wc_winner_vote'
+const VOTES_KEY = 'wc_poll_votes'
+const FAVORITES = [
+  { tla: 'ARG', name: 'Argentina',   flagCode: 'ar' },
+  { tla: 'FRA', name: 'France',      flagCode: 'fr' },
+  { tla: 'BRA', name: 'Brazil',      flagCode: 'br' },
+  { tla: 'GER', name: 'Germany',     flagCode: 'de' },
+  { tla: 'ENG', name: 'England',     flagCode: 'gb-eng' },
+  { tla: 'ESP', name: 'Spain',       flagCode: 'es' },
+  { tla: 'POR', name: 'Portugal',    flagCode: 'pt' },
+  { tla: 'NED', name: 'Netherlands', flagCode: 'nl' },
+]
+
+function loadVotes() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(VOTES_KEY) || 'null')
+    if (stored && typeof stored === 'object') return stored
+  } catch {}
+  return Object.fromEntries(FAVORITES.map(f => [f.tla, 0]))
+}
+
+function saveVotes(v) {
+  try { localStorage.setItem(VOTES_KEY, JSON.stringify(v)) } catch {}
+}
+
+function WinnerPoll() {
+  const [voted, setVoted] = useState(() => {
+    try { return localStorage.getItem(POLL_KEY) } catch { return null }
+  })
+  const [pollVotes, setPollVotes] = useState(loadVotes)
+  const [barsReady, setBarsReady] = useState(false)
+
+  useEffect(() => {
+    if (!voted) return
+    setBarsReady(false)
+    const t = setTimeout(() => setBarsReady(true), 60)
+    return () => clearTimeout(t)
+  }, [voted])
+
+  function castVote(tla) {
+    const prev = voted
+    const next = { ...pollVotes }
+    if (prev && prev !== tla) next[prev] = Math.max(0, (next[prev] || 0) - 1)
+    next[tla] = (next[tla] || 0) + 1
+    saveVotes(next)
+    setPollVotes(next)
+    try { localStorage.setItem(POLL_KEY, tla) } catch {}
+    setVoted(tla)
+  }
+
+  const votes = FAVORITES.map(f => ({ ...f, votes: pollVotes[f.tla] || 0 }))
+  const total = votes.reduce((s, f) => s + f.votes, 0)
+  const sorted = [...votes].sort((a, b) => b.votes - a.votes)
+
   return (
-    <div className={styles.goldenBoot}>
-      <div className={styles.panelHeader}>
-        <h2 className={styles.panelTitle}>
-          <span className={styles.bootIcon} aria-hidden="true">🥾</span>
-          Golden Boot Race
+    <div className={styles.winnerPoll}>
+      <div className={styles.pollHeader}>
+        <h2 className={styles.pollTitle}>
+          <span aria-hidden="true">🏆</span> Who will win WC2026?
         </h2>
-        <span className={styles.dateChip}>Top {scorers.length} Scorers</span>
+        <span className={styles.pollVoteCount}>{total.toLocaleString()} {total === 1 ? 'vote' : 'votes'}</span>
       </div>
-      <div className={styles.scorerList}>
-        {scorers.map((s, i) => (
-          <div key={s.player.id} className={styles.scorerRow}>
-            <span className={`${styles.rank} ${
-              i === 0 ? styles.rankGold :
-              i === 1 ? styles.rankSilver :
-              i === 2 ? styles.rankBronze : ''
-            }`}>{i + 1}</span>
-            <span className={styles.scorerFlag}>
-              <FlagLg team={s.team} />
-            </span>
-            <div className={styles.scorerInfo}>
-              <span className={styles.scorerName}>{s.player.name}</span>
-              <span className={styles.scorerCountry}>{s.team.shortName ?? s.team.name}</span>
-            </div>
-            <div className={styles.scorerStats}>
-              <span className={styles.goals}>{s.goals ?? 0}</span>
-              <span className={styles.goalLabel}>G</span>
-              <span className={styles.statDivider} aria-hidden="true" />
-              <span className={styles.assists}>{s.assists ?? 0}</span>
-              <span className={styles.assistLabel}>A</span>
-            </div>
-          </div>
-        ))}
-      </div>
+
+      {!voted ? (
+        <div className={styles.pollChoices}>
+          {FAVORITES.map(f => (
+            <button key={f.tla} className={styles.pollChoice} onClick={() => castVote(f.tla)}>
+              <img src={flagUrl(f.flagCode, 40)} alt={f.tla} className={styles.pollFlag} />
+              <span className={styles.pollName}>{f.name}</span>
+            </button>
+          ))}
+        </div>
+      ) : (
+        <div className={styles.pollResults}>
+          {sorted.map(f => {
+            const pct = Math.round((f.votes / total) * 100)
+            return (
+              <div key={f.tla} className={`${styles.pollRow}${voted === f.tla ? ` ${styles.pollRowVoted}` : ''}`}>
+                <img src={flagUrl(f.flagCode, 40)} alt={f.tla} className={styles.pollFlag} />
+                <span className={styles.pollName}>{f.name}</span>
+                <div className={styles.pollBarWrap}>
+                  <div className={styles.pollBar} style={{ width: barsReady ? `${pct}%` : '0%' }} />
+                </div>
+                <span className={styles.pollPct}>{pct}%</span>
+                {voted === f.tla && <span className={styles.pollCheck}>✓</span>}
+              </div>
+            )
+          })}
+          <button className={styles.pollChange} onClick={() => {
+            if (voted) {
+              const next = { ...pollVotes, [voted]: Math.max(0, (pollVotes[voted] || 0) - 1) }
+              saveVotes(next)
+              setPollVotes(next)
+            }
+            try { localStorage.removeItem(POLL_KEY) } catch {}
+            setVoted(null)
+          }}>Change vote</button>
+        </div>
+      )}
     </div>
   )
 }
@@ -171,11 +234,6 @@ export default function MatchDay() {
     getMatches,
     { matches: fallbackData.matches, espnFailed: false }
   )
-  const { data: scorersData } = useFetch(
-    getScorers,
-    { scorers: fallbackData.scorers }
-  )
-
   const [activeGroup, setActiveGroup] = useState('All Groups')
   const [updatedAt, setUpdatedAt] = useState(null)
 
@@ -204,11 +262,10 @@ export default function MatchDay() {
   const filteredYesterday = yesterdayMatches.filter(m => filterGroup(m.group))
   const filteredToday = todayMatches.filter(m => filterGroup(m.group))
 
-  const topScorers = (scorersData?.scorers ?? []).slice(0, 5)
-
   if (matchLoading) {
     return (
       <div className={styles.outer}>
+        <WinnerPoll />
         <div className={styles.loadingState}>Loading match data…</div>
       </div>
     )
@@ -216,6 +273,7 @@ export default function MatchDay() {
 
   return (
     <div className={styles.outer}>
+      <WinnerPoll />
       {relevantGroups.length > 0 && (
         <div className={styles.filterBar} role="toolbar" aria-label="Filter by group">
           {groupFilterList.map(g => (
@@ -275,8 +333,6 @@ export default function MatchDay() {
           </div>
         </div>
       </div>
-
-      <GoldenBoot scorers={topScorers} />
     </div>
   )
 }

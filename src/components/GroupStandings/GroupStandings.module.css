@@ -150,3 +150,31 @@
   border-top: 1px solid var(--color-border);
   margin: 0;
 }
+
+@media (max-width: 480px) {
+  .thTeam {
+    min-width: 100px;
+  }
+
+  .teamName {
+    max-width: 80px;
+  }
+
+  .table td,
+  .table th {
+    padding: 8px 4px;
+  }
+
+  .teamCell {
+    padding-left: var(--space-sm);
+    gap: 4px;
+  }
+
+  .groupTitle {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .hint {
+    padding: var(--space-sm) var(--space-md);
+  }
+}

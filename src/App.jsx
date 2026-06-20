@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer'
 import Home from './pages/Home'
 import Overview from './pages/Overview'
 import MyTeam from './pages/MyTeam'
-import Players from './pages/Players'
+import Stats from './pages/Stats'
 import Matches from './pages/Matches'
 import Compare from './pages/Compare'
 import styles from './App.module.css'
@@ -31,7 +31,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/overview" element={<Overview />} />
             <Route path="/my-team" element={<MyTeam />} />
-            <Route path="/players" element={<Players />} />
+            <Route path="/stats" element={<Stats />} />
             <Route path="/matches" element={<Matches />} />
             <Route path="/h2h" element={<Compare />} />
             <Route path="*" element={<Navigate to="/" replace />} />

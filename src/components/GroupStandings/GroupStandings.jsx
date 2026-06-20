@@ -1,7 +1,35 @@
+import { useState } from 'react'
 import { getFlagCode, FLAG_COLORS, flagUrl } from '../../utils/teamFlags'
 import styles from './GroupStandings.module.css'
 
 const QUALIFYING_SPOTS = 2
+
+function TeamLogo({ team, flagCode }) {
+  const [crestFailed, setCrestFailed] = useState(false)
+  if (team.crest && !crestFailed) {
+    return (
+      <img
+        src={team.crest}
+        alt=""
+        className={styles.crest}
+        loading="lazy"
+        onError={() => setCrestFailed(true)}
+      />
+    )
+  }
+  if (flagCode) {
+    return (
+      <img
+        src={flagUrl(flagCode, 40)}
+        alt=""
+        aria-hidden="true"
+        className={styles.flagImg}
+        loading="lazy"
+      />
+    )
+  }
+  return <span className={styles.crestPlaceholder}>{team.tla?.slice(0, 2) ?? '??'}</span>
+}
 
 export default function GroupStandings({ group }) {
   const letter = group.group.replace('GROUP_', '')
@@ -38,26 +66,7 @@ export default function GroupStandings({ group }) {
                 >
                   <td className={styles.pos}>{row.position}</td>
                   <td className={styles.teamCell}>
-                    {row.team.crest ? (
-                      <img
-                        src={row.team.crest}
-                        alt=""
-                        className={styles.crest}
-                        loading="lazy"
-                      />
-                    ) : flagCode ? (
-                      <img
-                        src={flagUrl(flagCode, 40)}
-                        alt=""
-                        aria-hidden="true"
-                        className={styles.flagImg}
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span className={styles.crestPlaceholder}>
-                        {row.team.tla?.slice(0, 2) ?? '??'}
-                      </span>
-                    )}
+                    <TeamLogo team={row.team} flagCode={flagCode} />
                     <span className={styles.teamName}>
                       {row.team.shortName ?? row.team.name}
                     </span>
