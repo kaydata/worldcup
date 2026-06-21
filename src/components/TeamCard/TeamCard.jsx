@@ -92,12 +92,15 @@ function MatchRow({ match, teamId }) {
   const opponent = isHome ? match.awayTeam : match.homeTeam
   const home = match.score?.fullTime?.home
   const away = match.score?.fullTime?.away
-  const winner = match.score?.winner
 
   let result = null
-  if (winner === 'HOME_TEAM') result = isHome ? 'W' : 'L'
-  else if (winner === 'AWAY_TEAM') result = isHome ? 'L' : 'W'
-  else if (winner === 'DRAW') result = 'D'
+  if (home != null && away != null && match.status === 'FINISHED') {
+    const myScore  = isHome ? home : away
+    const oppScore = isHome ? away : home
+    if (myScore > oppScore) result = 'W'
+    else if (myScore < oppScore) result = 'L'
+    else result = 'D'
+  }
 
   const scoreStr =
     home != null ? (isHome ? `${home}–${away}` : `${away}–${home}`) : null

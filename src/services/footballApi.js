@@ -96,10 +96,8 @@ function normalizeEvent(event, teamGroup) {
   }
 }
 
-// Returns "YYYYMMDD" in UTC for ESPN date queries
-function utcDateStr(offsetDays = 0) {
-  const d = new Date()
-  d.setUTCDate(d.getUTCDate() + offsetDays)
+// Returns "YYYYMMDD" in UTC
+function toYMD(d) {
   return [
     d.getUTCFullYear(),
     String(d.getUTCMonth() + 1).padStart(2, '0'),
@@ -107,8 +105,30 @@ function utcDateStr(offsetDays = 0) {
   ].join('')
 }
 
+// All dates from WC2026 group-stage start through tomorrow.
+// Past dates never change so we cache them for 24 h; today 60 s; future 5 min.
+function tournamentDates() {
+  const start = new Date(Date.UTC(2026, 5, 11)) // 11 Jun 2026
+  const tomorrow = new Date()
+  tomorrow.setUTCDate(tomorrow.getUTCDate() + 1)
+  const today = toYMD(new Date())
+  const result = []
+  const d = new Date(start)
+  while (d <= tomorrow) {
+    const ymd = toYMD(d)
+    result.push({
+      ymd,
+      ttl: ymd < today ? 24 * 60 * 60 * 1000   // past  → 24 h
+         : ymd === today ? SCOREBOARD_TTL         // today → 60 s
+         : 5 * 60 * 1000,                         // future → 5 min
+    })
+    d.setUTCDate(d.getUTCDate() + 1)
+  }
+  return result
+}
+
 export async function getMatches() {
-  // Build team-id → group map; try live ESPN standings, fall back to static
+  // Build team-id → group map from live standings (falls back to static)
   const teamGroup = {}
   try {
     const standingsData = await getStandings()
@@ -121,42 +141,40 @@ export async function getMatches() {
         teamGroup[row.team.id] = group.group
   }
 
-  // Fetch ESPN scoreboards for yesterday, today and tomorrow so the MatchDay
-  // panel always has both yesterday's results and upcoming fixtures.
-  // Yesterday and tomorrow are cached for 5 min; today uses 60 s TTL.
-  const days = [-1, 0, 1]
-  const dateStrs = days.map(utcDateStr)
-
+  // Fetch every group-stage date in parallel.
+  // Past dates are cached 24 h so repeat visits are instant;
+  // only today re-fetches every 60 s for live scores.
+  const dates = tournamentDates()
   let espnMatches = []
   let espnFailed = false
+
   try {
-    const responses = await Promise.all(
-      dateStrs.map((ds, i) =>
-        get(
-          `${ESPN_SITE}/scoreboard?dates=${ds}`,
-          `espn:scoreboard:${ds}`,
-          i === 1 ? SCOREBOARD_TTL : 5 * 60 * 1000
-        )
+    const responses = await Promise.allSettled(
+      dates.map(({ ymd, ttl }) =>
+        get(`${ESPN_SITE}/scoreboard?dates=${ymd}`, `espn:scoreboard:${ymd}`, ttl)
       )
     )
     const seen = new Set()
-    for (const raw of responses) {
-      for (const e of (raw.events ?? [])) {
+    for (const r of responses) {
+      if (r.status !== 'fulfilled') continue
+      for (const e of (r.value.events ?? [])) {
         if (!seen.has(e.id)) {
           seen.add(e.id)
           espnMatches.push(normalizeEvent(e, teamGroup))
         }
       }
     }
+    if (espnMatches.length === 0) espnFailed = true
   } catch {
     espnFailed = true
   }
 
-  // Merge: fallback provides base for future fixtures; ESPN overrides by ID
+  // Fallback provides future fixtures ESPN hasn't published yet.
+  // Any match ESPN has already returned takes precedence.
   const espnIds = new Set(espnMatches.map(m => String(m.id)))
-  const historical = (fallback.matches ?? []).filter(m => !espnIds.has(String(m.id)))
+  const fallbackOnly = (fallback.matches ?? []).filter(m => !espnIds.has(String(m.id)))
 
-  const matches = [...historical, ...espnMatches].sort(
+  const matches = [...fallbackOnly, ...espnMatches].sort(
     (a, b) => new Date(a.utcDate) - new Date(b.utcDate)
   )
 
@@ -174,5 +192,7 @@ export async function getTeam(id) {
 }
 
 export function invalidateMatches() {
-  clearAllCached()
+  // Past scoreboard entries won't change — only bust today and standings
+  clearCached(`espn:scoreboard:${toYMD(new Date())}`)
+  clearCached('espn:standings')
 }
