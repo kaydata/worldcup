@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useFetch } from '../hooks/useFetch'
-import { getMatches } from '../services/footballApi'
+import { getMatches, getStandings } from '../services/footballApi'
 import { flagUrl, getFlagCode } from '../utils/teamFlags'
 import statsData from '../data/stats.json'
 import fallbackData from '../data/fallback.json'
@@ -99,16 +99,21 @@ const TEAM_TABS = [
     { key: 'shots',         label: 'Shots',      unit: '' },
     { key: 'shotsOnTarget', label: 'On Target',  unit: '' },
     { key: 'corners',       label: 'Corners',    unit: '' },
-    { key: 'possession',    label: 'Possession', unit: '%' },
   ]},
   { id: 'defence',    label: 'Defence',    defaultMetric: 'cleanSheets', metrics: [
-    { key: 'cleanSheets', label: 'Clean Sheets', unit: '' },
-    { key: 'saves',       label: 'Saves',        unit: '' },
+    { key: 'cleanSheets',  label: 'Clean Sheets',  unit: '' },
+    { key: 'saves',        label: 'Saves',          unit: '' },
+    { key: 'tackles',      label: 'Tackles',        unit: '' },
+    { key: 'interceptions', label: 'Interceptions', unit: '' },
   ]},
   { id: 'discipline', label: 'Discipline', defaultMetric: 'fouls',       metrics: [
     { key: 'fouls',       label: 'Fouls',        unit: '' },
     { key: 'yellowCards', label: 'Yellow Cards', unit: '' },
     { key: 'redCards',    label: 'Red Cards',    unit: '' },
+  ]},
+  { id: 'possession', label: 'Passing',    defaultMetric: 'possession',  metrics: [
+    { key: 'possession',   label: 'Possession', unit: '%' },
+    { key: 'passAccuracy', label: 'Pass Acc.',  unit: '%' },
   ]},
 ]
 
@@ -417,8 +422,26 @@ function TriviaQuiz() {
 // ─── MAIN PAGE ─────────────────────────────────────────────────────────
 
 export default function Stats() {
-  const { data: matchData } = useFetch(getMatches, { matches: fallbackData.matches, espnFailed: false })
+  const { data: matchData }    = useFetch(getMatches,   { matches: fallbackData.matches, espnFailed: false })
+  const { data: standingsData } = useFetch(getStandings, { standings: [] })
   const matches = matchData?.matches ?? []
+
+  // Derive live match count and goal tally straight from standings —
+  // more accurate than stats.json which only updates once a day
+  const tournament = useMemo(() => {
+    const allEntries = (standingsData?.standings ?? []).flatMap(g => g.table ?? [])
+    const liveMatchesPlayed = allEntries.length > 0
+      ? Math.round(allEntries.reduce((s, e) => s + (e.playedGames ?? 0), 0) / 2)
+      : null
+    const liveTotalGoals = allEntries.length > 0
+      ? Math.round(allEntries.reduce((s, e) => s + (e.goalsFor ?? 0), 0) / 2)
+      : null
+    return {
+      ...statsData.tournament,
+      ...(liveMatchesPlayed != null && { matchesPlayed: liveMatchesPlayed }),
+      ...(liveTotalGoals    != null && { totalGoals:    liveTotalGoals    }),
+    }
+  }, [standingsData])
 
   return (
     <div className={styles.page}>
@@ -439,7 +462,7 @@ export default function Stats() {
         <div className={styles.statsCol}>
           <section className={styles.col}>
             <h2 className={styles.colTitle}>Tournament</h2>
-            <TournamentSection tournament={statsData.tournament} />
+            <TournamentSection tournament={tournament} />
           </section>
           <section className={styles.col}>
             <h2 className={styles.colTitle}>Teams</h2>

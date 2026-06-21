@@ -1,29 +1,30 @@
 import { useMemo } from 'react'
 import { useFetch } from '../../hooks/useFetch'
-import { getMatches } from '../../services/footballApi'
-import fallback from '../../data/fallback.json'
+import { getStandings } from '../../services/footballApi'
 import styles from './TournamentProgress.module.css'
 
 const GROUP_STAGE_TOTAL = 72
-const MATCHES_PER_GROUP = 6
+// WC2026: 4 teams per group, each plays 3 group-stage matches
+const GAMES_PER_TEAM = 3
 
 export default function TournamentProgress() {
-  const { data } = useFetch(getMatches, { matches: fallback.matches })
+  const { data } = useFetch(getStandings, { standings: [] })
 
   const { played, groupsDone } = useMemo(() => {
-    const matches = (data?.matches ?? []).filter(m => m.stage === 'GROUP_STAGE')
-    const played = matches.filter(m => m.status === 'FINISHED').length
-
-    // A group is complete when all 6 of its matches are finished
-    const countByGroup = {}
-    for (const m of matches) {
-      if (!m.group) continue
-      if (!countByGroup[m.group]) countByGroup[m.group] = 0
-      if (m.status === 'FINISHED') countByGroup[m.group]++
-    }
-    const groupsDone = Object.entries(countByGroup)
-      .filter(([, n]) => n >= MATCHES_PER_GROUP)
-      .map(([g]) => g.replace('GROUP_', ''))
+    const groups = data?.standings ?? []
+    // Sum all teams' playedGames then halve — each match appears once per side
+    const allEntries = groups.flatMap(g => g.table ?? [])
+    const played = Math.round(
+      allEntries.reduce((s, e) => s + (e.playedGames ?? 0), 0) / 2
+    )
+    // A group is done when every team has played all their group games
+    const groupsDone = groups
+      .filter(g =>
+        (g.table ?? []).length > 0 &&
+        (g.table ?? []).every(e => (e.playedGames ?? 0) >= GAMES_PER_TEAM)
+      )
+      .map(g => g.group?.replace('GROUP_', '') ?? '')
+      .filter(Boolean)
       .sort()
 
     return { played, groupsDone }

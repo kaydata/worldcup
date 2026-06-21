@@ -11,6 +11,7 @@ import { dirname, resolve } from 'node:path'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const STATS_PATH = resolve(__dirname, '..', 'src', 'data', 'stats.json')
 
+// Both endpoints confirmed working for WC2026
 const ESPN_V2   = 'https://site.api.espn.com/apis/v2/sports/soccer/fifa.world'
 const ESPN_SITE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world'
 
@@ -34,13 +35,14 @@ async function get(url) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)) }
 
-// Extract a numeric stat value by trying multiple name variants
+// Extract a numeric stat value by matching field name, displayName, or label
 function findStat(statistics, ...names) {
   for (const name of names) {
     const s = (statistics ?? []).find(s =>
       s.name === name || s.displayName === name || s.label === name
     )
     if (s != null) {
+      // possessionPct comes back as a plain number (e.g. 28.4), not "28.4%"
       const raw = String(s.displayValue ?? s.value ?? '0').replace('%', '')
       const n = parseFloat(raw)
       return isNaN(n) ? 0 : n
@@ -72,21 +74,21 @@ function datesBetween(startYMD) {
 // ── Main ───────────────────────────────────────────────────────────────────
 
 async function main() {
-  // 1. Standings: authoritative source for goals/goals-against per team
+  // 1. Standings: authoritative source for goals-for/against per team
   console.log('Fetching standings…')
   const standingsRaw = await get(`${ESPN_V2}/standings`)
 
-  const teamMap = {}   // TLA -> mutable stats object
+  const teamMap = {}
   let totalGoals = 0
 
   for (const group of (standingsRaw.children ?? [])) {
     for (const entry of (group.standings?.entries ?? [])) {
-      const tla  = entry.team?.abbreviation
+      const tla = entry.team?.abbreviation
       if (!tla) continue
       const stats = entry.stats ?? []
-      const gf    = stats.find(s => s.name === 'pointsFor'      || s.abbreviation === 'PF')?.value ?? 0
-      const ga    = stats.find(s => s.name === 'pointsAgainst'  || s.abbreviation === 'PA')?.value ?? 0
-      const gp    = stats.find(s => s.name === 'gamesPlayed'    || s.abbreviation === 'GP')?.value ?? 0
+      const gf = stats.find(s => s.name === 'pointsFor'     || s.abbreviation === 'PF')?.value ?? 0
+      const ga = stats.find(s => s.name === 'pointsAgainst' || s.abbreviation === 'PA')?.value ?? 0
+      const gp = stats.find(s => s.name === 'gamesPlayed'   || s.abbreviation === 'GP')?.value ?? 0
       totalGoals += gf
       teamMap[tla] = {
         tla,
@@ -105,23 +107,26 @@ async function main() {
         possession:    0,
         possMatches:   0,
         corners:       0,
+        tackles:       0,
+        interceptions: 0,
+        // accumulate passes for accurate passAccuracy ratio
+        accuratePasses: 0,
+        totalPasses:    0,
       }
     }
   }
-  // Goals counted once per team; divide by 2 would double-count finished — use raw total
-  totalGoals = Math.round(totalGoals / 2)
+  totalGoals = Math.round(totalGoals / 2)  // each goal counted once per team
 
   // 2. Scoreboard: collect all finished match IDs
   console.log('Scanning scoreboard for finished matches…')
-  const dates = datesBetween('20260611')  // WC2026 group stage start
+  const dates = datesBetween('20260611')
   const finishedIds = new Set()
 
   for (const date of dates) {
     try {
       const sb = await get(`${ESPN_SITE}/scoreboard?dates=${date}&limit=100`)
       for (const ev of (sb.events ?? [])) {
-        const comp   = ev.competitions?.[0]
-        const status = comp?.status?.type
+        const status = ev.competitions?.[0]?.status?.type
         if (status?.completed || status?.name === 'STATUS_FINAL') {
           finishedIds.add(ev.id)
         }
@@ -129,21 +134,21 @@ async function main() {
     } catch (e) {
       console.warn(`  Scoreboard ${date}: ${e.message}`)
     }
-    await sleep(150)
+    await sleep(120)
   }
   console.log(`  Found ${finishedIds.size} finished matches`)
 
-  // 3. Match summaries: per-team and per-player stats
-  let totalFouls      = 0
+  // 3. Match summaries
+  let totalFouls       = 0
   let totalYellowCards = 0
-  let totalRedCards   = 0
-  let totalAttendance = 0
+  let totalRedCards    = 0
+  let totalAttendance  = 0
   let penaltiesAwarded = 0
   let penaltiesScored  = 0
   let ownGoals         = 0
   let matchesPlayed    = 0
 
-  const players = {}  // displayName -> mutable player object
+  const players = {}
 
   function ensurePlayer(name, tla) {
     if (!players[name]) {
@@ -165,14 +170,13 @@ async function main() {
 
   for (const eventId of finishedIds) {
     try {
-      console.log(`  Summary ${eventId}…`)
-      const s = await get(`${ESPN_V2}/summary?event=${eventId}`)
+      process.stdout.write(`  Summary ${eventId}… `)
+      // ⚠️  Must use ESPN_SITE (not ESPN_V2) for the summary endpoint
+      const s = await get(`${ESPN_SITE}/summary?event=${eventId}`)
       matchesPlayed++
 
-      // Attendance
-      const att = s.header?.competitions?.[0]?.attendance
-               ?? s.gameInfo?.attendance ?? 0
-      totalAttendance += att
+      // Attendance lives under gameInfo, not header
+      totalAttendance += s.gameInfo?.attendance ?? 0
 
       // Per-team boxscore stats
       for (const bt of (s.boxscore?.teams ?? [])) {
@@ -181,31 +185,50 @@ async function main() {
         if (!team) continue
         const st = bt.statistics ?? []
 
-        const shots    = findStat(st, 'totalShots',    'Total Shots',    'shots')
-        const onTarget = findStat(st, 'shotsOnTarget', 'Shots on Goal',  'Shots on Target')
-        const fouls    = findStat(st, 'fouls',         'Fouls')
-        const yc       = findStat(st, 'yellowCards',   'Yellow Cards')
-        const rc       = findStat(st, 'redCards',      'Red Cards')
-        const corners  = findStat(st, 'corners',       'Corner Kicks',   'Corners')
-        const saves    = findStat(st, 'saves',         'Saves',          'Goalkeeper Saves')
-        const possRaw  = findStat(st, 'possessionPct', 'Possession')
+        // ESPN WC2026 actual field names (confirmed from live response):
+        //   fouls      → foulsCommitted
+        //   corners    → wonCorners
+        //   tackles    → effectiveTackles (or totalTackles)
+        //   possession → possessionPct (plain number, e.g. 28.4 = 28.4%)
+        //   passAcc    → passPct (0-1 ratio, multiply ×100 for %)
+        const shots    = findStat(st, 'totalShots')
+        const onTarget = findStat(st, 'shotsOnTarget')
+        const fouls    = findStat(st, 'foulsCommitted')
+        const yc       = findStat(st, 'yellowCards')
+        const rc       = findStat(st, 'redCards')
+        const corners  = findStat(st, 'wonCorners')
+        const saves    = findStat(st, 'saves')
+        const poss     = findStat(st, 'possessionPct')
+        const tackles  = findStat(st, 'effectiveTackles', 'totalTackles')
+        const intcpts  = findStat(st, 'interceptions')
+        const accPass  = findStat(st, 'accuratePasses')
+        const totPass  = findStat(st, 'totalPasses')
 
-        team.shots         += shots
-        team.shotsOnTarget += onTarget
-        team.fouls         += fouls
-        team.yellowCards   += yc
-        team.redCards      += rc
-        team.corners       += corners
-        team.saves         += saves
-        team.possession    += possRaw
-        team.possMatches   += 1
+        const pkGoals = findStat(st, 'penaltyKickGoals')
+        const pkShots = findStat(st, 'penaltyKickShots')
+
+        team.shots          += shots
+        team.shotsOnTarget  += onTarget
+        team.fouls          += fouls
+        team.yellowCards    += yc
+        team.redCards       += rc
+        team.corners        += corners
+        team.saves          += saves
+        team.possession     += poss
+        team.possMatches    += 1
+        team.tackles        += tackles
+        team.interceptions  += intcpts
+        team.accuratePasses += accPass
+        team.totalPasses    += totPass
 
         totalFouls       += fouls
         totalYellowCards += yc
         totalRedCards    += rc
+        penaltiesScored  += pkGoals
+        penaltiesAwarded += pkShots
       }
 
-      // Clean sheets from competitor final scores
+      // Clean sheets from competitor scores in the header
       const comps = s.header?.competitions?.[0]?.competitors ?? []
       if (comps.length === 2) {
         const [c0, c1] = comps
@@ -217,11 +240,10 @@ async function main() {
         if (t1 && s0 === 0) t1.cleanSheets++
       }
 
-      // Scoring plays: goals, penalties, own goals, assists
+      // Scoring plays (may be empty for WC2026 — ESPN hasn't populated them yet)
       for (const play of (s.scoringPlays ?? [])) {
         const typeText = (play.type?.text ?? play.type?.name ?? '').toLowerCase()
         const teamTla  = play.team?.abbreviation
-
         const isPenalty = typeText.includes('penalty')
         const isOwnGoal = typeText.includes('own goal') || typeText.includes('own-goal')
         const isMissed  = typeText.includes('missed') || typeText.includes('saved')
@@ -235,7 +257,6 @@ async function main() {
           if (!pName) continue
           const pType = (part.type?.name ?? part.type?.text ?? '').toLowerCase()
           const p = ensurePlayer(pName, teamTla)
-
           if (pType === 'scorer' || pType === 'goal' || pType === '') {
             if (!isOwnGoal && !isMissed) p.goals++
           } else if (pType === 'assist') {
@@ -260,70 +281,72 @@ async function main() {
           const savIdx = keys.findIndex(k => k === 'saves' || k === 'SV')
           const sotIdx = keys.findIndex(k => k === 'shotsOnTargetAgainst' || k === 'SOT')
           for (const athlete of (statGroup.athletes ?? [])) {
-            const pos = athlete.athlete?.position?.abbreviation ?? ''
-            if (pos !== 'GK') continue
+            if (athlete.athlete?.position?.abbreviation !== 'GK') continue
             const pName = athlete.athlete?.displayName
             if (!pName) continue
-            const p = ensurePlayer(pName, tla)
+            const p   = ensurePlayer(pName, tla)
             const sv  = savIdx >= 0 ? (parseInt(athlete.stats?.[savIdx]) || 0) : 0
             const sot = sotIdx >= 0 ? (parseInt(athlete.stats?.[sotIdx]) || 0) : 0
-            p.saves         = (p.saves ?? 0) + sv
-            p._shotsAgainst = ((p._shotsAgainst ?? 0) + sot)
+            p.saves          = (p.saves ?? 0) + sv
+            p._shotsAgainst  = ((p._shotsAgainst ?? 0) + sot)
           }
         }
       }
+
+      process.stdout.write('✓\n')
     } catch (e) {
-      console.warn(`  Summary ${eventId} failed: ${e.message}`)
+      process.stdout.write(`✗ ${e.message}\n`)
     }
-    await sleep(200)
+    await sleep(180)
   }
 
   // 4. Finalize team stats
   const teamStats = Object.values(teamMap)
     .filter(t => t.gamesPlayed > 0)
-    .map(({ possMatches, gamesPlayed, ...t }) => ({
+    .map(({ possMatches, gamesPlayed, accuratePasses, totalPasses, ...t }) => ({
       ...t,
-      possession: possMatches > 0 ? Math.round(t.possession / possMatches) : 50,
+      possession:   possMatches > 0 ? +((t.possession / possMatches)).toFixed(1) : 50,
+      passAccuracy: totalPasses > 0 ? Math.round((accuratePasses / totalPasses) * 100) : 0,
     }))
     .sort((a, b) => b.goals - a.goals || a.tla.localeCompare(b.tla))
 
-  // 5. Finalize player stats — goals/90 based on team matches played
+  // 5. Finalize player stats
   const playerStats = Object.values(players)
-    .filter(p => p.goals > 0 || (p.assists > 0) || (p.saves ?? 0) > 0)
+    .filter(p => p.goals > 0 || p.assists > 0 || (p.saves ?? 0) > 0)
     .map(p => {
       const teamGP = (teamMap[p.tla]?.gamesPlayed ?? 1) || 1
-      const sv     = p.saves ?? 0
-      const sot    = p._shotsAgainst ?? 0
+      const sv  = p.saves ?? 0
+      const sot = p._shotsAgainst ?? 0
       return {
-        name:            p.name,
-        tla:             p.tla,
-        flagCode:        p.flagCode,
-        goals:           p.goals,
-        goalsPerNinety:  p.goals > 0 ? +(p.goals / teamGP * 90 / 90).toFixed(2) : 0,
-        assists:         p.assists,
-        saves:           p.saves != null ? sv : null,
-        savePercent:     sv > 0 && sot > 0 ? Math.round((sv / sot) * 100) : (p.saves != null ? 0 : null),
+        name:              p.name,
+        tla:               p.tla,
+        flagCode:          p.flagCode,
+        goals:             p.goals,
+        goalsPerNinety:    p.goals > 0 ? +(p.goals / teamGP).toFixed(2) : 0,
+        assists:           p.assists,
+        saves:             p.saves != null ? sv : null,
+        savePercent:       sv > 0 && sot > 0 ? Math.round((sv / sot) * 100) : (p.saves != null ? 0 : null),
         keeperCleanSheets: p.saves != null ? (teamMap[p.tla]?.cleanSheets ?? 0) : null,
-        yellowCards:     p.yellowCards,
+        yellowCards:       p.yellowCards,
       }
     })
     .sort((a, b) => b.goals - a.goals || b.assists - a.assists)
 
-  // 6. Build output
+  // 6. Write output
   const output = {
     _updated: new Date().toISOString(),
     tournament: {
       totalGoals,
       matchesPlayed,
       totalFouls,
-      yellowCards:     totalYellowCards,
-      redCards:        totalRedCards,
+      yellowCards:      totalYellowCards,
+      redCards:         totalRedCards,
       penaltiesAwarded,
       penaltiesScored,
       ownGoals,
-      cleanSheets:     teamStats.reduce((s, t) => s + t.cleanSheets, 0),
+      cleanSheets:      teamStats.reduce((s, t) => s + t.cleanSheets, 0),
       totalAttendance,
-      avgPossession:   50,
+      avgPossession:    50,
     },
     teamStats,
     playerStats,
