@@ -119,37 +119,59 @@ function EmptyState({ msg }) {
   )
 }
 
+// ── Supabase poll helpers ──────────────────────────────────────────────────
+const SB_URL = import.meta.env.VITE_SUPABASE_URL
+const SB_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
+const SB_HDR = () => ({
+  'apikey': SB_KEY,
+  'Authorization': `Bearer ${SB_KEY}`,
+  'Content-Type': 'application/json',
+})
+
+async function fetchPollVotes() {
+  const res = await fetch(`${SB_URL}/rest/v1/poll_votes?select=tla,votes`, { headers: SB_HDR() })
+  if (!res.ok) throw new Error('poll fetch failed')
+  const rows = await res.json()
+  return Object.fromEntries(rows.map(r => [r.tla, r.votes ?? 0]))
+}
+
+async function sbRpc(fn, tla) {
+  await fetch(`${SB_URL}/rest/v1/rpc/${fn}`, {
+    method: 'POST',
+    headers: SB_HDR(),
+    body: JSON.stringify({ team_tla: tla }),
+  })
+}
+
+// ── Poll component ─────────────────────────────────────────────────────────
 const POLL_KEY = 'wc_winner_vote'
-const VOTES_KEY = 'wc_poll_votes'
 const FAVORITES = [
-  { tla: 'ARG', name: 'Argentina',   flagCode: 'ar' },
-  { tla: 'FRA', name: 'France',      flagCode: 'fr' },
-  { tla: 'BRA', name: 'Brazil',      flagCode: 'br' },
-  { tla: 'GER', name: 'Germany',     flagCode: 'de' },
-  { tla: 'ENG', name: 'England',     flagCode: 'gb-eng' },
-  { tla: 'ESP', name: 'Spain',       flagCode: 'es' },
-  { tla: 'POR', name: 'Portugal',    flagCode: 'pt' },
-  { tla: 'NED', name: 'Netherlands', flagCode: 'nl' },
+  { tla: 'ARG', name: 'Argentina',     flagCode: 'ar' },
+  { tla: 'FRA', name: 'France',        flagCode: 'fr' },
+  { tla: 'BRA', name: 'Brazil',        flagCode: 'br' },
+  { tla: 'GER', name: 'Germany',       flagCode: 'de' },
+  { tla: 'ENG', name: 'England',       flagCode: 'gb-eng' },
+  { tla: 'ESP', name: 'Spain',         flagCode: 'es' },
+  { tla: 'POR', name: 'Portugal',      flagCode: 'pt' },
+  { tla: 'USA', name: 'United States', flagCode: 'us' },
 ]
-
-function loadVotes() {
-  try {
-    const stored = JSON.parse(localStorage.getItem(VOTES_KEY) || 'null')
-    if (stored && typeof stored === 'object') return stored
-  } catch {}
-  return Object.fromEntries(FAVORITES.map(f => [f.tla, 0]))
-}
-
-function saveVotes(v) {
-  try { localStorage.setItem(VOTES_KEY, JSON.stringify(v)) } catch {}
-}
 
 function WinnerPoll() {
   const [voted, setVoted] = useState(() => {
     try { return localStorage.getItem(POLL_KEY) } catch { return null }
   })
-  const [pollVotes, setPollVotes] = useState(loadVotes)
+  const [pollVotes, setPollVotes] = useState(
+    () => Object.fromEntries(FAVORITES.map(f => [f.tla, 0]))
+  )
+  const [loading, setLoading]   = useState(true)
   const [barsReady, setBarsReady] = useState(false)
+
+  // Load global vote counts from Supabase on mount
+  useEffect(() => {
+    fetchPollVotes()
+      .then(v => { setPollVotes(v); setLoading(false) })
+      .catch(() => setLoading(false))
+  }, [])
 
   useEffect(() => {
     if (!voted) return
@@ -158,19 +180,43 @@ function WinnerPoll() {
     return () => clearTimeout(t)
   }, [voted])
 
-  function castVote(tla) {
+  async function castVote(tla) {
     const prev = voted
-    const next = { ...pollVotes }
-    if (prev && prev !== tla) next[prev] = Math.max(0, (next[prev] || 0) - 1)
-    next[tla] = (next[tla] || 0) + 1
-    saveVotes(next)
-    setPollVotes(next)
+    // Optimistic UI update first so it feels instant
+    setPollVotes(v => {
+      const next = { ...v }
+      if (prev && prev !== tla) next[prev] = Math.max(0, (next[prev] || 0) - 1)
+      next[tla] = (next[tla] || 0) + 1
+      return next
+    })
     try { localStorage.setItem(POLL_KEY, tla) } catch {}
     setVoted(tla)
+    // Persist to Supabase, then sync back the real count
+    try {
+      if (prev && prev !== tla) await sbRpc('decrement_vote', prev)
+      await sbRpc('increment_vote', tla)
+      const v = await fetchPollVotes()
+      setPollVotes(v)
+    } catch {}
   }
 
-  const votes = FAVORITES.map(f => ({ ...f, votes: pollVotes[f.tla] || 0 }))
-  const total = votes.reduce((s, f) => s + f.votes, 0)
+  async function changeVote() {
+    const prev = voted
+    setPollVotes(v => prev
+      ? { ...v, [prev]: Math.max(0, (v[prev] || 0) - 1) }
+      : v
+    )
+    try { localStorage.removeItem(POLL_KEY) } catch {}
+    setVoted(null)
+    try {
+      if (prev) await sbRpc('decrement_vote', prev)
+      const v = await fetchPollVotes()
+      setPollVotes(v)
+    } catch {}
+  }
+
+  const votes  = FAVORITES.map(f => ({ ...f, votes: pollVotes[f.tla] || 0 }))
+  const total  = votes.reduce((s, f) => s + f.votes, 0)
   const sorted = [...votes].sort((a, b) => b.votes - a.votes)
 
   return (
@@ -179,7 +225,9 @@ function WinnerPoll() {
         <h2 className={styles.pollTitle}>
           <span aria-hidden="true">🏆</span> Who will win WC2026?
         </h2>
-        <span className={styles.pollVoteCount}>{total.toLocaleString()} {total === 1 ? 'vote' : 'votes'}</span>
+        <span className={styles.pollVoteCount}>
+          {loading ? '…' : `${total.toLocaleString()} ${total === 1 ? 'vote' : 'votes'}`}
+        </span>
       </div>
 
       {!voted ? (
@@ -194,7 +242,7 @@ function WinnerPoll() {
       ) : (
         <div className={styles.pollResults}>
           {sorted.map(f => {
-            const pct = Math.round((f.votes / total) * 100)
+            const pct = total > 0 ? Math.round((f.votes / total) * 100) : 0
             return (
               <div key={f.tla} className={`${styles.pollRow}${voted === f.tla ? ` ${styles.pollRowVoted}` : ''}`}>
                 <img src={flagUrl(f.flagCode, 40)} alt={f.tla} className={styles.pollFlag} />
@@ -207,15 +255,7 @@ function WinnerPoll() {
               </div>
             )
           })}
-          <button className={styles.pollChange} onClick={() => {
-            if (voted) {
-              const next = { ...pollVotes, [voted]: Math.max(0, (pollVotes[voted] || 0) - 1) }
-              saveVotes(next)
-              setPollVotes(next)
-            }
-            try { localStorage.removeItem(POLL_KEY) } catch {}
-            setVoted(null)
-          }}>Change vote</button>
+          <button className={styles.pollChange} onClick={changeVote}>Change vote</button>
         </div>
       )}
     </div>
