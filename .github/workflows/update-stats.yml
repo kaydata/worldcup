@@ -2,8 +2,8 @@ name: Update Stats
 
 on:
   schedule:
-    # Run at 06:00 UTC daily — matches in Americas finish overnight
-    - cron: '0 6 * * *'
+    # Run every 4 hours — catches results from all daily match slots
+    - cron: '0 */4 * * *'
   workflow_dispatch:  # Allow manual trigger from GitHub UI
 
 jobs:

@@ -204,8 +204,7 @@ async function main() {
         const accPass  = findStat(st, 'accuratePasses')
         const totPass  = findStat(st, 'totalPasses')
 
-        const pkGoals = findStat(st, 'penaltyKickGoals')
-        const pkShots = findStat(st, 'penaltyKickShots')
+        const pkShots = findStat(st, 'penaltyKickShots')  // penalties taken (pkGoals is always 0 in ESPN WC2026 data)
 
         team.shots          += shots
         team.shotsOnTarget  += onTarget
@@ -224,7 +223,6 @@ async function main() {
         totalFouls       += fouls
         totalYellowCards += yc
         totalRedCards    += rc
-        penaltiesScored  += pkGoals
         penaltiesAwarded += pkShots
       }
 
@@ -240,55 +238,60 @@ async function main() {
         if (t1 && s0 === 0) t1.cleanSheets++
       }
 
-      // Scoring plays (may be empty for WC2026 — ESPN hasn't populated them yet)
-      for (const play of (s.scoringPlays ?? [])) {
-        const typeText = (play.type?.text ?? play.type?.name ?? '').toLowerCase()
-        const teamTla  = play.team?.abbreviation
-        const isPenalty = typeText.includes('penalty')
-        const isOwnGoal = typeText.includes('own goal') || typeText.includes('own-goal')
-        const isMissed  = typeText.includes('missed') || typeText.includes('saved')
-
-        if (isPenalty) penaltiesAwarded++
-        if (isPenalty && !isMissed) penaltiesScored++
-        if (isOwnGoal) ownGoals++
-
-        for (const part of (play.participants ?? [])) {
-          const pName = part.athlete?.displayName
-          if (!pName) continue
-          const pType = (part.type?.name ?? part.type?.text ?? '').toLowerCase()
-          const p = ensurePlayer(pName, teamTla)
-          if (pType === 'scorer' || pType === 'goal' || pType === '') {
-            if (!isOwnGoal && !isMissed) p.goals++
-          } else if (pType === 'assist') {
-            p.assists++
-          }
+      // Build player→team map from rosters (keyEvents don't include team on events)
+      const playerTeam = {}
+      for (const teamRoster of (s.rosters ?? [])) {
+        const tla = teamRoster.team?.abbreviation
+        for (const p of (teamRoster.roster ?? [])) {
+          const name = p.athlete?.displayName
+          if (name && tla) playerTeam[name] = tla
         }
       }
 
-      // Yellow cards from key events
+      // Goals, assists, penalties, own goals, yellow cards from keyEvents.
+      // ESPN WC2026: scoringPlays is empty; boxscore.players is absent.
+      // keyEvents is the only source for per-player scoring data.
+      // Convention: participants[0] = scorer/carded player, participants[1] = assister.
       for (const ev of (s.keyEvents ?? [])) {
-        const typeText = (ev.type?.text ?? ev.type?.name ?? '').toLowerCase()
-        if (!typeText.includes('yellow')) continue
-        const pName = ev.participants?.[0]?.athlete?.displayName
-        if (pName) ensurePlayer(pName, ev.team?.abbreviation).yellowCards++
+        const typeStr  = ev.type?.type ?? ''
+        const typeText = (ev.type?.text ?? '').toLowerCase()
+        const p0name   = ev.participants?.[0]?.athlete?.displayName ?? ev.participants?.[0]?.name
+        const p1name   = ev.participants?.[1]?.athlete?.displayName ?? ev.participants?.[1]?.name
+
+        if (typeText.includes('yellow card') || typeStr === 'yellow-card') {
+          if (p0name) ensurePlayer(p0name, playerTeam[p0name]).yellowCards++
+          continue
+        }
+
+        if (typeStr === 'penalty---scored') {
+          penaltiesScored++
+          if (p0name) ensurePlayer(p0name, playerTeam[p0name]).goals++
+          continue
+        }
+
+        if (typeStr === 'penalty---missed') continue  // already counted in pkShots
+
+        if (typeStr.includes('own') || typeText.includes('own goal')) {
+          ownGoals++
+          continue
+        }
+
+        if (typeStr === 'goal' || typeStr.startsWith('goal---')) {
+          if (p0name) ensurePlayer(p0name, playerTeam[p0name]).goals++
+          if (p1name) ensurePlayer(p1name, playerTeam[p1name]).assists++
+        }
       }
 
-      // Goalkeeper saves from boxscore player stats
-      for (const teamPlayers of (s.boxscore?.players ?? [])) {
-        const tla = teamPlayers.team?.abbreviation
-        for (const statGroup of (teamPlayers.statistics ?? [])) {
-          const keys   = statGroup.keys ?? []
-          const savIdx = keys.findIndex(k => k === 'saves' || k === 'SV')
-          const sotIdx = keys.findIndex(k => k === 'shotsOnTargetAgainst' || k === 'SOT')
-          for (const athlete of (statGroup.athletes ?? [])) {
-            if (athlete.athlete?.position?.abbreviation !== 'GK') continue
-            const pName = athlete.athlete?.displayName
-            if (!pName) continue
-            const p   = ensurePlayer(pName, tla)
-            const sv  = savIdx >= 0 ? (parseInt(athlete.stats?.[savIdx]) || 0) : 0
-            const sot = sotIdx >= 0 ? (parseInt(athlete.stats?.[sotIdx]) || 0) : 0
-            p.saves          = (p.saves ?? 0) + sv
-            p._shotsAgainst  = ((p._shotsAgainst ?? 0) + sot)
+      // Goalkeeper saves from match leaders (boxscore.players absent in WC2026)
+      for (const teamLeaders of (s.leaders ?? [])) {
+        const tla     = teamLeaders.team?.abbreviation
+        const saveCat = (teamLeaders.leaders ?? []).find(c => c.name === 'saves')
+        for (const leader of (saveCat?.leaders ?? [])) {
+          const pName = leader.athlete?.displayName
+          const sv    = parseFloat(leader.displayValue) || 0
+          if (pName) {
+            const p = ensurePlayer(pName, tla ?? playerTeam[pName])
+            p.saves = (p.saves ?? 0) + sv
           }
         }
       }
@@ -315,8 +318,7 @@ async function main() {
     .filter(p => p.goals > 0 || p.assists > 0 || (p.saves ?? 0) > 0)
     .map(p => {
       const teamGP = (teamMap[p.tla]?.gamesPlayed ?? 1) || 1
-      const sv  = p.saves ?? 0
-      const sot = p._shotsAgainst ?? 0
+      const sv = p.saves ?? 0
       return {
         name:              p.name,
         tla:               p.tla,
@@ -325,7 +327,7 @@ async function main() {
         goalsPerNinety:    p.goals > 0 ? +(p.goals / teamGP).toFixed(2) : 0,
         assists:           p.assists,
         saves:             p.saves != null ? sv : null,
-        savePercent:       sv > 0 && sot > 0 ? Math.round((sv / sot) * 100) : (p.saves != null ? 0 : null),
+        savePercent:       null,  // ESPN WC2026 doesn't provide shots-on-target-against per player
         keeperCleanSheets: p.saves != null ? (teamMap[p.tla]?.cleanSheets ?? 0) : null,
         yellowCards:       p.yellowCards,
       }
