@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-06-29T14:41:30.356Z",
+  "_updated": "2026-06-29T21:13:39.671Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 73,
-    "totalFouls": 1631,
-    "yellowCards": 180,
+    "matchesPlayed": 74,
+    "totalFouls": 1648,
+    "yellowCards": 185,
     "redCards": 10,
     "penaltiesAwarded": 11,
     "penaltiesScored": 8,
     "ownGoals": 12,
     "cleanSheets": 41,
-    "totalAttendance": 4713786,
+    "totalAttendance": 4782563,
     "avgPossession": 50
   },
   "teamStats": [
@@ -173,16 +173,16 @@
       "goals": 7,
       "goalsAgainst": 1,
       "cleanSheets": 2,
-      "shots": 41,
-      "shotsOnTarget": 19,
-      "saves": 10,
-      "fouls": 40,
-      "yellowCards": 5,
+      "shots": 60,
+      "shotsOnTarget": 26,
+      "saves": 11,
+      "fouls": 44,
+      "yellowCards": 7,
       "redCards": 0,
-      "possession": 54,
-      "corners": 17,
-      "tackles": 29,
-      "interceptions": 28,
+      "possession": 57.7,
+      "corners": 23,
+      "tackles": 37,
+      "interceptions": 37,
       "passAccuracy": 90
     },
     {
@@ -192,17 +192,17 @@
       "goals": 7,
       "goalsAgainst": 3,
       "cleanSheets": 1,
-      "shots": 29,
-      "shotsOnTarget": 11,
-      "saves": 8,
-      "fouls": 42,
-      "yellowCards": 1,
+      "shots": 34,
+      "shotsOnTarget": 13,
+      "saves": 12,
+      "fouls": 55,
+      "yellowCards": 4,
       "redCards": 0,
-      "possession": 51.5,
-      "corners": 11,
-      "tackles": 29,
-      "interceptions": 15,
-      "passAccuracy": 87
+      "possession": 46.5,
+      "corners": 13,
+      "tackles": 33,
+      "interceptions": 20,
+      "passAccuracy": 86
     },
     {
       "tla": "SUI",
@@ -1286,7 +1286,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Yasin Ayari",
@@ -1589,6 +1589,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Kaishu Sano",
+      "tla": "JPN",
+      "flagCode": "jp",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Romelu Lukaku",
       "tla": "BEL",
       "flagCode": "be",
@@ -1767,6 +1779,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Casemiro",
+      "tla": "BRA",
+      "flagCode": "br",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 2
     },
     {
       "name": "John McGinn",
@@ -2657,12 +2681,24 @@
       "yellowCards": 0
     },
     {
+      "name": "Gabriel Martinelli",
+      "tla": "BRA",
+      "flagCode": "br",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Bruno Guimarães",
       "tla": "BRA",
       "flagCode": "br",
       "goals": 0,
       "goalsPerNinety": 0,
-      "assists": 3,
+      "assists": 4,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -3197,18 +3233,6 @@
       "yellowCards": 0
     },
     {
-      "name": "Kaishu Sano",
-      "tla": "JPN",
-      "flagCode": "jp",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Aymeric Laporte",
       "tla": "ESP",
       "flagCode": "es",
@@ -3725,6 +3749,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Gabriel Magalhães",
+      "tla": "BRA",
+      "flagCode": "br",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Raúl Rangel",
       "tla": "MEX",
       "flagCode": "mx",
@@ -3839,7 +3875,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 10,
+      "saves": 11,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -3947,7 +3983,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 8,
+      "saves": 12,
       "savePercent": null,
       "keeperCleanSheets": 1,
       "yellowCards": 0
