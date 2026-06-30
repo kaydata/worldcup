@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-06-29T21:13:39.671Z",
+  "_updated": "2026-06-30T11:28:38.103Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 74,
-    "totalFouls": 1648,
-    "yellowCards": 185,
+    "matchesPlayed": 76,
+    "totalFouls": 1711,
+    "yellowCards": 190,
     "redCards": 10,
     "penaltiesAwarded": 11,
     "penaltiesScored": 8,
     "ownGoals": 12,
     "cleanSheets": 41,
-    "totalAttendance": 4782563,
+    "totalAttendance": 4897751,
     "avgPossession": 50
   },
   "teamStats": [
@@ -40,16 +40,16 @@
       "goals": 10,
       "goalsAgainst": 4,
       "cleanSheets": 0,
-      "shots": 53,
-      "shotsOnTarget": 22,
-      "saves": 3,
-      "fouls": 33,
-      "yellowCards": 1,
+      "shots": 74,
+      "shotsOnTarget": 28,
+      "saves": 5,
+      "fouls": 51,
+      "yellowCards": 3,
       "redCards": 0,
-      "possession": 61.7,
-      "corners": 18,
-      "tackles": 43,
-      "interceptions": 24,
+      "possession": 65.2,
+      "corners": 34,
+      "tackles": 50,
+      "interceptions": 28,
       "passAccuracy": 88
     },
     {
@@ -59,17 +59,17 @@
       "goals": 10,
       "goalsAgainst": 4,
       "cleanSheets": 0,
-      "shots": 40,
-      "shotsOnTarget": 20,
-      "saves": 11,
-      "fouls": 26,
+      "shots": 46,
+      "shotsOnTarget": 22,
+      "saves": 16,
+      "fouls": 44,
       "yellowCards": 3,
       "redCards": 0,
-      "possession": 60.7,
-      "corners": 13,
-      "tackles": 18,
-      "interceptions": 25,
-      "passAccuracy": 90
+      "possession": 53,
+      "corners": 18,
+      "tackles": 28,
+      "interceptions": 36,
+      "passAccuracy": 88
     },
     {
       "tla": "ARG",
@@ -181,7 +181,7 @@
       "redCards": 0,
       "possession": 57.7,
       "corners": 23,
-      "tackles": 37,
+      "tackles": 36,
       "interceptions": 37,
       "passAccuracy": 90
     },
@@ -201,7 +201,7 @@
       "possession": 46.5,
       "corners": 13,
       "tackles": 33,
-      "interceptions": 20,
+      "interceptions": 21,
       "passAccuracy": 86
     },
     {
@@ -306,17 +306,17 @@
       "goals": 6,
       "goalsAgainst": 3,
       "cleanSheets": 1,
-      "shots": 48,
-      "shotsOnTarget": 16,
-      "saves": 5,
-      "fouls": 32,
-      "yellowCards": 1,
+      "shots": 59,
+      "shotsOnTarget": 21,
+      "saves": 6,
+      "fouls": 47,
+      "yellowCards": 2,
       "redCards": 0,
-      "possession": 58.9,
-      "corners": 16,
-      "tackles": 32,
-      "interceptions": 18,
-      "passAccuracy": 88
+      "possession": 61.7,
+      "corners": 24,
+      "tackles": 46,
+      "interceptions": 29,
+      "passAccuracy": 89
     },
     {
       "tla": "MEX",
@@ -743,17 +743,17 @@
       "goals": 2,
       "goalsAgainst": 4,
       "cleanSheets": 2,
-      "shots": 23,
-      "shotsOnTarget": 5,
-      "saves": 13,
-      "fouls": 41,
-      "yellowCards": 7,
+      "shots": 30,
+      "shotsOnTarget": 8,
+      "saves": 19,
+      "fouls": 53,
+      "yellowCards": 9,
       "redCards": 1,
-      "possession": 33.4,
-      "corners": 2,
-      "tackles": 48,
-      "interceptions": 27,
-      "passAccuracy": 71
+      "possession": 31.1,
+      "corners": 8,
+      "tackles": 68,
+      "interceptions": 40,
+      "passAccuracy": 69
     },
     {
       "tla": "QAT",
@@ -1013,6 +1013,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Cody Gakpo",
+      "tla": "NED",
+      "flagCode": "nl",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Ismaïla Sarr",
       "tla": "SEN",
       "flagCode": "sn",
@@ -1035,6 +1047,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Kai Havertz",
+      "tla": "GER",
+      "flagCode": "de",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
     },
     {
       "name": "Elijah Just",
@@ -1114,7 +1138,7 @@
       "flagCode": "nl",
       "goals": 2,
       "goalsPerNinety": 0.67,
-      "assists": 1,
+      "assists": 2,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -1160,18 +1184,6 @@
       "name": "Rubén Vargas",
       "tla": "SUI",
       "flagCode": "ch",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Cody Gakpo",
-      "tla": "NED",
-      "flagCode": "nl",
       "goals": 2,
       "goalsPerNinety": 0.67,
       "assists": 1,
@@ -1263,18 +1275,6 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 1
-    },
-    {
-      "name": "Kai Havertz",
-      "tla": "GER",
-      "flagCode": "de",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
     },
     {
       "name": "Daichi Kamada",
@@ -1391,6 +1391,18 @@
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 3,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Julio Enciso",
+      "tla": "PAR",
+      "flagCode": "py",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 2,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -1587,6 +1599,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Matías Galarza",
+      "tla": "PAR",
+      "flagCode": "py",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 2
     },
     {
       "name": "Kaishu Sano",
@@ -1862,7 +1886,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Franck Kessié",
@@ -2129,16 +2153,16 @@
       "yellowCards": 1
     },
     {
-      "name": "Matías Galarza",
-      "tla": "PAR",
-      "flagCode": "py",
+      "name": "Issa Diop",
+      "tla": "MAR",
+      "flagCode": "ma",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 0,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 1
+      "yellowCards": 2
     },
     {
       "name": "Junya Ito",
@@ -2705,6 +2729,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Florian Wirtz",
+      "tla": "GER",
+      "flagCode": "de",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 3,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Michael Olise",
       "tla": "FRA",
       "flagCode": "fr",
@@ -2729,33 +2765,9 @@
       "yellowCards": 0
     },
     {
-      "name": "Julio Enciso",
-      "tla": "PAR",
-      "flagCode": "py",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 2,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Brahim Díaz",
       "tla": "MAR",
       "flagCode": "ma",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 2,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Florian Wirtz",
-      "tla": "GER",
-      "flagCode": "de",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 2,
@@ -3761,6 +3773,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Chemsdine Talbi",
+      "tla": "MAR",
+      "flagCode": "ma",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Raúl Rangel",
       "tla": "MEX",
       "flagCode": "mx",
@@ -3833,13 +3857,13 @@
       "yellowCards": 0
     },
     {
-      "name": "Orlando Gil",
+      "name": "Orlando Gill",
       "tla": "PAR",
       "flagCode": "py",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 13,
+      "saves": 19,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -3887,7 +3911,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 5,
+      "saves": 6,
       "savePercent": null,
       "keeperCleanSheets": 1,
       "yellowCards": 0
@@ -3947,7 +3971,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 3,
+      "saves": 5,
       "savePercent": null,
       "keeperCleanSheets": 0,
       "yellowCards": 0
@@ -3971,7 +3995,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 11,
+      "saves": 16,
       "savePercent": null,
       "keeperCleanSheets": 0,
       "yellowCards": 0
