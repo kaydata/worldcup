@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-01T11:41:54.849Z",
+  "_updated": "2026-07-01T18:33:16.545Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 79,
-    "totalFouls": 1772,
-    "yellowCards": 194,
+    "matchesPlayed": 80,
+    "totalFouls": 1794,
+    "yellowCards": 196,
     "redCards": 11,
     "penaltiesAwarded": 11,
     "penaltiesScored": 8,
     "ownGoals": 12,
     "cleanSheets": 43,
-    "totalAttendance": 5128903,
+    "totalAttendance": 5197142,
     "avgPossession": 50
   },
   "teamStats": [
@@ -125,7 +125,7 @@
       "possession": 49.8,
       "corners": 17,
       "tackles": 41,
-      "interceptions": 29,
+      "interceptions": 28,
       "passAccuracy": 85
     },
     {
@@ -287,16 +287,16 @@
       "goals": 6,
       "goalsAgainst": 2,
       "cleanSheets": 2,
-      "shots": 58,
-      "shotsOnTarget": 20,
-      "saves": 5,
-      "fouls": 37,
-      "yellowCards": 2,
+      "shots": 74,
+      "shotsOnTarget": 27,
+      "saves": 6,
+      "fouls": 47,
+      "yellowCards": 3,
       "redCards": 0,
-      "possession": 65.9,
-      "corners": 24,
-      "tackles": 31,
-      "interceptions": 13,
+      "possession": 64.4,
+      "corners": 29,
+      "tackles": 38,
+      "interceptions": 20,
       "passAccuracy": 89
     },
     {
@@ -477,17 +477,17 @@
       "goals": 4,
       "goalsAgainst": 3,
       "cleanSheets": 0,
-      "shots": 34,
-      "shotsOnTarget": 7,
-      "saves": 9,
-      "fouls": 32,
-      "yellowCards": 5,
+      "shots": 41,
+      "shotsOnTarget": 9,
+      "saves": 14,
+      "fouls": 44,
+      "yellowCards": 6,
       "redCards": 0,
-      "possession": 39.6,
-      "corners": 10,
-      "tackles": 32,
-      "interceptions": 19,
-      "passAccuracy": 79
+      "possession": 39.8,
+      "corners": 13,
+      "tackles": 39,
+      "interceptions": 22,
+      "passAccuracy": 80
     },
     {
       "tla": "COL",
@@ -965,6 +965,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Harry Kane",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 5,
+      "goalsPerNinety": 1.67,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Ousmane Dembélé",
       "tla": "FRA",
       "flagCode": "fr",
@@ -1097,18 +1109,6 @@
       "yellowCards": 0
     },
     {
-      "name": "Harry Kane",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
-      "goals": 3,
-      "goalsPerNinety": 1,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Jonathan David",
       "tla": "CAN",
       "flagCode": "ca",
@@ -1202,7 +1202,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Rubén Vargas",
@@ -2729,6 +2729,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Brian Cipenga",
+      "tla": "COD",
+      "flagCode": "cd",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Michael Olise",
       "tla": "FRA",
       "flagCode": "fr",
@@ -2888,6 +2900,18 @@
       "name": "Houssem Aouar",
       "tla": "ALG",
       "flagCode": "dz",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Anthony Gordon",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 2,
@@ -3135,6 +3159,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Chancel Mbemba",
+      "tla": "COD",
+      "flagCode": "cd",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
     },
     {
       "name": "Arthur Masuaku",
@@ -4259,7 +4295,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 5,
+      "saves": 6,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4403,7 +4439,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 9,
+      "saves": 14,
       "savePercent": null,
       "keeperCleanSheets": 0,
       "yellowCards": 0
