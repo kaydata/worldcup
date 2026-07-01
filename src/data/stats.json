@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-01T18:33:16.545Z",
+  "_updated": "2026-07-01T23:59:29.228Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 80,
-    "totalFouls": 1794,
-    "yellowCards": 196,
+    "matchesPlayed": 81,
+    "totalFouls": 1828,
+    "yellowCards": 198,
     "redCards": 11,
-    "penaltiesAwarded": 11,
-    "penaltiesScored": 8,
+    "penaltiesAwarded": 12,
+    "penaltiesScored": 9,
     "ownGoals": 12,
     "cleanSheets": 43,
-    "totalAttendance": 5197142,
+    "totalAttendance": 5264067,
     "avgPossession": 50
   },
   "teamStats": [
@@ -135,17 +135,17 @@
       "goals": 8,
       "goalsAgainst": 6,
       "cleanSheets": 1,
-      "shots": 50,
-      "shotsOnTarget": 18,
-      "saves": 9,
-      "fouls": 24,
-      "yellowCards": 2,
+      "shots": 69,
+      "shotsOnTarget": 23,
+      "saves": 12,
+      "fouls": 36,
+      "yellowCards": 3,
       "redCards": 0,
-      "possession": 58,
-      "corners": 20,
-      "tackles": 26,
-      "interceptions": 20,
-      "passAccuracy": 87
+      "possession": 55.5,
+      "corners": 22,
+      "tackles": 30,
+      "interceptions": 31,
+      "passAccuracy": 86
     },
     {
       "tla": "USA",
@@ -268,17 +268,17 @@
       "goals": 6,
       "goalsAgainst": 2,
       "cleanSheets": 1,
-      "shots": 73,
-      "shotsOnTarget": 20,
-      "saves": 6,
-      "fouls": 29,
-      "yellowCards": 3,
+      "shots": 92,
+      "shotsOnTarget": 25,
+      "saves": 9,
+      "fouls": 51,
+      "yellowCards": 4,
       "redCards": 1,
-      "possession": 59.4,
-      "corners": 14,
-      "tackles": 26,
-      "interceptions": 23,
-      "passAccuracy": 87
+      "possession": 57.6,
+      "corners": 18,
+      "tackles": 30,
+      "interceptions": 31,
+      "passAccuracy": 86
     },
     {
       "tla": "ENG",
@@ -295,7 +295,7 @@
       "redCards": 0,
       "possession": 64.4,
       "corners": 29,
-      "tackles": 38,
+      "tackles": 37,
       "interceptions": 20,
       "passAccuracy": 89
     },
@@ -485,7 +485,7 @@
       "redCards": 0,
       "possession": 39.8,
       "corners": 13,
-      "tackles": 39,
+      "tackles": 40,
       "interceptions": 22,
       "passAccuracy": 80
     },
@@ -1001,6 +1001,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Ismaïla Sarr",
+      "tla": "SEN",
+      "flagCode": "sn",
+      "goals": 4,
+      "goalsPerNinety": 1.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Deniz Undav",
       "tla": "GER",
       "flagCode": "de",
@@ -1040,18 +1052,6 @@
       "name": "Cody Gakpo",
       "tla": "NED",
       "flagCode": "nl",
-      "goals": 3,
-      "goalsPerNinety": 1,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Ismaïla Sarr",
-      "tla": "SEN",
-      "flagCode": "sn",
       "goals": 3,
       "goalsPerNinety": 1,
       "assists": 1,
@@ -1241,6 +1241,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Romelu Lukaku",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Riyad Mahrez",
       "tla": "ALG",
       "flagCode": "dz",
@@ -1275,6 +1287,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 1
+    },
+    {
+      "name": "Leandro Trossard",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
     },
     {
       "name": "Raúl Jiménez",
@@ -1409,7 +1433,19 @@
       "yellowCards": 0
     },
     {
-      "name": "Leandro Trossard",
+      "name": "Habib Diarra",
+      "tla": "SEN",
+      "flagCode": "sn",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Youri Tielemans",
       "tla": "BEL",
       "flagCode": "be",
       "goals": 2,
@@ -1640,18 +1676,6 @@
       "name": "Kaishu Sano",
       "tla": "JPN",
       "flagCode": "jp",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
-    },
-    {
-      "name": "Romelu Lukaku",
-      "tla": "BEL",
-      "flagCode": "be",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 1,
@@ -2528,18 +2552,6 @@
       "name": "Désiré Doué",
       "tla": "FRA",
       "flagCode": "fr",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Habib Diarra",
-      "tla": "SEN",
-      "flagCode": "sn",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 0,
@@ -3674,7 +3686,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Marcos Llorente",
@@ -3824,6 +3836,30 @@
       "name": "Chemsdine Talbi",
       "tla": "MAR",
       "flagCode": "ma",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Moussa Niakhaté",
+      "tla": "SEN",
+      "flagCode": "sn",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Thomas Meunier",
+      "tla": "BEL",
+      "flagCode": "be",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 1,
@@ -4139,7 +4175,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 6,
+      "saves": 9,
       "savePercent": null,
       "keeperCleanSheets": 1,
       "yellowCards": 0
@@ -4475,7 +4511,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 1,
+      "saves": 4,
       "savePercent": null,
       "keeperCleanSheets": 1,
       "yellowCards": 0
