@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-06-30T23:54:29.012Z",
+  "_updated": "2026-07-01T11:41:54.849Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 78,
-    "totalFouls": 1748,
-    "yellowCards": 191,
-    "redCards": 10,
+    "matchesPlayed": 79,
+    "totalFouls": 1772,
+    "yellowCards": 194,
+    "redCards": 11,
     "penaltiesAwarded": 11,
     "penaltiesScored": 8,
     "ownGoals": 12,
-    "cleanSheets": 42,
-    "totalAttendance": 5048079,
+    "cleanSheets": 43,
+    "totalAttendance": 5128903,
     "avgPossession": 50
   },
   "teamStats": [
@@ -238,7 +238,7 @@
       "redCards": 0,
       "possession": 46.1,
       "corners": 18,
-      "tackles": 29,
+      "tackles": 30,
       "interceptions": 28,
       "passAccuracy": 81
     },
@@ -324,18 +324,18 @@
       "flagCode": "mx",
       "goals": 6,
       "goalsAgainst": 0,
-      "cleanSheets": 3,
-      "shots": 35,
-      "shotsOnTarget": 13,
-      "saves": 5,
-      "fouls": 34,
+      "cleanSheets": 4,
+      "shots": 50,
+      "shotsOnTarget": 16,
+      "saves": 6,
+      "fouls": 44,
       "yellowCards": 2,
       "redCards": 1,
-      "possession": 50.3,
-      "corners": 5,
-      "tackles": 21,
-      "interceptions": 21,
-      "passAccuracy": 86
+      "possession": 48.5,
+      "corners": 8,
+      "tackles": 26,
+      "interceptions": 28,
+      "passAccuracy": 85
     },
     {
       "tla": "POR",
@@ -667,17 +667,17 @@
       "goals": 2,
       "goalsAgainst": 2,
       "cleanSheets": 1,
-      "shots": 46,
-      "shotsOnTarget": 19,
-      "saves": 8,
-      "fouls": 35,
-      "yellowCards": 5,
-      "redCards": 0,
-      "possession": 55,
-      "corners": 18,
-      "tackles": 42,
-      "interceptions": 32,
-      "passAccuracy": 87
+      "shots": 53,
+      "shotsOnTarget": 20,
+      "saves": 9,
+      "fouls": 49,
+      "yellowCards": 8,
+      "redCards": 1,
+      "possession": 55.6,
+      "corners": 26,
+      "tackles": 50,
+      "interceptions": 38,
+      "passAccuracy": 86
     },
     {
       "tla": "GHA",
@@ -1001,6 +1001,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Julián Quiñones",
+      "tla": "MEX",
+      "flagCode": "mx",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Johan Manzambi",
       "tla": "SUI",
       "flagCode": "ch",
@@ -1265,7 +1277,7 @@
       "yellowCards": 1
     },
     {
-      "name": "Julián Quiñones",
+      "name": "Raúl Jiménez",
       "tla": "MEX",
       "flagCode": "mx",
       "goals": 2,
@@ -1743,18 +1755,6 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 2
-    },
-    {
-      "name": "Raúl Jiménez",
-      "tla": "MEX",
-      "flagCode": "mx",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
     },
     {
       "name": "Ladislav Krejcí",
@@ -2753,6 +2753,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Roberto Alvarado",
+      "tla": "MEX",
+      "flagCode": "mx",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 3,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Florian Wirtz",
       "tla": "GER",
       "flagCode": "de",
@@ -2771,18 +2783,6 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 3,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Roberto Alvarado",
-      "tla": "MEX",
-      "flagCode": "mx",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 2,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -3803,9 +3803,9 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 5,
+      "saves": 6,
       "savePercent": null,
-      "keeperCleanSheets": 3,
+      "keeperCleanSheets": 4,
       "yellowCards": 0
     },
     {
@@ -4043,7 +4043,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 8,
+      "saves": 9,
       "savePercent": null,
       "keeperCleanSheets": 1,
       "yellowCards": 0
