@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-01T23:59:29.228Z",
+  "_updated": "2026-07-02T10:20:38.848Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 81,
-    "totalFouls": 1828,
-    "yellowCards": 198,
-    "redCards": 11,
+    "matchesPlayed": 82,
+    "totalFouls": 1848,
+    "yellowCards": 199,
+    "redCards": 12,
     "penaltiesAwarded": 12,
     "penaltiesScored": 9,
     "ownGoals": 12,
-    "cleanSheets": 43,
-    "totalAttendance": 5264067,
+    "cleanSheets": 44,
+    "totalAttendance": 5332894,
     "avgPossession": 50
   },
   "teamStats": [
@@ -153,17 +153,17 @@
       "flagCode": "us",
       "goals": 8,
       "goalsAgainst": 4,
-      "cleanSheets": 1,
-      "shots": 44,
-      "shotsOnTarget": 15,
-      "saves": 4,
-      "fouls": 38,
+      "cleanSheets": 2,
+      "shots": 52,
+      "shotsOnTarget": 17,
+      "saves": 7,
+      "fouls": 45,
       "yellowCards": 5,
-      "redCards": 0,
-      "possession": 59.9,
-      "corners": 19,
-      "tackles": 24,
-      "interceptions": 38,
+      "redCards": 1,
+      "possession": 57,
+      "corners": 23,
+      "tackles": 32,
+      "interceptions": 45,
       "passAccuracy": 85
     },
     {
@@ -276,7 +276,7 @@
       "redCards": 1,
       "possession": 57.6,
       "corners": 18,
-      "tackles": 30,
+      "tackles": 31,
       "interceptions": 31,
       "passAccuracy": 86
     },
@@ -382,16 +382,16 @@
       "goals": 5,
       "goalsAgainst": 6,
       "cleanSheets": 0,
-      "shots": 27,
-      "shotsOnTarget": 11,
+      "shots": 37,
+      "shotsOnTarget": 14,
       "saves": 6,
-      "fouls": 47,
-      "yellowCards": 6,
+      "fouls": 60,
+      "yellowCards": 7,
       "redCards": 1,
-      "possession": 43.7,
-      "corners": 12,
-      "tackles": 24,
-      "interceptions": 26,
+      "possession": 45.6,
+      "corners": 15,
+      "tackles": 36,
+      "interceptions": 33,
       "passAccuracy": 80
     },
     {
@@ -1061,6 +1061,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Folarin Balogun",
+      "tla": "USA",
+      "flagCode": "us",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Ismael Saibari",
       "tla": "MAR",
       "flagCode": "ma",
@@ -1325,18 +1337,6 @@
       "yellowCards": 1
     },
     {
-      "name": "Folarin Balogun",
-      "tla": "USA",
-      "flagCode": "us",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
-    },
-    {
       "name": "Daichi Kamada",
       "tla": "JPN",
       "flagCode": "jp",
@@ -1556,6 +1556,18 @@
       "name": "Promise David",
       "tla": "CAN",
       "flagCode": "ca",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Malik Tillman",
+      "tla": "USA",
+      "flagCode": "us",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 1,
@@ -2993,18 +3005,6 @@
       "yellowCards": 0
     },
     {
-      "name": "Malik Tillman",
-      "tla": "USA",
-      "flagCode": "us",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Paul Okon-Engstler",
       "tla": "AUS",
       "flagCode": "au",
@@ -4403,9 +4403,9 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 2,
+      "saves": 5,
       "savePercent": null,
-      "keeperCleanSheets": 1,
+      "keeperCleanSheets": 2,
       "yellowCards": 0
     },
     {
