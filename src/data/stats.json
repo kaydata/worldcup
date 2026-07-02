@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-02T18:18:04.436Z",
+  "_updated": "2026-07-02T23:45:05.718Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 82,
-    "totalFouls": 1848,
-    "yellowCards": 199,
+    "matchesPlayed": 83,
+    "totalFouls": 1871,
+    "yellowCards": 200,
     "redCards": 12,
     "penaltiesAwarded": 12,
     "penaltiesScored": 9,
     "ownGoals": 12,
-    "cleanSheets": 44,
-    "totalAttendance": 5332894,
+    "cleanSheets": 45,
+    "totalAttendance": 5403386,
     "avgPossession": 50
   },
   "teamStats": [
@@ -249,16 +249,16 @@
       "goals": 6,
       "goalsAgainst": 6,
       "cleanSheets": 0,
-      "shots": 27,
+      "shots": 32,
       "shotsOnTarget": 8,
-      "saves": 7,
-      "fouls": 32,
-      "yellowCards": 4,
+      "saves": 13,
+      "fouls": 47,
+      "yellowCards": 5,
       "redCards": 0,
-      "possession": 48.2,
+      "possession": 45,
       "corners": 10,
-      "tackles": 18,
-      "interceptions": 34,
+      "tackles": 26,
+      "interceptions": 40,
       "passAccuracy": 85
     },
     {
@@ -438,17 +438,17 @@
       "flagCode": "es",
       "goals": 5,
       "goalsAgainst": 0,
-      "cleanSheets": 3,
-      "shots": 55,
-      "shotsOnTarget": 16,
+      "cleanSheets": 4,
+      "shots": 78,
+      "shotsOnTarget": 26,
       "saves": 4,
-      "fouls": 34,
+      "fouls": 42,
       "yellowCards": 2,
       "redCards": 0,
-      "possession": 69.4,
-      "corners": 23,
-      "tackles": 30,
-      "interceptions": 28,
+      "possession": 68.2,
+      "corners": 32,
+      "tackles": 42,
+      "interceptions": 34,
       "passAccuracy": 91
     },
     {
@@ -1001,6 +1001,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Mikel Oyarzabal",
+      "tla": "ESP",
+      "flagCode": "es",
+      "goals": 4,
+      "goalsPerNinety": 1.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Ismaïla Sarr",
       "tla": "SEN",
       "flagCode": "sn",
@@ -1232,18 +1244,6 @@
       "name": "Ayase Ueda",
       "tla": "JPN",
       "flagCode": "jp",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Mikel Oyarzabal",
-      "tla": "ESP",
-      "flagCode": "es",
       "goals": 2,
       "goalsPerNinety": 0.67,
       "assists": 1,
@@ -1779,6 +1779,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Álex Baena",
+      "tla": "ESP",
+      "flagCode": "es",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
     },
     {
       "name": "Teboho Mokoena",
@@ -2573,18 +2585,6 @@
       "yellowCards": 0
     },
     {
-      "name": "Álex Baena",
-      "tla": "ESP",
-      "flagCode": "es",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
-    },
-    {
       "name": "Mahmoud Saber",
       "tla": "EGY",
       "flagCode": "eg",
@@ -2765,6 +2765,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Pedro Porro",
+      "tla": "ESP",
+      "flagCode": "es",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Michael Olise",
       "tla": "FRA",
       "flagCode": "fr",
@@ -2936,6 +2948,18 @@
       "name": "Anthony Gordon",
       "tla": "ENG",
       "flagCode": "gb-eng",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Marc Cucurella",
+      "tla": "ESP",
+      "flagCode": "es",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 2,
@@ -4153,7 +4177,7 @@
       "assists": 0,
       "saves": 4,
       "savePercent": null,
-      "keeperCleanSheets": 3,
+      "keeperCleanSheets": 4,
       "yellowCards": 0
     },
     {
@@ -4295,7 +4319,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 7,
+      "saves": 13,
       "savePercent": null,
       "keeperCleanSheets": 0,
       "yellowCards": 0
