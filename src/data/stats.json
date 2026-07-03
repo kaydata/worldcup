@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-03T17:03:12.566Z",
+  "_updated": "2026-07-03T23:40:13.393Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 85,
-    "totalFouls": 1911,
-    "yellowCards": 205,
+    "matchesPlayed": 86,
+    "totalFouls": 1937,
+    "yellowCards": 207,
     "redCards": 12,
     "penaltiesAwarded": 13,
     "penaltiesScored": 10,
-    "ownGoals": 12,
+    "ownGoals": 13,
     "cleanSheets": 46,
-    "totalAttendance": 5498919,
+    "totalAttendance": 5569163,
     "avgPossession": 50
   },
   "teamStats": [
@@ -420,17 +420,17 @@
       "goals": 5,
       "goalsAgainst": 3,
       "cleanSheets": 0,
-      "shots": 48,
-      "shotsOnTarget": 13,
-      "saves": 9,
-      "fouls": 34,
-      "yellowCards": 6,
+      "shots": 62,
+      "shotsOnTarget": 16,
+      "saves": 10,
+      "fouls": 48,
+      "yellowCards": 8,
       "redCards": 0,
-      "possession": 54.5,
-      "corners": 19,
-      "tackles": 40,
-      "interceptions": 29,
-      "passAccuracy": 86
+      "possession": 55.4,
+      "corners": 26,
+      "tackles": 47,
+      "interceptions": 37,
+      "passAccuracy": 85
     },
     {
       "tla": "ESP",
@@ -610,17 +610,17 @@
       "goals": 2,
       "goalsAgainst": 2,
       "cleanSheets": 2,
-      "shots": 26,
-      "shotsOnTarget": 11,
-      "saves": 11,
-      "fouls": 34,
+      "shots": 42,
+      "shotsOnTarget": 12,
+      "saves": 14,
+      "fouls": 46,
       "yellowCards": 5,
       "redCards": 0,
-      "possession": 40.8,
-      "corners": 12,
-      "tackles": 28,
-      "interceptions": 20,
-      "passAccuracy": 77
+      "possession": 41,
+      "corners": 16,
+      "tackles": 35,
+      "interceptions": 29,
+      "passAccuracy": 78
     },
     {
       "tla": "CPV",
@@ -1397,6 +1397,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Emam Ashour",
+      "tla": "EGY",
+      "flagCode": "eg",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Marko Arnautovic",
       "tla": "AUT",
       "flagCode": "at",
@@ -2000,18 +2012,6 @@
       "name": "Mattias Svanberg",
       "tla": "SWE",
       "flagCode": "se",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Emam Ashour",
-      "tla": "EGY",
-      "flagCode": "eg",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 0,
@@ -3917,6 +3917,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Karim Hafez",
+      "tla": "EGY",
+      "flagCode": "eg",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Raúl Rangel",
       "tla": "MEX",
       "flagCode": "mx",
@@ -4079,7 +4091,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 11,
+      "saves": 14,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4235,7 +4247,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 9,
+      "saves": 10,
       "savePercent": null,
       "keeperCleanSheets": 0,
       "yellowCards": 0
