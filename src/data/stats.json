@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-04T15:46:30.381Z",
+  "_updated": "2026-07-04T20:15:25.490Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 88,
-    "totalFouls": 1986,
-    "yellowCards": 214,
+    "matchesPlayed": 89,
+    "totalFouls": 2024,
+    "yellowCards": 222,
     "redCards": 12,
     "penaltiesAwarded": 13,
     "penaltiesScored": 10,
     "ownGoals": 14,
-    "cleanSheets": 47,
-    "totalAttendance": 5702686,
+    "cleanSheets": 48,
+    "totalAttendance": 5771463,
     "avgPossession": 50
   },
   "teamStats": [
@@ -97,17 +97,17 @@
       "goals": 8,
       "goalsAgainst": 3,
       "cleanSheets": 2,
-      "shots": 70,
-      "shotsOnTarget": 28,
-      "saves": 5,
-      "fouls": 48,
-      "yellowCards": 7,
+      "shots": 80,
+      "shotsOnTarget": 31,
+      "saves": 6,
+      "fouls": 72,
+      "yellowCards": 11,
       "redCards": 0,
-      "possession": 56.6,
-      "corners": 39,
-      "tackles": 40,
-      "interceptions": 31,
-      "passAccuracy": 82
+      "possession": 54.2,
+      "corners": 50,
+      "tackles": 50,
+      "interceptions": 36,
+      "passAccuracy": 81
     },
     {
       "tla": "NOR",
@@ -305,18 +305,18 @@
       "flagCode": "ma",
       "goals": 6,
       "goalsAgainst": 3,
-      "cleanSheets": 1,
-      "shots": 59,
-      "shotsOnTarget": 21,
-      "saves": 6,
-      "fouls": 47,
-      "yellowCards": 2,
+      "cleanSheets": 2,
+      "shots": 64,
+      "shotsOnTarget": 25,
+      "saves": 9,
+      "fouls": 61,
+      "yellowCards": 6,
       "redCards": 0,
-      "possession": 61.7,
-      "corners": 24,
-      "tackles": 46,
-      "interceptions": 29,
-      "passAccuracy": 89
+      "possession": 60.4,
+      "corners": 25,
+      "tackles": 55,
+      "interceptions": 37,
+      "passAccuracy": 88
     },
     {
       "tla": "MEX",
@@ -1142,7 +1142,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Matheus Cunha",
@@ -1301,6 +1301,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Soufiane Rahimi",
+      "tla": "MAR",
+      "flagCode": "ma",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Nicolas Pépé",
       "tla": "CIV",
       "flagCode": "ci",
@@ -1358,7 +1370,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 1
+      "yellowCards": 2
     },
     {
       "name": "Daichi Kamada",
@@ -1481,6 +1493,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Azzedine Ounahi",
+      "tla": "MAR",
+      "flagCode": "ma",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Alexander Isak",
       "tla": "SWE",
       "flagCode": "se",
@@ -1544,6 +1568,18 @@
       "name": "Nathan Saliba",
       "tla": "CAN",
       "flagCode": "ca",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
+      "name": "Achraf Hakimi",
+      "tla": "MAR",
+      "flagCode": "ma",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 2,
@@ -1760,30 +1796,6 @@
       "name": "Rafael Leão",
       "tla": "POR",
       "flagCode": "pt",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Achraf Hakimi",
-      "tla": "MAR",
-      "flagCode": "ma",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Soufiane Rahimi",
-      "tla": "MAR",
-      "flagCode": "ma",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 1,
@@ -2873,6 +2885,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Brahim Díaz",
+      "tla": "MAR",
+      "flagCode": "ma",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 4,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Bruno Guimarães",
       "tla": "BRA",
       "flagCode": "br",
@@ -2915,18 +2939,6 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 3,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Brahim Díaz",
-      "tla": "MAR",
-      "flagCode": "ma",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 2,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -4079,7 +4091,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 5,
+      "saves": 6,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4151,9 +4163,9 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 6,
+      "saves": 9,
       "savePercent": null,
-      "keeperCleanSheets": 1,
+      "keeperCleanSheets": 2,
       "yellowCards": 0
     },
     {
