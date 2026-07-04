@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-03T23:40:13.393Z",
+  "_updated": "2026-07-04T09:10:26.774Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 86,
-    "totalFouls": 1937,
-    "yellowCards": 207,
+    "matchesPlayed": 88,
+    "totalFouls": 1986,
+    "yellowCards": 214,
     "redCards": 12,
     "penaltiesAwarded": 13,
     "penaltiesScored": 10,
-    "ownGoals": 13,
-    "cleanSheets": 46,
-    "totalAttendance": 5569163,
+    "ownGoals": 14,
+    "cleanSheets": 47,
+    "totalAttendance": 5702686,
     "avgPossession": 50
   },
   "teamStats": [
@@ -78,16 +78,16 @@
       "goals": 8,
       "goalsAgainst": 1,
       "cleanSheets": 2,
-      "shots": 34,
-      "shotsOnTarget": 15,
-      "saves": 1,
-      "fouls": 33,
-      "yellowCards": 2,
+      "shots": 56,
+      "shotsOnTarget": 25,
+      "saves": 4,
+      "fouls": 46,
+      "yellowCards": 3,
       "redCards": 0,
-      "possession": 58.2,
-      "corners": 9,
-      "tackles": 35,
-      "interceptions": 30,
+      "possession": 59.6,
+      "corners": 17,
+      "tackles": 48,
+      "interceptions": 39,
       "passAccuracy": 91
     },
     {
@@ -495,18 +495,18 @@
       "flagCode": "co",
       "goals": 4,
       "goalsAgainst": 1,
-      "cleanSheets": 2,
-      "shots": 59,
-      "shotsOnTarget": 19,
+      "cleanSheets": 3,
+      "shots": 79,
+      "shotsOnTarget": 27,
       "saves": 4,
-      "fouls": 35,
-      "yellowCards": 4,
+      "fouls": 49,
+      "yellowCards": 6,
       "redCards": 0,
-      "possession": 59.8,
-      "corners": 14,
-      "tackles": 17,
-      "interceptions": 22,
-      "passAccuracy": 87
+      "possession": 60,
+      "corners": 17,
+      "tackles": 25,
+      "interceptions": 27,
+      "passAccuracy": 88
     },
     {
       "tla": "NZL",
@@ -629,17 +629,17 @@
       "goals": 2,
       "goalsAgainst": 2,
       "cleanSheets": 2,
-      "shots": 33,
-      "shotsOnTarget": 7,
-      "saves": 10,
-      "fouls": 15,
-      "yellowCards": 4,
+      "shots": 49,
+      "shotsOnTarget": 12,
+      "saves": 18,
+      "fouls": 27,
+      "yellowCards": 5,
       "redCards": 0,
-      "possession": 37.2,
-      "corners": 9,
-      "tackles": 38,
-      "interceptions": 41,
-      "passAccuracy": 79
+      "possession": 37,
+      "corners": 17,
+      "tackles": 45,
+      "interceptions": 50,
+      "passAccuracy": 81
     },
     {
       "tla": "CZE",
@@ -686,16 +686,16 @@
       "goals": 2,
       "goalsAgainst": 2,
       "cleanSheets": 2,
-      "shots": 15,
+      "shots": 23,
       "shotsOnTarget": 4,
-      "saves": 9,
-      "fouls": 46,
-      "yellowCards": 3,
+      "saves": 16,
+      "fouls": 56,
+      "yellowCards": 6,
       "redCards": 0,
-      "possession": 35.3,
-      "corners": 6,
-      "tackles": 33,
-      "interceptions": 25,
+      "possession": 36.3,
+      "corners": 8,
+      "tackles": 40,
+      "interceptions": 30,
       "passAccuracy": 84
     },
     {
@@ -929,24 +929,24 @@
   ],
   "playerStats": [
     {
-      "name": "Kylian Mbappé",
-      "tla": "FRA",
-      "flagCode": "fr",
-      "goals": 6,
-      "goalsPerNinety": 2,
-      "assists": 2,
+      "name": "Lionel Messi",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 7,
+      "goalsPerNinety": 2.33,
+      "assists": 0,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
     },
     {
-      "name": "Lionel Messi",
-      "tla": "ARG",
-      "flagCode": "ar",
+      "name": "Kylian Mbappé",
+      "tla": "FRA",
+      "flagCode": "fr",
       "goals": 6,
       "goalsPerNinety": 2,
-      "assists": 0,
+      "assists": 2,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -1829,6 +1829,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Lisandro Martínez",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Teboho Mokoena",
       "tla": "RSA",
       "flagCode": "za",
@@ -2021,6 +2033,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Sidny Lopes Cabral",
+      "tla": "CPV",
+      "flagCode": "cv",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 2
+    },
+    {
       "name": "Abdulelah Al-Amri",
       "tla": "KSA",
       "flagCode": "sa",
@@ -2174,7 +2198,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 1
+      "yellowCards": 2
     },
     {
       "name": "Abbosbek Fayzullaev",
@@ -2270,7 +2294,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Agustín Canobbio",
@@ -2811,6 +2835,30 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Deroy Duarte",
+      "tla": "CPV",
+      "flagCode": "cv",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Jhon Arias",
+      "tla": "COL",
+      "flagCode": "co",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
     },
     {
       "name": "Michael Olise",
@@ -3929,6 +3977,54 @@
       "yellowCards": 0
     },
     {
+      "name": "Ryan Mendes",
+      "tla": "CPV",
+      "flagCode": "cv",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Alexis Mac Allister",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Yannick Semedo",
+      "tla": "CPV",
+      "flagCode": "cv",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Luis Suárez",
+      "tla": "COL",
+      "flagCode": "co",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Raúl Rangel",
       "tla": "MEX",
       "flagCode": "mx",
@@ -4223,7 +4319,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 10,
+      "saves": 18,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4453,7 +4549,7 @@
       "assists": 0,
       "saves": 4,
       "savePercent": null,
-      "keeperCleanSheets": 2,
+      "keeperCleanSheets": 3,
       "yellowCards": 0
     },
     {
@@ -4487,7 +4583,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 1,
+      "saves": 4,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4574,6 +4670,18 @@
       "saves": 4,
       "savePercent": null,
       "keeperCleanSheets": 1,
+      "yellowCards": 0
+    },
+    {
+      "name": "Lawrence Ati Zigi",
+      "tla": "GHA",
+      "flagCode": "gh",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 0,
+      "saves": 7,
+      "savePercent": null,
+      "keeperCleanSheets": 2,
       "yellowCards": 0
     }
   ]
