@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-05T20:21:05.425Z",
+  "_updated": "2026-07-06T14:07:33.045Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 90,
-    "totalFouls": 2048,
-    "yellowCards": 225,
-    "redCards": 12,
-    "penaltiesAwarded": 14,
-    "penaltiesScored": 11,
+    "matchesPlayed": 92,
+    "totalFouls": 2082,
+    "yellowCards": 232,
+    "redCards": 13,
+    "penaltiesAwarded": 18,
+    "penaltiesScored": 14,
     "ownGoals": 14,
     "cleanSheets": 49,
-    "totalAttendance": 5839787,
+    "totalAttendance": 6001274,
     "avgPossession": 50
   },
   "teamStats": [
@@ -116,17 +116,17 @@
       "goals": 8,
       "goalsAgainst": 7,
       "cleanSheets": 0,
-      "shots": 44,
-      "shotsOnTarget": 20,
-      "saves": 11,
-      "fouls": 42,
+      "shots": 53,
+      "shotsOnTarget": 25,
+      "saves": 15,
+      "fouls": 48,
       "yellowCards": 2,
       "redCards": 0,
-      "possession": 49.8,
-      "corners": 17,
-      "tackles": 41,
-      "interceptions": 28,
-      "passAccuracy": 85
+      "possession": 53.1,
+      "corners": 22,
+      "tackles": 52,
+      "interceptions": 34,
+      "passAccuracy": 87
     },
     {
       "tla": "SEN",
@@ -173,16 +173,16 @@
       "goals": 7,
       "goalsAgainst": 1,
       "cleanSheets": 2,
-      "shots": 60,
-      "shotsOnTarget": 26,
-      "saves": 11,
-      "fouls": 44,
-      "yellowCards": 7,
+      "shots": 74,
+      "shotsOnTarget": 30,
+      "saves": 14,
+      "fouls": 51,
+      "yellowCards": 8,
       "redCards": 0,
-      "possession": 57.7,
-      "corners": 23,
-      "tackles": 36,
-      "interceptions": 37,
+      "possession": 52.9,
+      "corners": 28,
+      "tackles": 46,
+      "interceptions": 48,
       "passAccuracy": 90
     },
     {
@@ -287,17 +287,17 @@
       "goals": 6,
       "goalsAgainst": 2,
       "cleanSheets": 2,
-      "shots": 74,
-      "shotsOnTarget": 27,
-      "saves": 6,
-      "fouls": 47,
-      "yellowCards": 3,
-      "redCards": 0,
-      "possession": 64.4,
-      "corners": 29,
-      "tackles": 37,
-      "interceptions": 20,
-      "passAccuracy": 89
+      "shots": 80,
+      "shotsOnTarget": 32,
+      "saves": 9,
+      "fouls": 54,
+      "yellowCards": 7,
+      "redCards": 1,
+      "possession": 58.1,
+      "corners": 31,
+      "tackles": 46,
+      "interceptions": 24,
+      "passAccuracy": 88
     },
     {
       "tla": "MAR",
@@ -325,17 +325,17 @@
       "goals": 6,
       "goalsAgainst": 0,
       "cleanSheets": 4,
-      "shots": 50,
-      "shotsOnTarget": 16,
-      "saves": 6,
-      "fouls": 44,
-      "yellowCards": 2,
+      "shots": 70,
+      "shotsOnTarget": 21,
+      "saves": 8,
+      "fouls": 58,
+      "yellowCards": 4,
       "redCards": 1,
-      "possession": 48.5,
-      "corners": 8,
-      "tackles": 26,
-      "interceptions": 28,
-      "passAccuracy": 85
+      "possession": 52.1,
+      "corners": 20,
+      "tackles": 33,
+      "interceptions": 35,
+      "passAccuracy": 86
     },
     {
       "tla": "POR",
@@ -941,6 +941,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Erling Haaland",
+      "tla": "NOR",
+      "flagCode": "no",
+      "goals": 7,
+      "goalsPerNinety": 2.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Lionel Messi",
       "tla": "ARG",
       "flagCode": "ar",
@@ -953,24 +965,12 @@
       "yellowCards": 0
     },
     {
-      "name": "Erling Haaland",
-      "tla": "NOR",
-      "flagCode": "no",
-      "goals": 5,
-      "goalsPerNinety": 1.67,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Harry Kane",
       "tla": "ENG",
       "flagCode": "gb-eng",
-      "goals": 5,
-      "goalsPerNinety": 1.67,
-      "assists": 0,
+      "goals": 6,
+      "goalsPerNinety": 2,
+      "assists": 1,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -989,6 +989,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Julián Quiñones",
+      "tla": "MEX",
+      "flagCode": "mx",
+      "goals": 4,
+      "goalsPerNinety": 1.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Vinícius Júnior",
       "tla": "BRA",
       "flagCode": "br",
@@ -999,6 +1011,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Jude Bellingham",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 4,
+      "goalsPerNinety": 1.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
     },
     {
       "name": "Mikel Oyarzabal",
@@ -1049,9 +1073,9 @@
       "yellowCards": 0
     },
     {
-      "name": "Julián Quiñones",
-      "tla": "MEX",
-      "flagCode": "mx",
+      "name": "Cody Gakpo",
+      "tla": "NED",
+      "flagCode": "nl",
       "goals": 3,
       "goalsPerNinety": 1,
       "assists": 1,
@@ -1061,12 +1085,12 @@
       "yellowCards": 0
     },
     {
-      "name": "Cody Gakpo",
-      "tla": "NED",
-      "flagCode": "nl",
+      "name": "Raúl Jiménez",
+      "tla": "MEX",
+      "flagCode": "mx",
       "goals": 3,
       "goalsPerNinety": 1,
-      "assists": 1,
+      "assists": 0,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -1241,18 +1265,6 @@
       "yellowCards": 1
     },
     {
-      "name": "Jude Bellingham",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
-    },
-    {
       "name": "Rubén Vargas",
       "tla": "SUI",
       "flagCode": "ch",
@@ -1343,18 +1355,6 @@
       "goals": 2,
       "goalsPerNinety": 0.67,
       "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Raúl Jiménez",
-      "tla": "MEX",
-      "flagCode": "mx",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 0,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -2873,6 +2873,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Neymar",
+      "tla": "BRA",
+      "flagCode": "br",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Michael Olise",
       "tla": "FRA",
       "flagCode": "fr",
@@ -2945,6 +2957,30 @@
       "yellowCards": 0
     },
     {
+      "name": "Bukayo Saka",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 3,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Andreas Schjelderup",
+      "tla": "NOR",
+      "flagCode": "no",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 3,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Joshua Kimmich",
       "tla": "GER",
       "flagCode": "de",
@@ -2984,18 +3020,6 @@
       "name": "Chris Wood",
       "tla": "NZL",
       "flagCode": "nz",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 2,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Bukayo Saka",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 2,
@@ -3326,7 +3350,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 1
+      "yellowCards": 2
     },
     {
       "name": "Elliot Anderson",
@@ -3650,7 +3674,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Tshepang Moremi",
@@ -3740,18 +3764,6 @@
       "name": "Orkun Kökçü",
       "tla": "TUR",
       "flagCode": "tr",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Andreas Schjelderup",
-      "tla": "NOR",
-      "flagCode": "no",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 1,
@@ -4043,7 +4055,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 6,
+      "saves": 8,
       "savePercent": null,
       "keeperCleanSheets": 4,
       "yellowCards": 0
@@ -4151,7 +4163,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 11,
+      "saves": 14,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4499,7 +4511,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 6,
+      "saves": 9,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4619,7 +4631,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 6,
+      "saves": 10,
       "savePercent": null,
       "keeperCleanSheets": 0,
       "yellowCards": 0
