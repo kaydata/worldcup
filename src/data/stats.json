@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-06T21:16:16.786Z",
+  "_updated": "2026-07-07T11:22:26.050Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 93,
-    "totalFouls": 2104,
-    "yellowCards": 235,
+    "matchesPlayed": 94,
+    "totalFouls": 2124,
+    "yellowCards": 237,
     "redCards": 13,
     "penaltiesAwarded": 18,
     "penaltiesScored": 14,
     "ownGoals": 14,
     "cleanSheets": 50,
-    "totalAttendance": 6071923,
+    "totalAttendance": 6138848,
     "avgPossession": 50
   },
   "teamStats": [
@@ -154,16 +154,16 @@
       "goals": 8,
       "goalsAgainst": 4,
       "cleanSheets": 2,
-      "shots": 52,
-      "shotsOnTarget": 17,
-      "saves": 7,
-      "fouls": 45,
-      "yellowCards": 5,
+      "shots": 59,
+      "shotsOnTarget": 19,
+      "saves": 10,
+      "fouls": 56,
+      "yellowCards": 7,
       "redCards": 1,
-      "possession": 57,
-      "corners": 23,
-      "tackles": 32,
-      "interceptions": 45,
+      "possession": 56.8,
+      "corners": 26,
+      "tackles": 41,
+      "interceptions": 54,
       "passAccuracy": 85
     },
     {
@@ -268,17 +268,17 @@
       "goals": 6,
       "goalsAgainst": 2,
       "cleanSheets": 1,
-      "shots": 92,
-      "shotsOnTarget": 25,
-      "saves": 9,
-      "fouls": 51,
+      "shots": 107,
+      "shotsOnTarget": 32,
+      "saves": 10,
+      "fouls": 60,
       "yellowCards": 4,
       "redCards": 1,
-      "possession": 57.6,
-      "corners": 18,
-      "tackles": 31,
-      "interceptions": 31,
-      "passAccuracy": 86
+      "possession": 54.9,
+      "corners": 23,
+      "tackles": 41,
+      "interceptions": 40,
+      "passAccuracy": 85
     },
     {
       "tla": "ENG",
@@ -447,8 +447,8 @@
       "redCards": 0,
       "possession": 65.6,
       "corners": 39,
-      "tackles": 57,
-      "interceptions": 39,
+      "tackles": 55,
+      "interceptions": 40,
       "passAccuracy": 90
     },
     {
@@ -1085,6 +1085,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Romelu Lukaku",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Raúl Jiménez",
       "tla": "MEX",
       "flagCode": "mx",
@@ -1229,6 +1241,30 @@
       "yellowCards": 1
     },
     {
+      "name": "Leandro Trossard",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Malik Tillman",
+      "tla": "USA",
+      "flagCode": "us",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Maxi Araújo",
       "tla": "URU",
       "flagCode": "uy",
@@ -1289,18 +1325,6 @@
       "yellowCards": 0
     },
     {
-      "name": "Romelu Lukaku",
-      "tla": "BEL",
-      "flagCode": "be",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
-    },
-    {
       "name": "Riyad Mahrez",
       "tla": "ALG",
       "flagCode": "dz",
@@ -1349,7 +1373,7 @@
       "yellowCards": 1
     },
     {
-      "name": "Leandro Trossard",
+      "name": "Charles De Ketelaere",
       "tla": "BEL",
       "flagCode": "be",
       "goals": 2,
@@ -1589,6 +1613,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Hans Vanaken",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Hwang In-Beom",
       "tla": "KOR",
       "flagCode": "kr",
@@ -1604,18 +1640,6 @@
       "name": "Promise David",
       "tla": "CAN",
       "flagCode": "ca",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Malik Tillman",
-      "tla": "USA",
-      "flagCode": "us",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 1,
@@ -3065,6 +3089,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Nicolas Raskin",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Houssem Aouar",
       "tla": "ALG",
       "flagCode": "dz",
@@ -3833,30 +3869,6 @@
       "yellowCards": 0
     },
     {
-      "name": "Hans Vanaken",
-      "tla": "BEL",
-      "flagCode": "be",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Nicolas Raskin",
-      "tla": "BEL",
-      "flagCode": "be",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Mateo Kovacic",
       "tla": "CRO",
       "flagCode": "hr",
@@ -4379,7 +4391,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 9,
+      "saves": 10,
       "savePercent": null,
       "keeperCleanSheets": 1,
       "yellowCards": 0
@@ -4607,7 +4619,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 5,
+      "saves": 8,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
