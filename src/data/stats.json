@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-07T19:17:20.712Z",
+  "_updated": "2026-07-07T23:31:42.334Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 95,
-    "totalFouls": 2148,
-    "yellowCards": 241,
+    "matchesPlayed": 96,
+    "totalFouls": 2191,
+    "yellowCards": 246,
     "redCards": 13,
     "penaltiesAwarded": 19,
     "penaltiesScored": 14,
     "ownGoals": 14,
-    "cleanSheets": 50,
-    "totalAttendance": 6207087,
+    "cleanSheets": 52,
+    "totalAttendance": 6259584,
     "avgPossession": 50
   },
   "teamStats": [
@@ -210,18 +210,18 @@
       "flagCode": "ch",
       "goals": 7,
       "goalsAgainst": 3,
-      "cleanSheets": 1,
-      "shots": 56,
-      "shotsOnTarget": 23,
-      "saves": 13,
-      "fouls": 47,
-      "yellowCards": 3,
+      "cleanSheets": 2,
+      "shots": 63,
+      "shotsOnTarget": 25,
+      "saves": 16,
+      "fouls": 69,
+      "yellowCards": 6,
       "redCards": 0,
-      "possession": 57.5,
-      "corners": 23,
-      "tackles": 40,
-      "interceptions": 33,
-      "passAccuracy": 86
+      "possession": 56.7,
+      "corners": 26,
+      "tackles": 47,
+      "interceptions": 46,
+      "passAccuracy": 87
     },
     {
       "tla": "SWE",
@@ -428,8 +428,8 @@
       "redCards": 0,
       "possession": 51.6,
       "corners": 27,
-      "tackles": 55,
-      "interceptions": 47,
+      "tackles": 54,
+      "interceptions": 46,
       "passAccuracy": 85
     },
     {
@@ -495,18 +495,18 @@
       "flagCode": "co",
       "goals": 4,
       "goalsAgainst": 1,
-      "cleanSheets": 3,
-      "shots": 79,
-      "shotsOnTarget": 27,
-      "saves": 4,
-      "fouls": 49,
-      "yellowCards": 6,
+      "cleanSheets": 4,
+      "shots": 94,
+      "shotsOnTarget": 30,
+      "saves": 6,
+      "fouls": 70,
+      "yellowCards": 8,
       "redCards": 0,
-      "possession": 60,
-      "corners": 17,
-      "tackles": 25,
-      "interceptions": 27,
-      "passAccuracy": 88
+      "possession": 57.4,
+      "corners": 24,
+      "tackles": 32,
+      "interceptions": 39,
+      "passAccuracy": 87
     },
     {
       "tla": "NZL",
@@ -2294,7 +2294,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 1
+      "yellowCards": 2
     },
     {
       "name": "Issa Diop",
@@ -4142,7 +4142,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Ferran Torres",
@@ -4259,9 +4259,9 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 13,
+      "saves": 16,
       "savePercent": null,
-      "keeperCleanSheets": 1,
+      "keeperCleanSheets": 2,
       "yellowCards": 0
     },
     {
@@ -4679,9 +4679,9 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 4,
+      "saves": 6,
       "savePercent": null,
-      "keeperCleanSheets": 3,
+      "keeperCleanSheets": 4,
       "yellowCards": 0
     },
     {
