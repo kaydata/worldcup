@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-07T11:22:26.050Z",
+  "_updated": "2026-07-07T19:17:20.712Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 94,
-    "totalFouls": 2124,
-    "yellowCards": 237,
+    "matchesPlayed": 95,
+    "totalFouls": 2148,
+    "yellowCards": 241,
     "redCards": 13,
-    "penaltiesAwarded": 18,
+    "penaltiesAwarded": 19,
     "penaltiesScored": 14,
     "ownGoals": 14,
     "cleanSheets": 50,
-    "totalAttendance": 6138848,
+    "totalAttendance": 6207087,
     "avgPossession": 50
   },
   "teamStats": [
@@ -78,16 +78,16 @@
       "goals": 8,
       "goalsAgainst": 1,
       "cleanSheets": 2,
-      "shots": 56,
-      "shotsOnTarget": 25,
+      "shots": 75,
+      "shotsOnTarget": 32,
       "saves": 4,
-      "fouls": 46,
+      "fouls": 59,
       "yellowCards": 3,
       "redCards": 0,
-      "possession": 59.6,
-      "corners": 17,
-      "tackles": 48,
-      "interceptions": 39,
+      "possession": 60.4,
+      "corners": 23,
+      "tackles": 63,
+      "interceptions": 46,
       "passAccuracy": 91
     },
     {
@@ -420,16 +420,16 @@
       "goals": 5,
       "goalsAgainst": 3,
       "cleanSheets": 0,
-      "shots": 62,
-      "shotsOnTarget": 16,
-      "saves": 10,
-      "fouls": 48,
-      "yellowCards": 8,
+      "shots": 67,
+      "shotsOnTarget": 18,
+      "saves": 14,
+      "fouls": 59,
+      "yellowCards": 12,
       "redCards": 0,
-      "possession": 55.4,
-      "corners": 26,
-      "tackles": 47,
-      "interceptions": 37,
+      "possession": 51.6,
+      "corners": 27,
+      "tackles": 55,
+      "interceptions": 47,
       "passAccuracy": 85
     },
     {
@@ -929,6 +929,18 @@
   ],
   "playerStats": [
     {
+      "name": "Lionel Messi",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 8,
+      "goalsPerNinety": 2.67,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Kylian Mbappé",
       "tla": "FRA",
       "flagCode": "fr",
@@ -944,18 +956,6 @@
       "name": "Erling Haaland",
       "tla": "NOR",
       "flagCode": "no",
-      "goals": 7,
-      "goalsPerNinety": 2.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Lionel Messi",
-      "tla": "ARG",
-      "flagCode": "ar",
       "goals": 7,
       "goalsPerNinety": 2.33,
       "assists": 0,
@@ -1316,6 +1316,18 @@
       "name": "Ayase Ueda",
       "tla": "JPN",
       "flagCode": "jp",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Mostafa Zico",
+      "tla": "EGY",
+      "flagCode": "eg",
       "goals": 2,
       "goalsPerNinety": 0.67,
       "assists": 1,
@@ -1781,18 +1793,6 @@
       "yellowCards": 1
     },
     {
-      "name": "Mostafa Zico",
-      "tla": "EGY",
-      "flagCode": "eg",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Trézéguet",
       "tla": "EGY",
       "flagCode": "eg",
@@ -1863,6 +1863,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 1
+    },
+    {
+      "name": "Lautaro Martínez",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
     },
     {
       "name": "Lisandro Martínez",
@@ -2669,6 +2681,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Yasser Ibrahim",
+      "tla": "EGY",
+      "flagCode": "eg",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 2
+    },
+    {
       "name": "Kevin De Bruyne",
       "tla": "BEL",
       "flagCode": "be",
@@ -2766,18 +2790,6 @@
     },
     {
       "name": "Giovani Lo Celso",
-      "tla": "ARG",
-      "flagCode": "ar",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Lautaro Martínez",
       "tla": "ARG",
       "flagCode": "ar",
       "goals": 1,
@@ -2912,6 +2924,30 @@
       "name": "Mikel Merino",
       "tla": "ESP",
       "flagCode": "es",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Cristian Romero",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Enzo Fernández",
+      "tla": "ARG",
+      "flagCode": "ar",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 0,
@@ -3267,6 +3303,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 1
+    },
+    {
+      "name": "Marawan Attia",
+      "tla": "EGY",
+      "flagCode": "eg",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 2
     },
     {
       "name": "Adrien Rabiot",
@@ -4025,6 +4073,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Haissem Hassan",
+      "tla": "EGY",
+      "flagCode": "eg",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 2
+    },
+    {
       "name": "Ryan Mendes",
       "tla": "CPV",
       "flagCode": "cv",
@@ -4059,6 +4119,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Gonzalo Montiel",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
     },
     {
       "name": "Luis Suárez",
@@ -4403,10 +4475,10 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 10,
+      "saves": 14,
       "savePercent": null,
       "keeperCleanSheets": 0,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Mohammed Al-Owais",
