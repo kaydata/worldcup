@@ -1,5 +1,5 @@
 {
-  "_updated": "2026-07-07T23:31:42.334Z",
+  "_updated": "2026-07-08T09:16:25.121Z",
   "tournament": {
     "totalGoals": 108,
     "matchesPlayed": 96,
@@ -220,7 +220,7 @@
       "possession": 56.7,
       "corners": 26,
       "tackles": 47,
-      "interceptions": 46,
+      "interceptions": 47,
       "passAccuracy": 87
     },
     {
@@ -504,8 +504,8 @@
       "redCards": 0,
       "possession": 57.4,
       "corners": 24,
-      "tackles": 32,
-      "interceptions": 39,
+      "tackles": 33,
+      "interceptions": 40,
       "passAccuracy": 87
     },
     {
