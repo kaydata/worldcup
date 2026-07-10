@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-10T18:08:49.420Z",
+  "_updated": "2026-07-10T23:32:31.885Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 97,
-    "totalFouls": 2214,
-    "yellowCards": 247,
+    "matchesPlayed": 98,
+    "totalFouls": 2245,
+    "yellowCards": 251,
     "redCards": 13,
     "penaltiesAwarded": 20,
     "penaltiesScored": 14,
     "ownGoals": 14,
     "cleanSheets": 53,
-    "totalAttendance": 6323395,
+    "totalAttendance": 6393887,
     "avgPossession": 50
   },
   "teamStats": [
@@ -268,16 +268,16 @@
       "goals": 6,
       "goalsAgainst": 2,
       "cleanSheets": 1,
-      "shots": 107,
-      "shotsOnTarget": 32,
-      "saves": 10,
-      "fouls": 60,
-      "yellowCards": 4,
+      "shots": 112,
+      "shotsOnTarget": 34,
+      "saves": 16,
+      "fouls": 78,
+      "yellowCards": 6,
       "redCards": 1,
-      "possession": 54.9,
-      "corners": 23,
-      "tackles": 41,
-      "interceptions": 40,
+      "possession": 51.1,
+      "corners": 24,
+      "tackles": 47,
+      "interceptions": 50,
       "passAccuracy": 85
     },
     {
@@ -439,16 +439,16 @@
       "goals": 5,
       "goalsAgainst": 0,
       "cleanSheets": 5,
-      "shots": 93,
-      "shotsOnTarget": 32,
-      "saves": 6,
-      "fouls": 55,
-      "yellowCards": 3,
+      "shots": 110,
+      "shotsOnTarget": 40,
+      "saves": 7,
+      "fouls": 68,
+      "yellowCards": 5,
       "redCards": 0,
-      "possession": 65.6,
-      "corners": 39,
-      "tackles": 55,
-      "interceptions": 40,
+      "possession": 66,
+      "corners": 44,
+      "tackles": 60,
+      "interceptions": 44,
       "passAccuracy": 90
     },
     {
@@ -1097,6 +1097,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Charles De Ketelaere",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Raúl Jiménez",
       "tla": "MEX",
       "flagCode": "mx",
@@ -1385,18 +1397,6 @@
       "yellowCards": 1
     },
     {
-      "name": "Charles De Ketelaere",
-      "tla": "BEL",
-      "flagCode": "be",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Cyle Larin",
       "tla": "CAN",
       "flagCode": "ca",
@@ -1539,6 +1539,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 1
+    },
+    {
+      "name": "Mikel Merino",
+      "tla": "ESP",
+      "flagCode": "es",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
     },
     {
       "name": "Alexander Isak",
@@ -2702,7 +2714,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Alexis Saelemaekers",
@@ -2921,18 +2933,6 @@
       "yellowCards": 1
     },
     {
-      "name": "Mikel Merino",
-      "tla": "ESP",
-      "flagCode": "es",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Cristian Romero",
       "tla": "ARG",
       "flagCode": "ar",
@@ -2948,6 +2948,18 @@
       "name": "Enzo Fernández",
       "tla": "ARG",
       "flagCode": "ar",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Fabián Ruiz",
+      "tla": "ESP",
+      "flagCode": "es",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 0,
@@ -3317,6 +3329,18 @@
       "yellowCards": 2
     },
     {
+      "name": "Timothy Castagne",
+      "tla": "BEL",
+      "flagCode": "be",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Adrien Rabiot",
       "tla": "FRA",
       "flagCode": "fr",
@@ -3554,7 +3578,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Dani Olmo",
@@ -4439,7 +4463,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 6,
+      "saves": 7,
       "savePercent": null,
       "keeperCleanSheets": 5,
       "yellowCards": 0
@@ -4463,7 +4487,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 10,
+      "saves": 14,
       "savePercent": null,
       "keeperCleanSheets": 1,
       "yellowCards": 0
