@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-14T20:21:15.539Z",
+  "_updated": "2026-07-15T02:24:08.775Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 100,
-    "totalFouls": 2295,
-    "yellowCards": 256,
+    "matchesPlayed": 101,
+    "totalFouls": 2318,
+    "yellowCards": 259,
     "redCards": 14,
-    "penaltiesAwarded": 20,
-    "penaltiesScored": 14,
+    "penaltiesAwarded": 21,
+    "penaltiesScored": 15,
     "ownGoals": 14,
-    "cleanSheets": 53,
-    "totalAttendance": 6527410,
+    "cleanSheets": 54,
+    "totalAttendance": 6597586,
     "avgPossession": 50
   },
   "teamStats": [
@@ -21,16 +21,16 @@
       "goals": 10,
       "goalsAgainst": 2,
       "cleanSheets": 4,
-      "shots": 110,
-      "shotsOnTarget": 47,
+      "shots": 120,
+      "shotsOnTarget": 50,
       "saves": 10,
-      "fouls": 59,
-      "yellowCards": 4,
+      "fouls": 70,
+      "yellowCards": 6,
       "redCards": 0,
-      "possession": 58.4,
-      "corners": 41,
-      "tackles": 57,
-      "interceptions": 51,
+      "possession": 57.1,
+      "corners": 48,
+      "tackles": 65,
+      "interceptions": 59,
       "passAccuracy": 88
     },
     {
@@ -438,17 +438,17 @@
       "flagCode": "es",
       "goals": 5,
       "goalsAgainst": 0,
-      "cleanSheets": 5,
-      "shots": 110,
-      "shotsOnTarget": 40,
-      "saves": 7,
-      "fouls": 68,
-      "yellowCards": 5,
+      "cleanSheets": 6,
+      "shots": 120,
+      "shotsOnTarget": 42,
+      "saves": 10,
+      "fouls": 80,
+      "yellowCards": 6,
       "redCards": 0,
-      "possession": 66,
-      "corners": 44,
-      "tackles": 61,
-      "interceptions": 45,
+      "possession": 63.8,
+      "corners": 45,
+      "tackles": 75,
+      "interceptions": 52,
       "passAccuracy": 90
     },
     {
@@ -938,7 +938,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Lionel Messi",
@@ -1001,6 +1001,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Mikel Oyarzabal",
+      "tla": "ESP",
+      "flagCode": "es",
+      "goals": 5,
+      "goalsPerNinety": 1.67,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Julián Quiñones",
       "tla": "MEX",
       "flagCode": "mx",
@@ -1016,18 +1028,6 @@
       "name": "Vinícius Júnior",
       "tla": "BRA",
       "flagCode": "br",
-      "goals": 4,
-      "goalsPerNinety": 1.33,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Mikel Oyarzabal",
-      "tla": "ESP",
-      "flagCode": "es",
       "goals": 4,
       "goalsPerNinety": 1.33,
       "assists": 1,
@@ -1532,6 +1532,18 @@
       "name": "Youri Tielemans",
       "tla": "BEL",
       "flagCode": "be",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Pedro Porro",
+      "tla": "ESP",
+      "flagCode": "es",
       "goals": 2,
       "goalsPerNinety": 0.67,
       "assists": 0,
@@ -2897,18 +2909,6 @@
       "yellowCards": 0
     },
     {
-      "name": "Pedro Porro",
-      "tla": "ESP",
-      "flagCode": "es",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
       "name": "Gonçalo Ramos",
       "tla": "POR",
       "flagCode": "pt",
@@ -3161,6 +3161,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Dani Olmo",
+      "tla": "ESP",
+      "flagCode": "es",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Patrick Berg",
       "tla": "NOR",
       "flagCode": "no",
@@ -3206,7 +3218,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Érik Lira",
@@ -3374,7 +3386,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "David Møller Wolfe",
@@ -3603,18 +3615,6 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 1
-    },
-    {
-      "name": "Dani Olmo",
-      "tla": "ESP",
-      "flagCode": "es",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
     },
     {
       "name": "Tim Payne",
@@ -4499,9 +4499,9 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 7,
+      "saves": 10,
       "savePercent": null,
-      "keeperCleanSheets": 5,
+      "keeperCleanSheets": 6,
       "yellowCards": 0
     },
     {
