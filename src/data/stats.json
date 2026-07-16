@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-15T20:59:19.287Z",
+  "_updated": "2026-07-16T02:31:37.928Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 101,
-    "totalFouls": 2318,
-    "yellowCards": 259,
+    "matchesPlayed": 102,
+    "totalFouls": 2344,
+    "yellowCards": 263,
     "redCards": 14,
     "penaltiesAwarded": 21,
     "penaltiesScored": 15,
     "ownGoals": 14,
     "cleanSheets": 54,
-    "totalAttendance": 6597586,
+    "totalAttendance": 6665825,
     "avgPossession": 50
   },
   "teamStats": [
@@ -78,17 +78,17 @@
       "goals": 8,
       "goalsAgainst": 1,
       "cleanSheets": 2,
-      "shots": 97,
-      "shotsOnTarget": 39,
-      "saves": 8,
-      "fouls": 73,
-      "yellowCards": 6,
+      "shots": 112,
+      "shotsOnTarget": 44,
+      "saves": 9,
+      "fouls": 88,
+      "yellowCards": 9,
       "redCards": 0,
-      "possession": 60.1,
-      "corners": 31,
-      "tackles": 71,
-      "interceptions": 59,
-      "passAccuracy": 90
+      "possession": 60.7,
+      "corners": 37,
+      "tackles": 80,
+      "interceptions": 65,
+      "passAccuracy": 91
     },
     {
       "tla": "CAN",
@@ -287,17 +287,17 @@
       "goals": 6,
       "goalsAgainst": 2,
       "cleanSheets": 2,
-      "shots": 94,
-      "shotsOnTarget": 40,
-      "saves": 12,
-      "fouls": 62,
-      "yellowCards": 7,
+      "shots": 99,
+      "shotsOnTarget": 42,
+      "saves": 15,
+      "fouls": 73,
+      "yellowCards": 8,
       "redCards": 1,
-      "possession": 57.2,
-      "corners": 35,
-      "tackles": 55,
-      "interceptions": 30,
-      "passAccuracy": 89
+      "possession": 54.1,
+      "corners": 37,
+      "tackles": 64,
+      "interceptions": 39,
+      "passAccuracy": 88
     },
     {
       "tla": "MAR",
@@ -929,6 +929,18 @@
   ],
   "playerStats": [
     {
+      "name": "Lionel Messi",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 8,
+      "goalsPerNinety": 2.67,
+      "assists": 4,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Kylian Mbappé",
       "tla": "FRA",
       "flagCode": "fr",
@@ -939,18 +951,6 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 1
-    },
-    {
-      "name": "Lionel Messi",
-      "tla": "ARG",
-      "flagCode": "ar",
-      "goals": 8,
-      "goalsPerNinety": 2.67,
-      "assists": 2,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
     },
     {
       "name": "Erling Haaland",
@@ -1088,6 +1088,18 @@
       "name": "Romelu Lukaku",
       "tla": "BEL",
       "flagCode": "be",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
+      "name": "Lautaro Martínez",
+      "tla": "ARG",
+      "flagCode": "ar",
       "goals": 3,
       "goalsPerNinety": 1,
       "assists": 1,
@@ -1397,18 +1409,6 @@
       "yellowCards": 1
     },
     {
-      "name": "Lautaro Martínez",
-      "tla": "ARG",
-      "flagCode": "ar",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
-    },
-    {
       "name": "Cyle Larin",
       "tla": "CAN",
       "flagCode": "ca",
@@ -1589,6 +1589,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Enzo Fernández",
+      "tla": "ARG",
+      "flagCode": "ar",
+      "goals": 2,
+      "goalsPerNinety": 0.67,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Alexander Isak",
       "tla": "SWE",
       "flagCode": "se",
@@ -1604,6 +1616,18 @@
       "name": "Andreas Schjelderup",
       "tla": "NOR",
       "flagCode": "no",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 3,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Anthony Gordon",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 3,
@@ -1946,7 +1970,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Alexis Mac Allister",
@@ -2966,19 +2990,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Enzo Fernández",
-      "tla": "ARG",
-      "flagCode": "ar",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Fabián Ruiz",
@@ -3078,18 +3090,6 @@
     },
     {
       "name": "Bukayo Saka",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 3,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Anthony Gordon",
       "tla": "ENG",
       "flagCode": "gb-eng",
       "goals": 0,
@@ -3422,7 +3422,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Nico González",
@@ -3518,7 +3518,7 @@
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
-      "yellowCards": 0
+      "yellowCards": 1
     },
     {
       "name": "Brandon Thomas-Asante",
@@ -4217,6 +4217,18 @@
       "yellowCards": 1
     },
     {
+      "name": "Morgan Rogers",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Raúl Rangel",
       "tla": "MEX",
       "flagCode": "mx",
@@ -4679,7 +4691,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 12,
+      "saves": 15,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
@@ -4775,7 +4787,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 8,
+      "saves": 9,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
