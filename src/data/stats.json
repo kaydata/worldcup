@@ -1,16 +1,16 @@
 {
-  "_updated": "2026-07-18T20:45:50.426Z",
+  "_updated": "2026-07-19T02:37:37.256Z",
   "tournament": {
     "totalGoals": 108,
-    "matchesPlayed": 102,
-    "totalFouls": 2344,
+    "matchesPlayed": 103,
+    "totalFouls": 2366,
     "yellowCards": 263,
     "redCards": 14,
-    "penaltiesAwarded": 21,
-    "penaltiesScored": 15,
+    "penaltiesAwarded": 22,
+    "penaltiesScored": 16,
     "ownGoals": 14,
     "cleanSheets": 54,
-    "totalAttendance": 6665825,
+    "totalAttendance": 6730303,
     "avgPossession": 50
   },
   "teamStats": [
@@ -21,16 +21,16 @@
       "goals": 10,
       "goalsAgainst": 2,
       "cleanSheets": 4,
-      "shots": 120,
-      "shotsOnTarget": 50,
-      "saves": 10,
-      "fouls": 70,
+      "shots": 139,
+      "shotsOnTarget": 59,
+      "saves": 14,
+      "fouls": 84,
       "yellowCards": 6,
       "redCards": 0,
-      "possession": 57.1,
-      "corners": 48,
-      "tackles": 65,
-      "interceptions": 59,
+      "possession": 55.7,
+      "corners": 51,
+      "tackles": 75,
+      "interceptions": 68,
       "passAccuracy": 88
     },
     {
@@ -287,17 +287,17 @@
       "goals": 6,
       "goalsAgainst": 2,
       "cleanSheets": 2,
-      "shots": 99,
-      "shotsOnTarget": 42,
-      "saves": 15,
-      "fouls": 73,
+      "shots": 118,
+      "shotsOnTarget": 53,
+      "saves": 20,
+      "fouls": 81,
       "yellowCards": 8,
       "redCards": 1,
       "possession": 54.1,
-      "corners": 37,
-      "tackles": 64,
-      "interceptions": 39,
-      "passAccuracy": 88
+      "corners": 41,
+      "tackles": 77,
+      "interceptions": 50,
+      "passAccuracy": 89
     },
     {
       "tla": "MAR",
@@ -929,6 +929,18 @@
   ],
   "playerStats": [
     {
+      "name": "Kylian Mbappé",
+      "tla": "FRA",
+      "flagCode": "fr",
+      "goals": 10,
+      "goalsPerNinety": 3.33,
+      "assists": 4,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
+    },
+    {
       "name": "Lionel Messi",
       "tla": "ARG",
       "flagCode": "ar",
@@ -941,12 +953,12 @@
       "yellowCards": 0
     },
     {
-      "name": "Kylian Mbappé",
-      "tla": "FRA",
-      "flagCode": "fr",
-      "goals": 8,
-      "goalsPerNinety": 2.67,
-      "assists": 3,
+      "name": "Jude Bellingham",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 7,
+      "goalsPerNinety": 2.33,
+      "assists": 1,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -965,36 +977,24 @@
       "yellowCards": 0
     },
     {
-      "name": "Harry Kane",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
+      "name": "Ousmane Dembélé",
+      "tla": "FRA",
+      "flagCode": "fr",
       "goals": 6,
       "goalsPerNinety": 2,
-      "assists": 1,
+      "assists": 2,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
     },
     {
-      "name": "Jude Bellingham",
+      "name": "Harry Kane",
       "tla": "ENG",
       "flagCode": "gb-eng",
       "goals": 6,
       "goalsPerNinety": 2,
       "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
-    },
-    {
-      "name": "Ousmane Dembélé",
-      "tla": "FRA",
-      "flagCode": "fr",
-      "goals": 5,
-      "goalsPerNinety": 1.67,
-      "assists": 2,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -1049,6 +1049,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Bukayo Saka",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 3,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Deniz Undav",
       "tla": "GER",
       "flagCode": "de",
@@ -1071,6 +1083,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
+    },
+    {
+      "name": "Bradley Barcola",
+      "tla": "FRA",
+      "flagCode": "fr",
+      "goals": 3,
+      "goalsPerNinety": 1,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 1
     },
     {
       "name": "Cody Gakpo",
@@ -1311,18 +1335,6 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
-    },
-    {
-      "name": "Bradley Barcola",
-      "tla": "FRA",
-      "flagCode": "fr",
-      "goals": 2,
-      "goalsPerNinety": 0.67,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 1
     },
     {
       "name": "Rubén Vargas",
@@ -1685,6 +1697,18 @@
       "yellowCards": 0
     },
     {
+      "name": "Declan Rice",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 2,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 2
+    },
+    {
       "name": "Nathan Saliba",
       "tla": "CAN",
       "flagCode": "ca",
@@ -1827,6 +1851,18 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 2
+    },
+    {
+      "name": "Marcus Rashford",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
     },
     {
       "name": "Luis Díaz",
@@ -2312,18 +2348,6 @@
       "name": "Petar Musa",
       "tla": "CRO",
       "flagCode": "hr",
-      "goals": 1,
-      "goalsPerNinety": 0.33,
-      "assists": 0,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Marcus Rashford",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
       "goals": 1,
       "goalsPerNinety": 0.33,
       "assists": 0,
@@ -3017,12 +3041,24 @@
       "yellowCards": 0
     },
     {
+      "name": "Ezri Konsa",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 1,
+      "goalsPerNinety": 0.33,
+      "assists": 0,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Michael Olise",
       "tla": "FRA",
       "flagCode": "fr",
       "goals": 0,
       "goalsPerNinety": 0,
-      "assists": 5,
+      "assists": 7,
       "saves": null,
       "savePercent": null,
       "keeperCleanSheets": null,
@@ -3080,18 +3116,6 @@
       "name": "Florian Wirtz",
       "tla": "GER",
       "flagCode": "de",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 3,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 0
-    },
-    {
-      "name": "Bukayo Saka",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 3,
@@ -3495,18 +3519,6 @@
       "savePercent": null,
       "keeperCleanSheets": null,
       "yellowCards": 0
-    },
-    {
-      "name": "Declan Rice",
-      "tla": "ENG",
-      "flagCode": "gb-eng",
-      "goals": 0,
-      "goalsPerNinety": 0,
-      "assists": 1,
-      "saves": null,
-      "savePercent": null,
-      "keeperCleanSheets": null,
-      "yellowCards": 2
     },
     {
       "name": "Elliot Anderson",
@@ -4229,6 +4241,30 @@
       "yellowCards": 0
     },
     {
+      "name": "Eberechi Eze",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
+      "name": "Dayot Upamecano",
+      "tla": "FRA",
+      "flagCode": "fr",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 1,
+      "saves": null,
+      "savePercent": null,
+      "keeperCleanSheets": null,
+      "yellowCards": 0
+    },
+    {
       "name": "Raúl Rangel",
       "tla": "MEX",
       "flagCode": "mx",
@@ -4607,7 +4643,7 @@
       "goals": 0,
       "goalsPerNinety": 0,
       "assists": 0,
-      "saves": 9,
+      "saves": 13,
       "savePercent": null,
       "keeperCleanSheets": 4,
       "yellowCards": 0
@@ -4884,6 +4920,18 @@
       "goalsPerNinety": 0,
       "assists": 0,
       "saves": 7,
+      "savePercent": null,
+      "keeperCleanSheets": 2,
+      "yellowCards": 0
+    },
+    {
+      "name": "Dean Henderson",
+      "tla": "ENG",
+      "flagCode": "gb-eng",
+      "goals": 0,
+      "goalsPerNinety": 0,
+      "assists": 0,
+      "saves": 5,
       "savePercent": null,
       "keeperCleanSheets": 2,
       "yellowCards": 0
